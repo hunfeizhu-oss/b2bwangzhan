@@ -1,6 +1,6 @@
 # Themes V3 Replica
 
-个人网站作品模块：复刻 `https://themes.xiaoman.cn/v3/` 的 B2B 跨境独立站模板图库体验。
+复刻 `https://themes.xiaoman.cn/v3/` 的 B2B 跨境独立站模板图库体验。
 
 ## 内容
 
