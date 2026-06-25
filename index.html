@@ -848,11 +848,12 @@
       const templates = [
         {
           id: 1,
-          name: "电动出行品牌独立站",
+          name: "MAXMOV 电动出行落地页",
           industry: "汽车零配件",
           cover: "assets/maxmov/hero-scooter-factory.png",
           featured: true,
-          tags: "电动车 scooter mobility maxmov factory"
+          tags: "电动车 scooter mobility maxmov factory landing page",
+          url: "cases/maxmov/"
         },
         {
           id: 2,
@@ -1164,6 +1165,10 @@
       }
 
       function previewTemplate(item) {
+        if (item.url) {
+          window.open(item.url, "_blank", "noopener,noreferrer");
+          return;
+        }
         const query = encodeURIComponent(item.name);
         window.open(`https://themes.xiaoman.cn/v3/?preview=${query}`, "_blank", "noopener,noreferrer");
       }
