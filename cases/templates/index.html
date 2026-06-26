@@ -141,12 +141,6 @@
         font-weight: 600;
       }
 
-      .button.primary {
-        border-color: var(--blue);
-        background: var(--blue);
-        color: var(--white);
-      }
-
       .viewport {
         position: relative;
         flex: 1;
@@ -223,7 +217,6 @@
         </div>
         <div class="actions">
           <a class="button" href="../../">返回模板库</a>
-          <a class="button primary" id="openOriginal" href="#" target="_blank" rel="noopener noreferrer">打开预览</a>
         </div>
       </header>
 
@@ -242,7 +235,6 @@
       const template = byName[requested.toLowerCase()] || templates[0];
       const frame = document.getElementById("previewFrame");
       const emptyState = document.getElementById("emptyState");
-      const openOriginal = document.getElementById("openOriginal");
 
       function renderMeta(item) {
         const parts = [
@@ -263,7 +255,6 @@
         document.getElementById("templateName").textContent = template.name;
         renderMeta(template);
         frame.src = template.previewUrl;
-        openOriginal.href = template.previewUrl;
       }
     </script>
   </body>
