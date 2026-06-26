@@ -507,32 +507,35 @@
         display: flex;
         width: 100%;
         flex-wrap: wrap;
-        gap: 8px;
-        padding: 24px 72px 20px;
+        justify-content: center;
+        gap: 10px;
+        padding: 24px 72px 18px;
         background: var(--white);
       }
 
       .chip {
-        min-height: 42px;
-        padding: 11px 16px;
+        min-height: 38px;
+        padding: 9px 14px;
         border-radius: 8px;
         color: var(--text);
         background: var(--soft);
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 600;
+        white-space: nowrap;
         transition:
           color 180ms ease,
           background 180ms ease,
-          transform 180ms ease;
+          box-shadow 180ms ease;
       }
 
       .chip:hover {
-        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(18, 28, 45, 0.08);
       }
 
       .chip.active {
         color: var(--white);
         background: var(--blue);
+        box-shadow: 0 8px 18px rgba(10, 106, 255, 0.2);
       }
 
       .industry-fold {
@@ -952,6 +955,7 @@
         }
 
         .industry {
+          justify-content: flex-start;
           padding: 24px 50px 20px 20px;
         }
 
