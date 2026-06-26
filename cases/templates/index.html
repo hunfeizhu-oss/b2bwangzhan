@@ -3,46 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Themes V3 模板案例预览页" />
+    <meta name="description" content="个人网站模板案例预览" />
     <link
       rel="icon"
-      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="%230a6aff"/><text x="32" y="43" text-anchor="middle" font-size="36" font-family="Arial" font-weight="800" fill="white">T</text></svg>'
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="%230a6aff"/><text x="32" y="43" text-anchor="middle" font-size="38" font-family="Arial" font-weight="700" fill="white">T</text></svg>'
     />
-    <title>Template Case Preview</title>
+    <title>模板预览</title>
     <style>
       :root {
         --blue: #0a6aff;
         --ink: #141414;
         --text: #333333;
-        --muted: #737373;
-        --line: #e9edf5;
+        --muted: #8c8c8c;
         --soft: #f6f7f9;
-        --wash: #eef7ff;
+        --line: #e9edf5;
         --white: #ffffff;
-        --shadow: 0 10px 34px rgba(20, 26, 38, 0.1);
       }
 
       * {
         box-sizing: border-box;
       }
 
-      html {
-        scroll-behavior: smooth;
+      html,
+      body {
+        width: 100%;
+        height: 100%;
       }
 
       body {
         margin: 0;
         color: var(--text);
-        background: var(--white);
+        background: var(--soft);
         font-family:
           "PingFang SC", "Microsoft YaHei", "Source Han Sans CN", "Noto Sans SC",
           -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.55;
-      }
-
-      img {
-        display: block;
-        max-width: 100%;
       }
 
       a {
@@ -50,17 +44,24 @@
         text-decoration: none;
       }
 
+      .preview-app {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
       .topbar {
         position: sticky;
         top: 0;
-        z-index: 20;
-        display: flex;
+        z-index: 10;
+        display: grid;
+        min-height: 74px;
+        padding: 14px 72px;
+        grid-template-columns: 160px minmax(0, 1fr) auto;
+        gap: 28px;
         align-items: center;
-        justify-content: space-between;
-        height: 74px;
-        padding: 0 clamp(20px, 5vw, 72px);
-        border-bottom: 1px solid rgba(233, 237, 245, 0.86);
-        background: rgba(255, 255, 255, 0.94);
+        border-bottom: 1px solid rgba(233, 237, 245, 0.9);
+        background: rgba(255, 255, 255, 0.96);
         backdrop-filter: blur(16px);
       }
 
@@ -69,871 +70,201 @@
         align-items: center;
         gap: 10px;
         color: var(--ink);
-        font-size: 22px;
-        font-weight: 900;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0;
       }
 
       .brand-mark {
         display: grid;
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
         place-items: center;
         border-radius: 10px;
         color: var(--white);
         background: var(--blue);
-        font-size: 19px;
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        color: var(--muted);
-        font-size: 14px;
-        font-weight: 700;
-      }
-
-      .nav a:hover,
-      .back-link {
-        color: var(--blue);
-      }
-
-      .hero {
-        background:
-          linear-gradient(125deg, rgba(238, 247, 255, 0.95), rgba(255, 255, 255, 0.9)),
-          radial-gradient(circle at 14% 20%, rgba(10, 106, 255, 0.12), transparent 26%),
-          var(--wash);
-      }
-
-      .hero-grid {
-        display: grid;
-        width: min(1300px, calc(100% - 40px));
-        min-height: 620px;
-        margin: 0 auto;
-        padding: 70px 0;
-        grid-template-columns: minmax(0, 0.92fr) minmax(480px, 1.08fr);
-        gap: 56px;
-        align-items: center;
-      }
-
-      .kicker {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 16px;
-        color: var(--blue);
-        font-size: 13px;
-        font-weight: 900;
-        text-transform: uppercase;
-      }
-
-      .kicker::before {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--blue);
-        content: "";
-      }
-
-      h1,
-      h2,
-      h3,
-      p {
-        margin-top: 0;
-      }
-
-      h1 {
-        margin-bottom: 18px;
-        color: var(--ink);
-        font-size: clamp(44px, 6vw, 76px);
-        font-weight: 950;
-        line-height: 1.02;
-        letter-spacing: 0;
-      }
-
-      .lead {
-        max-width: 610px;
-        margin-bottom: 28px;
-        color: var(--text);
-        font-size: clamp(18px, 2vw, 22px);
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-bottom: 32px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 46px;
-        padding: 0 18px;
-        border-radius: 7px;
-        font-size: 13px;
-        font-weight: 900;
-        text-transform: uppercase;
-      }
-
-      .btn-primary {
-        color: var(--white);
-        background: var(--blue);
-        box-shadow: 0 14px 30px rgba(10, 106, 255, 0.24);
-      }
-
-      .btn-secondary {
-        border: 1px solid rgba(10, 106, 255, 0.22);
-        color: var(--blue);
-        background: var(--white);
-      }
-
-      .proof-row {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .proof {
-        min-height: 92px;
-        padding: 17px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.78);
-      }
-
-      .proof strong {
-        display: block;
-        color: var(--ink);
-        font-size: 24px;
-        font-weight: 950;
-      }
-
-      .proof span {
-        color: var(--muted);
-        font-size: 13px;
-        font-weight: 700;
-      }
-
-      .hero-media {
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: var(--shadow);
-      }
-
-      .hero-media img {
-        width: 100%;
-        height: 530px;
-        object-fit: cover;
-      }
-
-      .section {
-        width: min(1300px, calc(100% - 40px));
-        margin: 0 auto;
-        padding: 82px 0;
-      }
-
-      .section-head {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 32px;
-        margin-bottom: 32px;
-      }
-
-      .section-head h2 {
-        margin-bottom: 0;
-        color: var(--ink);
-        font-size: clamp(32px, 4.4vw, 54px);
-        font-weight: 950;
-        line-height: 1.02;
-      }
-
-      .section-head p {
-        max-width: 430px;
-        margin-bottom: 0;
-        color: var(--muted);
-      }
-
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 24px;
-      }
-
-      .card {
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--white);
-        box-shadow: 0 8px 26px rgba(20, 26, 38, 0.06);
-      }
-
-      .card img {
-        width: 100%;
-        height: 236px;
-        object-fit: cover;
-      }
-
-      .card-body {
-        padding: 18px;
-      }
-
-      h3 {
-        margin-bottom: 8px;
-        color: var(--ink);
-        font-size: 19px;
-        font-weight: 900;
-      }
-
-      .card p {
-        margin-bottom: 0;
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      .band {
-        background: #101828;
-      }
-
-      .band-grid {
-        display: grid;
-        width: min(1300px, calc(100% - 40px));
-        margin: 0 auto;
-        padding: 82px 0;
-        grid-template-columns: 0.94fr 1.06fr;
-        gap: 56px;
-        align-items: center;
-      }
-
-      .band h2 {
-        margin-bottom: 16px;
-        color: var(--white);
-        font-size: clamp(32px, 4.4vw, 54px);
-        font-weight: 950;
-        line-height: 1.02;
-      }
-
-      .band p {
-        color: rgba(255, 255, 255, 0.72);
-      }
-
-      .feature-list {
-        display: grid;
-        gap: 14px;
-        margin-top: 24px;
-      }
-
-      .feature-list span {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--white);
+        font-size: 20px;
         font-weight: 800;
       }
 
-      .feature-list span::before {
-        width: 8px;
-        height: 8px;
+      .template-info {
+        min-width: 0;
+      }
+
+      h1 {
+        overflow: hidden;
+        margin: 0 0 5px;
+        color: var(--ink);
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .meta {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .dot {
+        width: 4px;
+        height: 4px;
+        flex: 0 0 auto;
         border-radius: 50%;
-        background: #fdb022;
-        content: "";
+        background: #c9d0dc;
       }
 
-      .band img {
-        width: 100%;
-        height: 400px;
-        border-radius: 8px;
-        object-fit: cover;
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
 
-      .cta {
-        width: min(1300px, calc(100% - 40px));
-        margin: 0 auto 82px;
-        padding: 44px;
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 36px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
         border-radius: 8px;
+        background: var(--white);
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .button.primary {
+        border-color: var(--blue);
+        background: var(--blue);
         color: var(--white);
-        background:
-          linear-gradient(135deg, rgba(10, 106, 255, 0.96), rgba(20, 184, 166, 0.9)),
-          var(--blue);
       }
 
-      .cta h2 {
-        margin-bottom: 12px;
-        font-size: clamp(30px, 4vw, 46px);
+      .viewport {
+        position: relative;
+        flex: 1;
+        min-height: calc(100vh - 74px);
+        background: #eef2fa;
       }
 
-      .cta p {
-        max-width: 680px;
-        margin-bottom: 0;
-        color: rgba(255, 255, 255, 0.82);
+      iframe {
+        display: block;
+        width: 100%;
+        height: calc(100vh - 74px);
+        border: 0;
+        background: var(--white);
       }
 
-      footer {
-        padding: 32px 20px;
-        color: rgba(255, 255, 255, 0.58);
-        background: #13151a;
+      .empty {
+        position: absolute;
+        inset: 0;
+        display: none;
+        place-items: center;
+        padding: 28px;
+        color: var(--muted);
         text-align: center;
       }
 
-      @media (max-width: 980px) {
-        .nav a:not(.back-link) {
-          display: none;
-        }
-
-        .hero-grid,
-        .band-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-media img {
-          height: 430px;
-        }
-
-        .cards {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
+      .empty.active {
+        display: grid;
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 760px) {
         .topbar {
-          height: 64px;
+          min-height: 120px;
+          padding: 14px 20px;
+          grid-template-columns: 1fr auto;
+          gap: 10px 14px;
         }
 
         .brand {
-          font-size: 19px;
+          grid-column: 1;
         }
 
-        .brand-mark {
-          width: 32px;
-          height: 32px;
+        .template-info {
+          grid-column: 1 / -1;
+          grid-row: 2;
         }
 
-        .hero-grid {
-          min-height: auto;
-          padding: 50px 0 62px;
+        .actions {
+          grid-column: 2;
+          grid-row: 1;
         }
 
-        .proof-row,
-        .cards {
-          grid-template-columns: 1fr;
+        .button {
+          min-height: 34px;
+          padding: 0 10px;
+          font-size: 13px;
         }
 
-        .hero-media img,
-        .band img {
-          height: 330px;
-        }
-
-        .section {
-          padding: 64px 0;
-        }
-
-        .section-head {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-
-        .band-grid {
-          padding: 64px 0;
-        }
-
-        .cta {
-          padding: 30px 22px;
+        iframe {
+          height: calc(100vh - 120px);
         }
       }
     </style>
   </head>
   <body>
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="Template case home">
-        <span class="brand-mark" id="brandMark">T</span>
-        <span id="brandName">Themes</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#products">Products</a>
-        <a href="#solution">Solution</a>
-        <a href="#proof">Proof</a>
-        <a class="back-link" href="../../">Back to Themes</a>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero">
-        <div class="hero-grid">
-          <div>
-            <div class="kicker" id="industry">B2B Template</div>
-            <h1 id="headline">Template case preview</h1>
-            <p class="lead" id="lead"></p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#products">View Products</a>
-              <a class="btn btn-secondary" href="#solution">Explore Solution</a>
-            </div>
-            <div class="proof-row" id="metrics"></div>
-          </div>
-          <div class="hero-media">
-            <img id="heroImage" alt="" />
-          </div>
+    <div class="preview-app">
+      <header class="topbar">
+        <a class="brand" href="../../" aria-label="模板案例库首页">
+          <span class="brand-mark">T</span>
+          <span>模板案例库</span>
+        </a>
+        <div class="template-info">
+          <h1 id="templateName">模板预览</h1>
+          <div class="meta" id="templateMeta"></div>
         </div>
-      </section>
-
-      <section class="section" id="products">
-        <div class="section-head">
-          <h2 id="productsTitle">Product System</h2>
-          <p id="productsIntro"></p>
+        <div class="actions">
+          <a class="button" href="../../">返回模板库</a>
+          <a class="button primary" id="openOriginal" href="#" target="_blank" rel="noopener noreferrer">打开预览</a>
         </div>
-        <div class="cards" id="productCards"></div>
-      </section>
+      </header>
 
-      <section class="band" id="solution">
-        <div class="band-grid">
-          <div>
-            <div class="kicker" id="solutionKicker">Solution</div>
-            <h2 id="solutionTitle"></h2>
-            <p id="solutionText"></p>
-            <div class="feature-list" id="featureList"></div>
-          </div>
-          <img id="solutionImage" alt="" />
-        </div>
-      </section>
+      <main class="viewport">
+        <iframe id="previewFrame" title="Template preview" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="empty" id="emptyState">暂无数据</div>
+      </main>
+    </div>
 
-      <section class="section" id="proof">
-        <div class="section-head">
-          <h2>Buyer Proof</h2>
-          <p>用工厂、资质、应用场景和内容模块，为 B2B 买家建立信任。</p>
-        </div>
-        <div class="cards" id="proofCards"></div>
-      </section>
-
-      <section class="cta">
-        <h2 id="ctaTitle"></h2>
-        <p id="ctaText"></p>
-      </section>
-    </main>
-
-    <footer id="footerText">Themes V3 template case preview.</footer>
-
+    <script src="../../assets/templates-v3-data.js"></script>
     <script>
-      const sharedProof = [
-        {
-          title: "Quality Control",
-          text: "关键环节可视化，降低跨境采购的不确定性。",
-          image: "../../assets/maxmov/factory-qc.png"
-        },
-        {
-          title: "Factory Capacity",
-          text: "用工厂图、产线图和流程说明证明交付能力。",
-          image: "../../assets/maxmov/factory-assembly.png"
-        },
-        {
-          title: "Export Support",
-          text: "突出认证、包装、物流和售后资料的完整性。",
-          image: "../../assets/cert-clean.png"
-        }
-      ];
+      const params = new URLSearchParams(window.location.search);
+      const requested = params.get("case") || "";
+      const templates = window.TEMPLATE_LIBRARY_ITEMS || [];
+      const byName = window.TEMPLATE_LIBRARY_BY_NAME || {};
+      const template = byName[requested.toLowerCase()] || templates[0];
+      const frame = document.getElementById("previewFrame");
+      const emptyState = document.getElementById("emptyState");
+      const openOriginal = document.getElementById("openOriginal");
 
-      const cases = {
-        "industrial-machinery": {
-          mark: "IM",
-          brand: "INDUSTRIA",
-          industry: "工业机械",
-          headline: "Industrial equipment pages built for serious buyers.",
-          lead: "适合设备制造、自动化产线和工程机械企业，用清晰参数、工厂能力和应用场景推动询盘转化。",
-          hero: "../../assets/maxmov/factory-assembly.png",
-          solutionImage: "../../assets/factory-lines.png",
-          productsTitle: "Machinery Categories",
-          productsIntro: "把复杂设备拆成可比较的品类、参数和应用场景。",
-          solutionTitle: "From factory capability to buyer confidence.",
-          solutionText: "页面结构围绕设备能力、加工精度、售前方案和交付支持展开，让采购方快速判断匹配度。",
-          ctaTitle: "Turn engineering strength into qualified inquiries.",
-          ctaText: "工业模板案例突出参数、产线和工程项目，适合高客单价 B2B 产品。",
-          metrics: ["OEM", "Precision", "Factory"],
-          features: ["设备参数表与应用场景", "工厂产能和测试流程", "工程项目与售前支持"],
-          products: [
-            ["Production Line", "自动化产线与装配能力展示。", "../../assets/maxmov/factory-assembly.png"],
-            ["Custom Equipment", "根据客户工艺进行配置和选型。", "../../assets/factory-lines.png"],
-            ["Inspection Tools", "检测与品控设备模块化呈现。", "../../assets/maxmov/factory-rd.png"]
-          ]
-        },
-        "oem-solution": {
-          mark: "OE",
-          brand: "OEMWORKS",
-          industry: "工业机械",
-          headline: "OEM solution pages for private-label programs.",
-          lead: "为 OEM/ODM 合作设计的模板案例，强调定制流程、样品确认、批量生产和品牌交付。",
-          hero: "../../assets/maxmov/oem-scooter.png",
-          solutionImage: "../../assets/maxmov/about-factory-exterior.png",
-          productsTitle: "OEM Service Flow",
-          productsIntro: "把定制合作拆成步骤，让潜在客户知道下一步怎么开始。",
-          solutionTitle: "A full-path OEM workflow buyers can trust.",
-          solutionText: "从需求沟通到样品、量产、包装和出货，让定制项目看起来可靠、可控、可执行。",
-          ctaTitle: "Make custom manufacturing easier to understand.",
-          ctaText: "适合展示定制生产能力、合作流程和案例成果。",
-          metrics: ["ODM", "Sample", "Bulk"],
-          features: ["品牌化外观与包装", "样品确认和量产排期", "出口资料和售后支持"],
-          products: [
-            ["Design Matching", "按目标市场调整外观和配置。", "../../assets/maxmov/oem-scooter.png"],
-            ["Sample Build", "快速样品确认和迭代。", "../../assets/maxmov/factory-rd.png"],
-            ["Batch Delivery", "量产、质检和包装交付。", "../../assets/maxmov/factory-assembly.png"]
-          ]
-        },
-        "garden-outdoor": {
-          mark: "GO",
-          brand: "GREENYARD",
-          industry: "家居园艺",
-          headline: "Outdoor product templates with lifestyle appeal.",
-          lead: "适合园艺、户外休闲和家居用品，把场景图、系列产品和批发能力结合起来。",
-          hero: "../../assets/category-golf.png",
-          solutionImage: "../../assets/about-building-clean.png",
-          productsTitle: "Outdoor Collections",
-          productsIntro: "用生活方式图片和清晰分类展示户外产品线。",
-          solutionTitle: "From product mood to wholesale readiness.",
-          solutionText: "模板强调使用场景、季节系列、包装规格和渠道合作，适合海外买家快速浏览。",
-          ctaTitle: "Build a softer B2B catalog for outdoor buyers.",
-          ctaText: "家居园艺模板让产品更有场景感，也保留 B2B 采购需要的信息密度。",
-          metrics: ["Garden", "Outdoor", "Wholesale"],
-          features: ["场景化产品系列", "尺寸包装和起订量", "批发与渠道合作"],
-          products: [
-            ["Garden Carts", "户外运输和休闲用品。", "../../assets/category-golf.png"],
-            ["Patio Sets", "适合庭院、露台和度假场景。", "../../assets/about-building-clean.png"],
-            ["Seasonal Packs", "按季节组合产品和促销套装。", "../../assets/blog-quality.png"]
-          ]
-        },
-        "hardware-tools": {
-          mark: "HT",
-          brand: "HARDKIT",
-          industry: "五金工具",
-          headline: "Hardware catalogs designed for quick comparison.",
-          lead: "用紧凑清晰的目录结构展示五金配件、工具附件和规格差异，适合经销商批量选型。",
-          hero: "../../assets/maxmov/accessory-light.png",
-          solutionImage: "../../assets/maxmov/factory-rd.png",
-          productsTitle: "Parts Catalog",
-          productsIntro: "突出型号、用途、兼容性和批量供货能力。",
-          solutionTitle: "A catalog that makes small parts easy to buy.",
-          solutionText: "五金类模板重点解决 SKU 多、规格多、信息碎的问题，让买家快速进入询价。",
-          ctaTitle: "Make every part easier to source.",
-          ctaText: "适合工具、配件、紧固件和替换件供应商。",
-          metrics: ["SKU", "Specs", "Stock"],
-          features: ["型号规格清晰展示", "应用和兼容性说明", "库存与批量采购入口"],
-          products: [
-            ["Lighting Parts", "功能件和替换件展示。", "../../assets/maxmov/accessory-light.png"],
-            ["Mounting Kits", "安装附件和套装组合。", "../../assets/maxmov/accessory-basket.png"],
-            ["Testing Parts", "检测设备和工装能力。", "../../assets/maxmov/factory-rd.png"]
-          ]
-        },
-        "packaging-print": {
-          mark: "PP",
-          brand: "PACKPRO",
-          industry: "包装印刷",
-          headline: "Packaging and printing sites that prove reliability.",
-          lead: "适合包装印刷企业展示材料、工艺、认证、打样和批量生产能力。",
-          hero: "../../assets/cert-clean.png",
-          solutionImage: "../../assets/certificates.png",
-          productsTitle: "Packaging Services",
-          productsIntro: "让材料、工艺、认证和交付流程更容易被买家理解。",
-          solutionTitle: "From artwork to certified production.",
-          solutionText: "模板用资质、样品、工艺说明和案例图建立信任，适合跨境品牌寻找长期包装供应商。",
-          ctaTitle: "Package proof, process and production in one page.",
-          ctaText: "包装印刷模板适合展示打样流程和规模化交付能力。",
-          metrics: ["Proof", "Print", "Pack"],
-          features: ["材料和印刷工艺", "认证与质量体系", "打样、量产和出货"],
-          products: [
-            ["Custom Boxes", "品牌包装盒与彩盒方案。", "../../assets/cert-clean.png"],
-            ["Label Printing", "标签、说明书和贴纸印刷。", "../../assets/certificates.png"],
-            ["Export Packs", "跨境运输包装支持。", "../../assets/blog-quality.png"]
-          ]
-        },
-        "construction-materials": {
-          mark: "CM",
-          brand: "BUILDWISE",
-          industry: "建材与房地产",
-          headline: "Construction material templates for project buyers.",
-          lead: "适合建材、工程项目和房地产供应链，用项目案例、材料规格和工厂能力建立信任。",
-          hero: "../../assets/maxmov/about-factory-exterior.png",
-          solutionImage: "../../assets/about-building-clean.png",
-          productsTitle: "Project Materials",
-          productsIntro: "围绕材料品类、工程应用和项目交付组织信息。",
-          solutionTitle: "Show material capability through real project logic.",
-          solutionText: "建材类页面要让采购方看到材料性能、案例、供货稳定性和工程支持。",
-          ctaTitle: "Help project buyers evaluate faster.",
-          ctaText: "适合建筑材料、工程配套和项目型 B2B 供应商。",
-          metrics: ["Project", "Supply", "Specs"],
-          features: ["项目案例与应用场景", "材料规格和性能说明", "稳定供货和工程支持"],
-          products: [
-            ["Facade Systems", "建筑外立面和工程材料。", "../../assets/maxmov/about-factory-exterior.png"],
-            ["Project Supply", "工程批量供货能力。", "../../assets/about-building-clean.png"],
-            ["Quality Documents", "检测报告和认证资料。", "../../assets/cert-clean.png"]
-          ]
-        },
-        "metal-processing": {
-          mark: "MP",
-          brand: "METALINK",
-          industry: "金属与合金",
-          headline: "Metal processing websites with factory-first proof.",
-          lead: "面向金属加工、合金材料和零部件供应商，突出加工能力、设备、精度和质量控制。",
-          hero: "../../assets/factory-lines.png",
-          solutionImage: "../../assets/factory-clean.png",
-          productsTitle: "Metal Capabilities",
-          productsIntro: "将材料、工艺、精度和交付能力结构化呈现。",
-          solutionTitle: "Make manufacturing capability visible.",
-          solutionText: "金属加工模板用设备图、工艺流程和检测能力证明可靠性，适合严肃采购场景。",
-          ctaTitle: "Turn workshop strength into sourcing confidence.",
-          ctaText: "适合金属件、合金材料、CNC 和结构件供应商。",
-          metrics: ["CNC", "Alloy", "QC"],
-          features: ["加工设备和工艺范围", "材料牌号和精度能力", "检测流程和批量交付"],
-          products: [
-            ["CNC Parts", "精密加工件展示。", "../../assets/factory-lines.png"],
-            ["Alloy Materials", "材料和表面处理能力。", "../../assets/factory-clean.png"],
-            ["Inspection", "尺寸检测和品控流程。", "../../assets/maxmov/factory-qc.png"]
-          ]
-        },
-        "sports-entertainment": {
-          mark: "SE",
-          brand: "RIDEPLAY",
-          industry: "运动及娱乐",
-          headline: "Sport product pages with energy and clarity.",
-          lead: "适合运动娱乐类产品，用动感图片、产品系列和场景卖点带动买家浏览。",
-          hero: "../../assets/category-ebike.png",
-          solutionImage: "../../assets/hero-rider-clean.png",
-          productsTitle: "Sport Collections",
-          productsIntro: "将运动产品按人群、场景和配置组织。",
-          solutionTitle: "Balance lifestyle emotion with B2B details.",
-          solutionText: "运动娱乐模板既要有视觉冲击，也要保留渠道采购需要的规格、包装和批发信息。",
-          ctaTitle: "Create a product story buyers can sell onward.",
-          ctaText: "适合户外运动、骑行、娱乐设备和渠道型产品。",
-          metrics: ["Sport", "Scene", "Retail"],
-          features: ["动感场景和产品系列", "渠道销售素材", "规格、包装和批发支持"],
-          products: [
-            ["E-Bike Series", "骑行产品系列展示。", "../../assets/category-ebike.png"],
-            ["Outdoor Ride", "户外场景强化产品吸引力。", "../../assets/hero-rider-clean.png"],
-            ["Performance Kit", "配置和配件组合。", "../../assets/product-street40.png"]
-          ]
-        },
-        "electrical-equipment": {
-          mark: "EE",
-          brand: "ELECTRA",
-          industry: "电器设备及用品",
-          headline: "Electrical equipment pages built around trust.",
-          lead: "适合电器设备、控制设备和检测仪器供应商，突出安全、检测、认证和应用场景。",
-          hero: "../../assets/maxmov/factory-qc.png",
-          solutionImage: "../../assets/maxmov/factory-rd.png",
-          productsTitle: "Equipment Lines",
-          productsIntro: "用稳定的结构展示设备、参数、认证和技术支持。",
-          solutionTitle: "Make technical products easier to verify.",
-          solutionText: "电器设备模板强调参数、检测流程、技术文档和售后支持，减少买家沟通成本。",
-          ctaTitle: "Turn technical credibility into inquiries.",
-          ctaText: "适合电器设备、测试仪器和工程设备产品站。",
-          metrics: ["Test", "Safety", "Docs"],
-          features: ["技术参数和认证", "测试流程可视化", "资料下载和技术支持"],
-          products: [
-            ["Testing Equipment", "检测设备和应用说明。", "../../assets/maxmov/factory-qc.png"],
-            ["Control Units", "控制部件和电器设备。", "../../assets/maxmov/factory-rd.png"],
-            ["Certified Supply", "认证资料和出口支持。", "../../assets/cert-clean.png"]
-          ]
-        },
-        "renewable-energy": {
-          mark: "RE",
-          brand: "SUNGRID",
-          industry: "可再生能源",
-          headline: "Renewable energy pages with project-scale proof.",
-          lead: "适合新能源、储能和清洁能源设备供应商，突出项目规模、技术能力和交付可信度。",
-          hero: "../../assets/factory-aerial.png",
-          solutionImage: "../../assets/maxmov/about-factory-exterior.png",
-          productsTitle: "Energy Solutions",
-          productsIntro: "围绕项目、设备、系统集成和售后支持展示能力。",
-          solutionTitle: "Present clean energy as a complete solution.",
-          solutionText: "新能源模板需要同时展示技术、项目经验和长期服务能力，帮助采购方判断合作风险。",
-          ctaTitle: "Make energy projects easier to evaluate.",
-          ctaText: "适合新能源设备、储能、工厂节能和系统解决方案。",
-          metrics: ["Clean", "Project", "System"],
-          features: ["项目规模和应用场景", "设备系统和技术支持", "长期服务和交付保障"],
-          products: [
-            ["Energy Systems", "系统级产品和应用方案。", "../../assets/factory-aerial.png"],
-            ["Factory Energy", "清洁制造和产能证明。", "../../assets/maxmov/about-factory-exterior.png"],
-            ["Support Docs", "项目资料和认证文件。", "../../assets/cert-clean.png"]
-          ]
-        },
-        "textile-fabric": {
-          mark: "TF",
-          brand: "FABRICA",
-          industry: "面料及纺织品",
-          headline: "Textile templates for material-rich catalogs.",
-          lead: "适合面料、纺织品和柔性材料供应商，用质感图片、参数和应用场景组织产品。",
-          hero: "../../assets/blog-quality.png",
-          solutionImage: "../../assets/blog-europe.png",
-          productsTitle: "Fabric Collections",
-          productsIntro: "把材质、工艺、颜色和应用场景变成可浏览的目录。",
-          solutionTitle: "Help buyers feel material quality online.",
-          solutionText: "纺织模板重点解决线上质感表达，用图文和规格同时服务品牌买手和采购团队。",
-          ctaTitle: "Make fabric sourcing more visual and precise.",
-          ctaText: "适合面料、家纺、服装材料和功能性纺织品。",
-          metrics: ["Texture", "Color", "Sample"],
-          features: ["材质和纹理展示", "颜色、克重和规格", "样品申请和批量报价"],
-          products: [
-            ["Functional Fabric", "功能面料和性能说明。", "../../assets/blog-quality.png"],
-            ["Color Range", "颜色和系列化展示。", "../../assets/blog-europe.png"],
-            ["Sample Packs", "样品册和采购支持。", "../../assets/blog-guide.png"]
-          ]
-        },
-        "electronics-components": {
-          mark: "EC",
-          brand: "CIRCUITX",
-          industry: "电子元器件",
-          headline: "Electronics component pages for spec-driven buyers.",
-          lead: "适合电子元器件、模块和研发供应链，强调规格、库存、兼容性和快速询价。",
-          hero: "../../assets/maxmov/factory-rd.png",
-          solutionImage: "../../assets/maxmov/factory-qc.png",
-          productsTitle: "Component Catalog",
-          productsIntro: "让型号、参数、兼容性和采购信息清楚可查。",
-          solutionTitle: "A technical catalog that still converts.",
-          solutionText: "电子元器件模板要兼顾工程师查参数和采购询价两种路径，降低沟通成本。",
-          ctaTitle: "Make component sourcing faster.",
-          ctaText: "适合模块、控制器、电子配件和研发供应商。",
-          metrics: ["Specs", "Stock", "Sample"],
-          features: ["型号参数和资料", "库存与样品申请", "应用和兼容性说明"],
-          products: [
-            ["Control Modules", "模块化元器件展示。", "../../assets/maxmov/factory-rd.png"],
-            ["Testing Support", "测试和验证能力。", "../../assets/maxmov/factory-qc.png"],
-            ["Accessory Parts", "配件和替换件目录。", "../../assets/maxmov/accessory-light.png"]
-          ]
-        },
-        "home-appliances": {
-          mark: "HA",
-          brand: "HOMIA",
-          industry: "家用电器",
-          headline: "Home appliance pages with showroom confidence.",
-          lead: "适合家电、智能设备和生活电器品牌，突出产品体验、系列化和渠道合作。",
-          hero: "../../assets/maxmov/about-showroom.png",
-          solutionImage: "../../assets/maxmov/about-office.png",
-          productsTitle: "Smart Home Lines",
-          productsIntro: "用展示空间、功能亮点和产品系列支撑渠道买家判断。",
-          solutionTitle: "Bring showroom clarity into a B2B page.",
-          solutionText: "家电模板需要把品牌感、产品体验和批发合作信息平衡到一个页面里。",
-          ctaTitle: "Show the product experience before the inquiry.",
-          ctaText: "适合智能家电、小家电、生活电器和渠道型品牌。",
-          metrics: ["Smart", "Retail", "ODM"],
-          features: ["产品场景和功能亮点", "系列化和渠道素材", "OEM/ODM 合作支持"],
-          products: [
-            ["Showroom Series", "展示空间和产品系列。", "../../assets/maxmov/about-showroom.png"],
-            ["Smart Device", "智能设备功能模块。", "../../assets/maxmov/about-office.png"],
-            ["Retail Pack", "渠道包装和销售资料。", "../../assets/cert-clean.png"]
-          ]
-        },
-        "b2b-news": {
-          mark: "BN",
-          brand: "B2B INSIGHT",
-          industry: "其他",
-          headline: "Content-driven B2B sites for authority building.",
-          lead: "适合行业资讯、采购指南和知识型内容站，用文章、指南和案例沉淀长尾搜索流量。",
-          hero: "../../assets/maxmov/blog-eec.png",
-          solutionImage: "../../assets/blog-guide.png",
-          productsTitle: "Content Modules",
-          productsIntro: "将新闻、指南、白皮书和案例以模板化方式组织。",
-          solutionTitle: "Use content to support product inquiries.",
-          solutionText: "内容型模板帮助 B2B 企业解释认证、选型、维护和行业趋势，提升搜索与信任。",
-          ctaTitle: "Turn knowledge into buyer confidence.",
-          ctaText: "适合行业博客、采购指南、认证说明和内容营销页面。",
-          metrics: ["SEO", "Guide", "Trust"],
-          features: ["行业文章和采购指南", "认证解读和维护说明", "案例内容和下载资源"],
-          products: [
-            ["Certification Guide", "认证和法规内容模块。", "../../assets/maxmov/blog-eec.png"],
-            ["Buying Guide", "选型和采购指南。", "../../assets/blog-guide.png"],
-            ["Quality Story", "质量与服务内容。", "../../assets/blog-quality.png"]
-          ]
-        },
-        "mobility-product": {
-          mark: "MS",
-          brand: "MOBILITY+",
-          industry: "汽车零配件",
-          headline: "Mobility product pages focused on comfort and trust.",
-          lead: "适合移动代步车、配件和康养出行产品，用安全、舒适和售后支持打动渠道买家。",
-          hero: "../../assets/maxmov/category-mobility.png",
-          solutionImage: "../../assets/maxmov/about-showroom.png",
-          productsTitle: "Mobility Series",
-          productsIntro: "按使用人群、功能配置和配件组合展示移动代步产品。",
-          solutionTitle: "Make comfort products feel reliable online.",
-          solutionText: "移动代步类模板重点展示稳定性、舒适性、配件和服务支持，适合经销商快速评估。",
-          ctaTitle: "Build confidence for mobility distributors.",
-          ctaText: "适合移动代步车、康养设备和出行配件供应商。",
-          metrics: ["Comfort", "Safety", "Service"],
-          features: ["舒适和安全卖点", "配件和配置组合", "售后资料和渠道支持"],
-          products: [
-            ["Mobility Scooter", "舒适型代步产品。", "../../assets/maxmov/category-mobility.png"],
-            ["Accessory Kit", "篮筐、灯具和座椅配件。", "../../assets/maxmov/accessory-light.png"],
-            ["Showroom Support", "展示和销售素材支持。", "../../assets/maxmov/about-showroom.png"]
-          ]
-        }
-      };
+      function renderMeta(item) {
+        const parts = [
+          ...(item.primaryTags || []),
+          ...(item.features || []).slice(0, 3)
+        ];
 
-      function currentCase() {
-        const params = new URLSearchParams(window.location.search);
-        return cases[params.get("case")] || cases["industrial-machinery"];
-      }
-
-      function setText(id, text) {
-        document.getElementById(id).textContent = text;
-      }
-
-      function cardMarkup(items) {
-        return items
-          .map(
-            ([title, text, image]) => `
-              <article class="card">
-                <img src="${image}" alt="${title}" />
-                <div class="card-body">
-                  <h3>${title}</h3>
-                  <p>${text}</p>
-                </div>
-              </article>
-            `
-          )
+        document.getElementById("templateMeta").innerHTML = parts
+          .map((part, index) => `${index ? '<span class="dot"></span>' : ""}<span>${part}</span>`)
           .join("");
       }
 
-      function render() {
-        const data = currentCase();
-        document.title = `${data.brand} | Template Case`;
-        setText("brandMark", data.mark);
-        setText("brandName", data.brand);
-        setText("industry", data.industry);
-        setText("headline", data.headline);
-        setText("lead", data.lead);
-        setText("productsTitle", data.productsTitle);
-        setText("productsIntro", data.productsIntro);
-        setText("solutionKicker", `${data.industry} Solution`);
-        setText("solutionTitle", data.solutionTitle);
-        setText("solutionText", data.solutionText);
-        setText("ctaTitle", data.ctaTitle);
-        setText("ctaText", data.ctaText);
-        setText("footerText", `${data.brand} template case inside Themes V3 replica.`);
-
-        document.getElementById("heroImage").src = data.hero;
-        document.getElementById("heroImage").alt = data.headline;
-        document.getElementById("solutionImage").src = data.solutionImage;
-        document.getElementById("solutionImage").alt = data.solutionTitle;
-
-        document.getElementById("metrics").innerHTML = data.metrics
-          .map((metric) => `<div class="proof"><strong>${metric}</strong><span>${data.industry}</span></div>`)
-          .join("");
-        document.getElementById("productCards").innerHTML = cardMarkup(data.products);
-        document.getElementById("proofCards").innerHTML = sharedProof
-          .map((item) => [item.title, item.text, item.image])
-          .map(([title, text, image]) => `
-              <article class="card">
-                <img src="${image}" alt="${title}" />
-                <div class="card-body">
-                  <h3>${title}</h3>
-                  <p>${text}</p>
-                </div>
-              </article>
-            `)
-          .join("");
-        document.getElementById("featureList").innerHTML = data.features
-          .map((feature) => `<span>${feature}</span>`)
-          .join("");
+      if (!template) {
+        emptyState.classList.add("active");
+        frame.remove();
+      } else {
+        document.title = `${template.name} | 模板预览`;
+        document.getElementById("templateName").textContent = template.name;
+        renderMeta(template);
+        frame.src = template.previewUrl;
+        openOriginal.href = template.previewUrl;
       }
-
-      render();
     </script>
   </body>
 </html>

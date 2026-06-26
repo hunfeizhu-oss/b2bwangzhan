@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Xiaoman Themes V3 复刻页面，展示 B2B 跨境独立站模板图库、行业筛选、搜索与预览交互。"
+      content="个人网站模板案例库，展示 B2B 跨境独立站模板图库、行业筛选、搜索与预览交互。"
     />
     <link
       rel="icon"
       href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="%230a6aff"/><text x="32" y="43" text-anchor="middle" font-size="38" font-family="Arial" font-weight="700" fill="white">T</text></svg>'
     />
-    <title>Themes V3 Replica</title>
+    <title>模板案例库</title>
     <style>
       :root {
         --blue: #0a6aff;
@@ -129,10 +129,10 @@
       .search-trigger,
       .icon-button {
         display: inline-grid;
-        width: 42px;
-        height: 42px;
+        width: 32px;
+        height: 32px;
         place-items: center;
-        border-radius: 50%;
+        border-radius: 8px;
         color: var(--ink);
         transition:
           color 180ms ease,
@@ -148,6 +148,7 @@
       }
 
       .search-trigger svg,
+      .search-trigger img,
       .icon-button svg {
         width: 24px;
         height: 24px;
@@ -163,21 +164,12 @@
         justify-content: center;
         padding: 58px 24px;
         text-align: center;
-        background:
-          linear-gradient(135deg, rgba(214, 236, 255, 0.78), rgba(244, 250, 255, 0.92)),
-          radial-gradient(circle at 14% 20%, rgba(10, 106, 255, 0.13), transparent 26%),
-          radial-gradient(circle at 84% 16%, rgba(54, 162, 255, 0.16), transparent 28%),
-          #eef7ff;
+        background: #eef7ff url("assets/template-bg.png") center / cover no-repeat;
       }
 
       .head-bg::before,
       .head-bg::after {
-        position: absolute;
-        width: 420px;
-        height: 180px;
-        border: 1px solid rgba(10, 106, 255, 0.09);
-        border-radius: 999px;
-        content: "";
+        display: none;
       }
 
       .head-bg::before {
@@ -312,14 +304,11 @@
         background: var(--white);
         box-shadow: var(--shadow);
         cursor: pointer;
-        transition:
-          box-shadow 220ms ease,
-          transform 220ms ease;
+        transition: box-shadow 220ms ease;
       }
 
       .template-card:hover {
         box-shadow: var(--shadow-strong);
-        transform: translateY(-3px);
       }
 
       .template-cover {
@@ -331,14 +320,10 @@
 
       .template-cover img {
         width: 100%;
-        height: 100%;
+        height: auto;
+        min-height: 320px;
         object-fit: cover;
-        object-position: center;
-        transition: transform 500ms ease;
-      }
-
-      .template-card:hover .template-cover img {
-        transform: scale(1.035);
+        object-position: top center;
       }
 
       .feature-ribbon {
@@ -346,17 +331,8 @@
         left: 18px;
         top: 0;
         z-index: 2;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 48px;
-        min-height: 28px;
-        padding: 0 10px;
-        border-radius: 0 0 8px 8px;
-        color: var(--white);
-        background: var(--blue);
-        font-size: 12px;
-        font-weight: 700;
+        width: 28px;
+        height: auto;
       }
 
       .template-title {
@@ -418,28 +394,15 @@
         width: 68px;
         height: 56px;
         margin-bottom: 16px;
+        background: url("assets/template-empty.png") center / contain no-repeat;
       }
 
       .empty-icon::before {
-        position: absolute;
-        inset: 10px 4px 0;
-        border: 2px solid #d9dfeb;
-        border-radius: 12px;
-        content: "";
+        display: none;
       }
 
       .empty-icon::after {
-        position: absolute;
-        left: 20px;
-        top: 0;
-        width: 28px;
-        height: 26px;
-        border-radius: 10px 10px 4px 4px;
-        background: #eef2fa;
-        box-shadow:
-          -13px 19px 0 -8px #d9dfeb,
-          13px 19px 0 -8px #d9dfeb;
-        content: "";
+        display: none;
       }
 
       .empty-state strong {
@@ -467,8 +430,8 @@
         margin-bottom: 18px;
         color: var(--white);
         font-size: 22px;
-        font-weight: 800;
-        letter-spacing: 0.04em;
+        font-weight: 700;
+        letter-spacing: 0;
       }
 
       .copyright {
@@ -612,6 +575,11 @@
         height: 28px;
       }
 
+      .to-top img {
+        width: 28px;
+        height: 28px;
+      }
+
       @media (max-width: 1199px) {
         .templates-grid {
           grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -735,7 +703,8 @@
           height: 36px;
         }
 
-        .to-top svg {
+        .to-top svg,
+        .to-top img {
           width: 20px;
           height: 20px;
         }
@@ -745,16 +714,13 @@
   <body>
     <main class="page" id="top">
       <header class="topbar">
-        <a class="brand" href="#top" aria-label="Themes 首页">
+        <a class="brand" href="#top" aria-label="模板案例库首页">
           <span class="brand-mark">T</span>
-          <span>Themes</span>
+          <span>模板案例库</span>
         </a>
         <div class="top-actions">
           <button class="search-trigger" type="button" aria-label="打开搜索" id="openSearch">
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="7"></circle>
-              <path d="m20 20-3.2-3.2"></path>
-            </svg>
+            <img src="assets/template-search.png" alt="search" width="24" />
           </button>
         </div>
       </header>
@@ -785,18 +751,15 @@
       </section>
 
       <footer class="site-footer">
-        <div class="footer-logo">OKKI THEMES</div>
+        <div class="footer-logo">模板案例库</div>
         <div class="copyright">
-          <span>Copyright © 2013-2020 OKKI Inc. All rights reserved.</span>
-          <span>深圳市小满科技有限公司 版权所有</span>
-          <span>粤ICP备12085749号-5</span>
+          <span>© 2026 Personal Website. All rights reserved.</span>
+          <span>Template inspiration gallery.</span>
         </div>
       </footer>
 
       <button class="to-top" type="button" aria-label="回到顶部" id="toTop">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="m6 15 6-6 6 6"></path>
-        </svg>
+        <img src="assets/template-top.png" alt="top" />
       </button>
     </main>
 
@@ -823,8 +786,9 @@
       </div>
     </div>
 
+    <script src="assets/templates-v3-data.js"></script>
     <script>
-      const industries = [
+      const industries = window.TEMPLATE_LIBRARY_INDUSTRIES || [
         "全部",
         "工业机械",
         "家居园艺",
@@ -843,153 +807,7 @@
       ];
 
       const quickLinks = ["工业机械", "家居园艺", "五金工具", "汽车零配件"];
-
-      const templates = [
-        {
-          id: 1,
-          name: "MAXMOV 电动出行落地页",
-          industry: "汽车零配件",
-          cover: "assets/maxmov/hero-scooter-factory.png",
-          featured: true,
-          tags: "电动车 scooter mobility maxmov factory landing page",
-          url: "cases/maxmov/"
-        },
-        {
-          id: 2,
-          name: "工业装备制造企业站",
-          industry: "工业机械",
-          cover: "assets/maxmov/factory-assembly.png",
-          featured: true,
-          tags: "工厂 装备 生产线 manufacturing machinery",
-          url: "cases/templates/?case=industrial-machinery"
-        },
-        {
-          id: 3,
-          name: "OEM 方案展示模板",
-          industry: "工业机械",
-          cover: "assets/maxmov/oem-scooter.png",
-          featured: false,
-          tags: "oem odm solution engineering",
-          url: "cases/templates/?case=oem-solution"
-        },
-        {
-          id: 4,
-          name: "园艺户外用品模板",
-          industry: "家居园艺",
-          cover: "assets/category-golf.png",
-          featured: false,
-          tags: "garden outdoor home lifestyle",
-          url: "cases/templates/?case=garden-outdoor"
-        },
-        {
-          id: 5,
-          name: "五金配件产品目录",
-          industry: "五金工具",
-          cover: "assets/maxmov/accessory-light.png",
-          featured: true,
-          tags: "hardware tools accessory light parts",
-          url: "cases/templates/?case=hardware-tools"
-        },
-        {
-          id: 6,
-          name: "包装印刷企业官网",
-          industry: "包装印刷",
-          cover: "assets/cert-clean.png",
-          featured: false,
-          tags: "package print certification b2b",
-          url: "cases/templates/?case=packaging-print"
-        },
-        {
-          id: 7,
-          name: "建材工程解决方案",
-          industry: "建材与房地产",
-          cover: "assets/maxmov/about-factory-exterior.png",
-          featured: false,
-          tags: "building real estate project materials",
-          url: "cases/templates/?case=construction-materials"
-        },
-        {
-          id: 8,
-          name: "金属加工企业模板",
-          industry: "金属与合金",
-          cover: "assets/factory-lines.png",
-          featured: false,
-          tags: "metal alloy factory process",
-          url: "cases/templates/?case=metal-processing"
-        },
-        {
-          id: 9,
-          name: "运动娱乐产品站",
-          industry: "运动及娱乐",
-          cover: "assets/category-ebike.png",
-          featured: false,
-          tags: "sports entertainment bike product",
-          url: "cases/templates/?case=sports-entertainment"
-        },
-        {
-          id: 10,
-          name: "电器设备采购站",
-          industry: "电器设备及用品",
-          cover: "assets/maxmov/factory-qc.png",
-          featured: false,
-          tags: "electrical equipment qc supply",
-          url: "cases/templates/?case=electrical-equipment"
-        },
-        {
-          id: 11,
-          name: "新能源产品展示站",
-          industry: "可再生能源",
-          cover: "assets/factory-aerial.png",
-          featured: true,
-          tags: "renewable energy clean factory",
-          url: "cases/templates/?case=renewable-energy"
-        },
-        {
-          id: 12,
-          name: "纺织面料品牌站",
-          industry: "面料及纺织品",
-          cover: "assets/blog-quality.png",
-          featured: false,
-          tags: "textile fabric quality material",
-          url: "cases/templates/?case=textile-fabric"
-        },
-        {
-          id: 13,
-          name: "电子元器件目录站",
-          industry: "电子元器件",
-          cover: "assets/maxmov/factory-rd.png",
-          featured: false,
-          tags: "electronics components rd engineering",
-          url: "cases/templates/?case=electronics-components"
-        },
-        {
-          id: 14,
-          name: "智能家用电器官网",
-          industry: "家用电器",
-          cover: "assets/maxmov/about-showroom.png",
-          featured: false,
-          tags: "appliance smart home showroom",
-          url: "cases/templates/?case=home-appliances"
-        },
-        {
-          id: 15,
-          name: "跨境 B2B 新闻内容站",
-          industry: "其他",
-          cover: "assets/maxmov/blog-eec.png",
-          featured: false,
-          tags: "blog news b2b europe guide",
-          url: "cases/templates/?case=b2b-news"
-        },
-        {
-          id: 16,
-          name: "移动代步车产品站",
-          industry: "汽车零配件",
-          cover: "assets/maxmov/category-mobility.png",
-          featured: false,
-          tags: "mobility scooter vehicle parts",
-          url: "cases/templates/?case=mobility-product"
-        }
-      ];
+      const templates = window.TEMPLATE_LIBRARY_ITEMS || [];
 
       const state = {
         industry: "全部",
@@ -1016,7 +834,9 @@
       function getVisibleTemplates() {
         const keyword = normalize(state.search);
         return templates.filter((item) => {
-          const inIndustry = state.industry === "全部" || item.industry === state.industry;
+          const inIndustry =
+            state.industry === "全部" ||
+            (Array.isArray(item.industries) && item.industries.includes(state.industry));
           if (!inIndustry) return false;
           if (!keyword) return true;
           return normalize(`${item.name} ${item.industry} ${item.tags}`).includes(keyword);
@@ -1063,9 +883,9 @@
           const card = document.createElement("article");
           card.className = "template-card";
           card.setAttribute("tabindex", "0");
-          card.setAttribute("aria-label", `${item.name}，${item.industry}`);
+          card.setAttribute("aria-label", `${item.name}，${(item.primaryTags || [item.industry]).join("，")}`);
           card.innerHTML = `
-            ${item.featured ? '<span class="feature-ribbon">精选</span>' : ""}
+            ${item.featured ? '<img class="feature-ribbon" src="assets/template-feature.png" alt="feature" width="28" />' : ""}
             <div class="template-cover">
               <img src="${item.cover}" alt="${item.name}" />
             </div>
@@ -1104,7 +924,9 @@
 
         const source = keyword
           ? templates
-              .filter((item) => normalize(`${item.name} ${item.industry} ${item.tags}`).includes(normalize(keyword)))
+              .filter((item) =>
+                normalize(`${item.name} ${item.industry} ${item.tags}`).includes(normalize(keyword))
+              )
               .slice(0, 8)
               .map((item) => item.name)
           : quickLinks;
@@ -1183,8 +1005,7 @@
           window.open(item.url, "_blank", "noopener,noreferrer");
           return;
         }
-        const query = encodeURIComponent(item.name);
-        window.open(`https://themes.xiaoman.cn/v3/?preview=${query}`, "_blank", "noopener,noreferrer");
+        window.open(item.previewUrl, "_blank", "noopener,noreferrer");
       }
 
       document.getElementById("openSearch").addEventListener("click", openSearch);
