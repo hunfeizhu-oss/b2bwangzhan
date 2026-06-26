@@ -60,7 +60,7 @@
       industries,
       featured: Boolean(item.isFeature),
       previewUrl,
-      url: `cases/templates/?case=${encodeURIComponent(item.name)}`,
+      url: `cases/templates/index.html?case=${encodeURIComponent(item.name)}`,
       tags: [...(item.primaryTags || []), ...(item.features || []), item.name].join(" " )
     };
   });

@@ -1522,10 +1522,10 @@
 
       function previewTemplate(item) {
         if (item.url) {
-          window.open(item.url, "_blank", "noopener,noreferrer");
+          window.location.href = item.url;
           return;
         }
-        window.open(item.previewUrl, "_blank", "noopener,noreferrer");
+        window.location.href = item.previewUrl;
       }
 
       document.getElementById("openSearch").addEventListener("click", openSearch);
