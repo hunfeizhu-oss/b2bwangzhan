@@ -203,6 +203,153 @@
         font-size: 18px;
       }
 
+      .prep-section {
+        width: 100%;
+        padding: 44px 72px 18px;
+        background: var(--white);
+      }
+
+      .prep-inner {
+        width: min(1320px, 100%);
+        margin: 0 auto;
+      }
+
+      .prep-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 32px;
+        margin-bottom: 22px;
+      }
+
+      .prep-head h2 {
+        margin: 0;
+        color: var(--ink);
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.25;
+      }
+
+      .prep-head p {
+        max-width: 620px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .prep-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .prep-card {
+        min-height: 238px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 6px 18px rgba(18, 28, 45, 0.04);
+      }
+
+      .prep-index {
+        display: inline-grid;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 14px;
+        place-items: center;
+        border-radius: 8px;
+        color: var(--white);
+        background: var(--blue);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .prep-card:nth-child(2) .prep-index {
+        background: #15947d;
+      }
+
+      .prep-card:nth-child(3) .prep-index {
+        background: #c78418;
+      }
+
+      .prep-card:nth-child(4) .prep-index {
+        background: #c84c6b;
+      }
+
+      .prep-card h3 {
+        margin: 0 0 12px;
+        color: var(--ink);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      .prep-list {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .prep-list li {
+        position: relative;
+        padding-left: 16px;
+        color: #4c5563;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .prep-list li::before {
+        position: absolute;
+        top: 0.72em;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #b8c2d2;
+        content: "";
+      }
+
+      .prep-detail {
+        display: grid;
+        margin-top: 26px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .prep-detail h3 {
+        margin: 0 0 12px;
+        color: var(--ink);
+        font-size: 19px;
+        font-weight: 700;
+      }
+
+      .prep-detail dl {
+        display: grid;
+        gap: 10px 16px;
+        margin: 0;
+        grid-template-columns: 118px minmax(0, 1fr);
+      }
+
+      .prep-detail dt {
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .prep-detail dd {
+        margin: 0;
+        color: #4c5563;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
       .search-result-bar {
         display: none;
         align-items: center;
@@ -590,9 +737,14 @@
         .topbar,
         .search-result-bar,
         .industry,
+        .prep-section,
         .templates-wrap {
           padding-right: 32px;
           padding-left: 32px;
+        }
+
+        .prep-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .templates-grid {
@@ -634,6 +786,34 @@
 
         .head-bg p {
           font-size: 14px;
+        }
+
+        .prep-section {
+          padding: 34px 20px 14px;
+        }
+
+        .prep-head {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .prep-head h2 {
+          font-size: 23px;
+        }
+
+        .prep-grid,
+        .prep-detail {
+          grid-template-columns: 1fr;
+        }
+
+        .prep-card {
+          min-height: auto;
+        }
+
+        .prep-detail dl {
+          grid-template-columns: 1fr;
+          gap: 4px;
         }
 
         .search-result-bar {
@@ -728,6 +908,89 @@
       <section class="head-bg" id="hero">
         <h1>B2B跨境独立站模版</h1>
         <p>面向高质量转化打造、每个模板均满足高标准、能够快速加载、适应移动端</p>
+      </section>
+
+      <section class="prep-section" aria-label="独立站资料准备清单">
+        <div class="prep-inner">
+          <div class="prep-head">
+            <h2>独立站资料准备清单</h2>
+            <p>选模板前先整理公司文案、优势表达、图片素材和产品资料，后续搭建、上线和询盘转化都会更顺。</p>
+          </div>
+
+          <div class="prep-grid">
+            <article class="prep-card">
+              <span class="prep-index">01</span>
+              <h3>公司介绍文案</h3>
+              <ul class="prep-list">
+                <li>建议300-500字，优先讲清公司名称和核心定位。</li>
+                <li>说明地理位置、行业细分领域和产品经营范围。</li>
+                <li>补充OEM/ODM能力、产能、品控和近期成就。</li>
+              </ul>
+            </article>
+
+            <article class="prep-card">
+              <span class="prep-index">02</span>
+              <h3>公司优势文案</h3>
+              <ul class="prep-list">
+                <li>先准备3个优势，按标题加描述的形式整理。</li>
+                <li>标题建议2-5个英文词，描述约30词并保持长度统一。</li>
+                <li>可写工厂面积、员工人数、专利数量、出口国家、证书和价值观。</li>
+              </ul>
+            </article>
+
+            <article class="prep-card">
+              <span class="prep-index">03</span>
+              <h3>公司与工厂图片</h3>
+              <ul class="prep-list">
+                <li>至少准备工厂图3张、公司外观图2张。</li>
+                <li>覆盖办公楼或门面、工厂全景、生产设备和流水线。</li>
+                <li>保持环境整洁、白天拍摄，不出现其他品牌水印或logo。</li>
+              </ul>
+            </article>
+
+            <article class="prep-card">
+              <span class="prep-index">04</span>
+              <h3>产品资料</h3>
+              <ul class="prep-list">
+                <li>明确一级和二级分类，整体分类最好不超过三级。</li>
+                <li>至少50%产品具备主图、3-5张副图、详情描述和产品优势。</li>
+                <li>主图和副图建议800x800或600x600，并按产品文件夹标注清楚。</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="prep-detail">
+            <div>
+              <h3>产品资料字段</h3>
+              <dl>
+                <dt>产品标题</dt>
+                <dd>控制在80个字符以内，并包含主关键词，方便访客搜索到对应产品。</dd>
+                <dt>视频素材</dt>
+                <dd>可提供YouTube链接，或约20MB的MP4文件；暂时没有视频可以先不放。</dd>
+                <dt>详情描述</dt>
+                <dd>建议500字符以上，可加入起订量、应用场景和核心卖点。</dd>
+                <dt>规格参数</dt>
+                <dd>尽量用表格展示，包含产地、品牌名、型号、认证等信息。</dd>
+                <dt>应用与FAQ</dt>
+                <dd>补充客户使用场景、案例图片、产品优势，以及访客常问问题和答复。</dd>
+              </dl>
+            </div>
+
+            <div>
+              <h3>图片拍摄重点</h3>
+              <dl>
+                <dt>公司形象</dt>
+                <dd>拍摄总部、办公楼或公司门面全景，可搭配统一着装的团队合影。</dd>
+                <dt>工厂能力</dt>
+                <dd>展示厂房外观、生产线布局、先进设备和自动化流水线。</dd>
+                <dt>产品呈现</dt>
+                <dd>准备纯色背景主图、使用场景图、细节图、正侧背俯视图和功能演示图。</dd>
+                <dt>文件规范</dt>
+                <dd>主图优先JPG，透明背景用PNG；所有素材避免平台水印和其他品牌标识。</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div class="search-result-bar" id="searchResultBar">
