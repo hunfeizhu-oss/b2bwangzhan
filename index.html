@@ -205,8 +205,8 @@
 
       .prep-section {
         width: 100%;
-        padding: 44px 72px 18px;
-        background: var(--white);
+        padding: 58px 72px 64px;
+        background: #f5f7fb;
       }
 
       .prep-inner {
@@ -219,7 +219,7 @@
         align-items: flex-end;
         justify-content: space-between;
         gap: 32px;
-        margin-bottom: 22px;
+        margin-bottom: 24px;
       }
 
       .prep-head h2 {
@@ -232,33 +232,54 @@
       }
 
       .prep-head p {
-        max-width: 620px;
+        max-width: 600px;
         margin: 0;
-        color: var(--muted);
-        font-size: 15px;
+        color: #657083;
+        font-size: 14px;
         line-height: 1.75;
       }
 
-      .prep-grid {
+      .prep-layout {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 16px;
+        grid-template-columns: 312px minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
       }
 
-      .prep-card {
-        min-height: 238px;
-        padding: 18px;
+      .prep-checklist {
+        padding: 22px;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: var(--white);
-        box-shadow: 0 6px 18px rgba(18, 28, 45, 0.04);
       }
 
-      .prep-index {
-        display: inline-grid;
-        width: 30px;
-        height: 30px;
-        margin-bottom: 14px;
+      .prep-checklist h3,
+      .prep-panel h3 {
+        margin: 0 0 16px;
+        color: var(--ink);
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .prep-steps {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .prep-steps li {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 12px;
+        align-items: start;
+      }
+
+      .prep-steps span {
+        display: grid;
+        width: 34px;
+        height: 34px;
         place-items: center;
         border-radius: 8px;
         color: var(--white);
@@ -267,40 +288,106 @@
         font-weight: 800;
       }
 
-      .prep-card:nth-child(2) .prep-index {
-        background: #15947d;
+      .prep-steps strong {
+        display: block;
+        margin-bottom: 2px;
+        color: var(--ink);
+        font-size: 14px;
       }
 
-      .prep-card:nth-child(3) .prep-index {
-        background: #c78418;
+      .prep-steps p {
+        margin: 0;
+        color: #657083;
+        font-size: 13px;
+        line-height: 1.65;
       }
 
-      .prep-card:nth-child(4) .prep-index {
-        background: #c84c6b;
+      .prep-workspace {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
       }
 
-      .prep-card h3 {
+      .prep-tabs {
+        display: flex;
+        gap: 6px;
+        padding: 12px;
+        overflow-x: auto;
+        border-bottom: 1px solid var(--line);
+        background: #fbfcfe;
+      }
+
+      .prep-tab {
+        min-height: 36px;
+        padding: 0 14px;
+        flex: 0 0 auto;
+        border-radius: 8px;
+        color: #596477;
+        background: transparent;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .prep-tab.active {
+        color: var(--white);
+        background: var(--blue);
+      }
+
+      .prep-panel {
+        display: none;
+        min-height: 420px;
+        padding: 24px;
+      }
+
+      .prep-panel.active {
+        display: block;
+      }
+
+      .prep-columns {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .prep-columns + .prep-columns {
+        margin-top: 24px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .prep-block {
+        min-width: 0;
+      }
+
+      .prep-block h4 {
         margin: 0 0 12px;
         color: var(--ink);
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
-        line-height: 1.35;
       }
 
-      .prep-list {
+      .prep-list,
+      .reference-steps {
         display: grid;
-        gap: 8px;
+        gap: 9px;
         margin: 0;
         padding: 0;
         list-style: none;
       }
 
+      .prep-list li,
+      .reference-steps li,
+      .reference-copy,
+      .reference-note {
+        color: #4c5563;
+        font-size: 14px;
+        line-height: 1.72;
+      }
+
       .prep-list li {
         position: relative;
         padding-left: 16px;
-        color: #4c5563;
-        font-size: 14px;
-        line-height: 1.65;
       }
 
       .prep-list li::before {
@@ -314,40 +401,79 @@
         content: "";
       }
 
-      .prep-detail {
-        display: grid;
-        margin-top: 26px;
-        padding-top: 24px;
-        border-top: 1px solid var(--line);
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 28px;
-      }
-
-      .prep-detail h3 {
-        margin: 0 0 12px;
-        color: var(--ink);
-        font-size: 19px;
-        font-weight: 700;
-      }
-
-      .prep-detail dl {
+      .prep-fields {
         display: grid;
         gap: 10px 16px;
         margin: 0;
-        grid-template-columns: 118px minmax(0, 1fr);
+        grid-template-columns: 112px minmax(0, 1fr);
       }
 
-      .prep-detail dt {
+      .prep-fields dt {
         color: var(--ink);
         font-size: 14px;
         font-weight: 700;
       }
 
-      .prep-detail dd {
+      .prep-fields dd {
         margin: 0;
         color: #4c5563;
         font-size: 14px;
         line-height: 1.65;
+      }
+
+      .reference-copy,
+      .reference-note {
+        margin: 0;
+      }
+
+      .reference-copy + .reference-copy,
+      .reference-copy + .reference-note,
+      .reference-note + .reference-copy {
+        margin-top: 12px;
+      }
+
+      .reference-copy strong,
+      .reference-note strong,
+      .reference-steps strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .reference-steps li {
+        padding: 12px;
+        border-radius: 8px;
+        background: #f6f8fb;
+      }
+
+      .reference-steps strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .reference-structure {
+        margin: 0;
+        padding: 14px;
+        overflow-x: auto;
+        border-radius: 8px;
+        background: #f6f8fb;
+        color: #3f4a5a;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 13px;
+        line-height: 1.65;
+        white-space: pre;
+      }
+
+      .reference-image-frame {
+        max-height: 560px;
+        overflow: auto;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .reference-image-frame img {
+        width: 100%;
+        height: auto;
       }
 
       .search-result-bar {
@@ -743,8 +869,8 @@
           padding-left: 32px;
         }
 
-        .prep-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        .prep-layout {
+          grid-template-columns: 1fr;
         }
 
         .templates-grid {
@@ -789,7 +915,7 @@
         }
 
         .prep-section {
-          padding: 34px 20px 14px;
+          padding: 42px 20px 48px;
         }
 
         .prep-head {
@@ -802,16 +928,21 @@
           font-size: 23px;
         }
 
-        .prep-grid,
-        .prep-detail {
+        .prep-layout,
+        .prep-columns {
           grid-template-columns: 1fr;
         }
 
-        .prep-card {
-          min-height: auto;
+        .prep-checklist,
+        .prep-panel {
+          padding: 18px;
         }
 
-        .prep-detail dl {
+        .prep-tabs {
+          padding: 10px;
+        }
+
+        .prep-fields {
           grid-template-columns: 1fr;
           gap: 4px;
         }
@@ -910,89 +1041,6 @@
         <p>面向高质量转化打造、每个模板均满足高标准、能够快速加载、适应移动端</p>
       </section>
 
-      <section class="prep-section" aria-label="独立站资料准备清单">
-        <div class="prep-inner">
-          <div class="prep-head">
-            <h2>独立站资料准备清单</h2>
-            <p>选模板前先整理公司文案、优势表达、图片素材和产品资料，后续搭建、上线和询盘转化都会更顺。</p>
-          </div>
-
-          <div class="prep-grid">
-            <article class="prep-card">
-              <span class="prep-index">01</span>
-              <h3>公司介绍文案</h3>
-              <ul class="prep-list">
-                <li>建议300-500字，优先讲清公司名称和核心定位。</li>
-                <li>说明地理位置、行业细分领域和产品经营范围。</li>
-                <li>补充OEM/ODM能力、产能、品控和近期成就。</li>
-              </ul>
-            </article>
-
-            <article class="prep-card">
-              <span class="prep-index">02</span>
-              <h3>公司优势文案</h3>
-              <ul class="prep-list">
-                <li>先准备3个优势，按标题加描述的形式整理。</li>
-                <li>标题建议2-5个英文词，描述约30词并保持长度统一。</li>
-                <li>可写工厂面积、员工人数、专利数量、出口国家、证书和价值观。</li>
-              </ul>
-            </article>
-
-            <article class="prep-card">
-              <span class="prep-index">03</span>
-              <h3>公司与工厂图片</h3>
-              <ul class="prep-list">
-                <li>至少准备工厂图3张、公司外观图2张。</li>
-                <li>覆盖办公楼或门面、工厂全景、生产设备和流水线。</li>
-                <li>保持环境整洁、白天拍摄，不出现其他品牌水印或logo。</li>
-              </ul>
-            </article>
-
-            <article class="prep-card">
-              <span class="prep-index">04</span>
-              <h3>产品资料</h3>
-              <ul class="prep-list">
-                <li>明确一级和二级分类，整体分类最好不超过三级。</li>
-                <li>至少50%产品具备主图、3-5张副图、详情描述和产品优势。</li>
-                <li>主图和副图建议800x800或600x600，并按产品文件夹标注清楚。</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="prep-detail">
-            <div>
-              <h3>产品资料字段</h3>
-              <dl>
-                <dt>产品标题</dt>
-                <dd>控制在80个字符以内，并包含主关键词，方便访客搜索到对应产品。</dd>
-                <dt>视频素材</dt>
-                <dd>可提供YouTube链接，或约20MB的MP4文件；暂时没有视频可以先不放。</dd>
-                <dt>详情描述</dt>
-                <dd>建议500字符以上，可加入起订量、应用场景和核心卖点。</dd>
-                <dt>规格参数</dt>
-                <dd>尽量用表格展示，包含产地、品牌名、型号、认证等信息。</dd>
-                <dt>应用与FAQ</dt>
-                <dd>补充客户使用场景、案例图片、产品优势，以及访客常问问题和答复。</dd>
-              </dl>
-            </div>
-
-            <div>
-              <h3>图片拍摄重点</h3>
-              <dl>
-                <dt>公司形象</dt>
-                <dd>拍摄总部、办公楼或公司门面全景，可搭配统一着装的团队合影。</dd>
-                <dt>工厂能力</dt>
-                <dd>展示厂房外观、生产线布局、先进设备和自动化流水线。</dd>
-                <dt>产品呈现</dt>
-                <dd>准备纯色背景主图、使用场景图、细节图、正侧背俯视图和功能演示图。</dd>
-                <dt>文件规范</dt>
-                <dd>主图优先JPG，透明背景用PNG；所有素材避免平台水印和其他品牌标识。</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <div class="search-result-bar" id="searchResultBar">
         <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="7"></circle>
@@ -1010,6 +1058,189 @@
           <div class="empty-icon" aria-hidden="true"></div>
           <strong>暂无数据</strong>
           <span>换个配方试试吧</span>
+        </div>
+      </section>
+
+      <section class="prep-section" aria-label="独立站资料准备清单">
+        <div class="prep-inner">
+          <div class="prep-head">
+            <h2>独立站资料准备清单</h2>
+            <p>模板选定后，按这份清单整理公司文案、优势表达、图片素材和产品资料，后续搭建会更顺。</p>
+          </div>
+
+          <div class="prep-layout">
+            <aside class="prep-checklist">
+              <h3>交付清单</h3>
+              <ol class="prep-steps">
+                <li>
+                  <span>01</span>
+                  <div>
+                    <strong>公司介绍</strong>
+                    <p>300-500字，讲清公司定位、所在地、行业领域、OEM/ODM能力和近期成就。</p>
+                  </div>
+                </li>
+                <li>
+                  <span>02</span>
+                  <div>
+                    <strong>公司优势</strong>
+                    <p>准备3个优势，标题2-5个英文词，描述约30词，突出工厂、证书、出口经验等。</p>
+                  </div>
+                </li>
+                <li>
+                  <span>03</span>
+                  <div>
+                    <strong>图片素材</strong>
+                    <p>至少准备工厂图3张、公司外观图2张，并补充产品主图、细节图和场景图。</p>
+                  </div>
+                </li>
+                <li>
+                  <span>04</span>
+                  <div>
+                    <strong>产品资料</strong>
+                    <p>明确一级和二级分类，至少50%产品具备主图、副图、详情描述和产品优势。</p>
+                  </div>
+                </li>
+              </ol>
+            </aside>
+
+            <div class="prep-workspace">
+              <div class="prep-tabs" role="tablist" aria-label="独立站资料准备内容">
+                <button class="prep-tab active" type="button" data-prep-tab="checklist">清单要求</button>
+                <button class="prep-tab" type="button" data-prep-tab="copy">文案参考</button>
+                <button class="prep-tab" type="button" data-prep-tab="product">产品参考</button>
+                <button class="prep-tab" type="button" data-prep-tab="detail">详情图参考</button>
+              </div>
+
+              <div class="prep-panel active" data-prep-panel="checklist">
+                <h3>资料整理要求</h3>
+                <div class="prep-columns">
+                  <div class="prep-block">
+                    <h4>公司与优势</h4>
+                    <ul class="prep-list">
+                      <li>公司介绍优先写清品牌名称、核心定位、地理位置和供应链优势。</li>
+                      <li>明确所属行业和细分赛道，避免泛泛而谈。</li>
+                      <li>公司优势可围绕工厂面积、员工人数、专利数量、出口国家、证书和价值观来写。</li>
+                    </ul>
+                  </div>
+                  <div class="prep-block">
+                    <h4>图片与产品</h4>
+                    <ul class="prep-list">
+                      <li>公司形象图建议包含办公楼、公司门面或团队合影。</li>
+                      <li>工厂图重点展示厂房全景、生产设备、自动化流水线和整洁环境。</li>
+                      <li>产品资料包含标题、主图、副图、视频、描述、规格、应用、优势和FAQ。</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="prep-columns">
+                  <div class="prep-block">
+                    <h4>产品资料字段</h4>
+                    <dl class="prep-fields">
+                      <dt>产品标题</dt>
+                      <dd>控制在80个字符以内，并包含主关键词。</dd>
+                      <dt>视频素材</dt>
+                      <dd>可提供YouTube链接，或约20MB的MP4文件；暂时没有视频可以先不放。</dd>
+                      <dt>详情描述</dt>
+                      <dd>建议500字符以上，可加入起订量、应用场景和核心卖点。</dd>
+                      <dt>规格参数</dt>
+                      <dd>尽量用表格展示，包含产地、品牌名、型号、认证等信息。</dd>
+                      <dt>应用与FAQ</dt>
+                      <dd>补充客户使用场景、案例图片、产品优势，以及访客常问问题和答复。</dd>
+                    </dl>
+                  </div>
+                  <div class="prep-block">
+                    <h4>图片规范</h4>
+                    <dl class="prep-fields">
+                      <dt>主图</dt>
+                      <dd>建议800x800或600x600，主体清楚，无其他品牌水印。</dd>
+                      <dt>副图</dt>
+                      <dd>每个产品准备3-5张，展示细节、材质、角度和应用场景。</dd>
+                      <dt>产品图</dt>
+                      <dd>可补充正面、侧面、背面、俯视图和功能演示图。</dd>
+                      <dt>文件格式</dt>
+                      <dd>主图优先JPG，透明背景用PNG，素材按文件夹标注清楚。</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prep-panel" data-prep-panel="copy">
+                <h3>文案参考</h3>
+                <div class="prep-columns">
+                  <div class="prep-block">
+                    <h4>公司介绍参考</h4>
+                    <p class="reference-copy">
+                      <strong>English:</strong>
+                      Demark (Wuhan) Technology Co., Ltd, based in Wuhan Optics Valley, is a high-tech enterprise specializing in laser cleaning and welding equipment. With over a decade of experience and collaboration with Huazhong University of Science and Technology, the company has developed several core laser technologies and holds more than 60 patents. DMK Laser is a leading provider of research, development, production, and sales of professional laser equipment.
+                    </p>
+                    <p class="reference-copy">
+                      <strong>中文翻译：</strong>
+                      德马克（武汉）科技有限公司位于武汉光谷，是一家专业从事激光清洗和焊接设备的高新技术企业。公司拥有十多年的研发经验，并与华中科技大学合作，开发了多项激光核心技术，拥有60多项专利。DMK Laser是一家集研发、生产、销售为一体的专业激光设备供应商。
+                    </p>
+                  </div>
+                  <div class="prep-block">
+                    <h4>公司优势参考</h4>
+                    <ul class="reference-steps">
+                      <li>
+                        <strong>Our Factory</strong>
+                        As a global supplier in laser cutting machines, laser welding machines and other laser machines and parts, xxx is to create added value for customers around the world.
+                      </li>
+                      <li>
+                        <strong>Our Product</strong>
+                        We supply laser machines all over the world to a wide range of companies worldwide, ranging from large manufacturing organizations to small fabricators.
+                      </li>
+                      <li>
+                        <strong>Product Application</strong>
+                        Laser cutting machines and laser welding machines are widely used in industries such as sheet metal fabrication, metallic job-shops and elevator manufacturing.
+                      </li>
+                    </ul>
+                    <p class="reference-note">
+                      <strong>中文方向：</strong>
+                      可围绕“我们的工厂、我们的产品、产品应用”三条来写，分别说明供应能力、客户覆盖范围和应用行业。正式使用时请结合公司真实情况改写。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prep-panel" data-prep-panel="product">
+                <h3>产品参考</h3>
+                <div class="prep-columns">
+                  <div class="prep-block">
+                    <h4>产品分类参考</h4>
+                    <pre class="reference-structure">一级分类A
+  - 二级分类1
+    - 三级分类1
+  - 二级分类2
+  - 二级分类3
+
+一级分类B
+  - 二级分类1
+    - 三级分类1
+  - 二级分类2
+  - 二级分类3</pre>
+                  </div>
+                  <div class="prep-block">
+                    <h4>产品标题参考</h4>
+                    <p class="reference-copy">
+                      <strong>示例标题：</strong>
+                      Portable Reusable Waterproof Single-Person Motorcycle Rain Coat
+                    </p>
+                    <p class="reference-note">
+                      <strong>关键词拆解：</strong>
+                      “防水雨衣、摩托车雨衣”是主关键词，“便携式、可重复使用、单人”是修饰词。产品标题建议控制在80个字符以内，并把主关键词放进去。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prep-panel" data-prep-panel="detail">
+                <h3>产品详情示例图</h3>
+                <div class="reference-image-frame">
+                  <img src="assets/prep-product-detail-reference.jpg" alt="产品详情页示例图" width="1200" height="4338" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1089,6 +1320,8 @@
       const resultBar = document.getElementById("searchResultBar");
       const resultText = document.getElementById("searchResultText");
       const hero = document.getElementById("hero");
+      const prepTabs = Array.from(document.querySelectorAll(".prep-tab"));
+      const prepPanels = Array.from(document.querySelectorAll(".prep-panel"));
 
       function normalize(value) {
         return String(value || "").trim().toLowerCase();
@@ -1233,6 +1466,17 @@
         return text.replace(new RegExp(`(${safeKeyword})`, "gi"), '<span class="highlight">$1</span>');
       }
 
+      function showPrepPanel(name) {
+        prepTabs.forEach((tab) => {
+          const active = tab.dataset.prepTab === name;
+          tab.classList.toggle("active", active);
+          tab.setAttribute("aria-selected", String(active));
+        });
+        prepPanels.forEach((panel) => {
+          panel.classList.toggle("active", panel.dataset.prepPanel === name);
+        });
+      }
+
       function render() {
         renderFilters();
         renderResultMode();
@@ -1277,6 +1521,11 @@
         searchInput.value = "";
         renderQuickLinks();
         searchInput.focus();
+      });
+
+      prepTabs.forEach((tab) => {
+        tab.setAttribute("aria-selected", String(tab.classList.contains("active")));
+        tab.addEventListener("click", () => showPrepPanel(tab.dataset.prepTab));
       });
 
       searchModal.addEventListener("click", (event) => {
