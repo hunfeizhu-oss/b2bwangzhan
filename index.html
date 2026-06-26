@@ -205,7 +205,7 @@
 
       .prep-section {
         width: 100%;
-        padding: 58px 72px 64px;
+        padding: 50px 72px 58px;
         background: #f5f7fb;
       }
 
@@ -215,24 +215,20 @@
       }
 
       .prep-head {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        gap: 32px;
-        margin-bottom: 24px;
+        max-width: 760px;
+        margin-bottom: 22px;
       }
 
       .prep-head h2 {
-        margin: 0;
+        margin: 0 0 8px;
         color: var(--ink);
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 700;
         letter-spacing: 0;
         line-height: 1.25;
       }
 
       .prep-head p {
-        max-width: 600px;
         margin: 0;
         color: #657083;
         font-size: 14px;
@@ -241,13 +237,13 @@
 
       .prep-layout {
         display: grid;
-        grid-template-columns: 312px minmax(0, 1fr);
-        gap: 22px;
+        grid-template-columns: 270px minmax(0, 1fr);
+        gap: 18px;
         align-items: start;
       }
 
       .prep-checklist {
-        padding: 22px;
+        padding: 18px;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: var(--white);
@@ -255,15 +251,15 @@
 
       .prep-checklist h3,
       .prep-panel h3 {
-        margin: 0 0 16px;
+        margin: 0 0 14px;
         color: var(--ink);
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 700;
       }
 
       .prep-steps {
         display: grid;
-        gap: 12px;
+        gap: 10px;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -271,20 +267,20 @@
 
       .prep-steps li {
         display: grid;
-        grid-template-columns: 34px minmax(0, 1fr);
-        gap: 12px;
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 10px;
         align-items: start;
       }
 
       .prep-steps span {
         display: grid;
-        width: 34px;
-        height: 34px;
+        width: 28px;
+        height: 28px;
         place-items: center;
         border-radius: 8px;
         color: var(--white);
         background: var(--blue);
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 800;
       }
 
@@ -292,14 +288,14 @@
         display: block;
         margin-bottom: 2px;
         color: var(--ink);
-        font-size: 14px;
+        font-size: 13px;
       }
 
       .prep-steps p {
         margin: 0;
         color: #657083;
-        font-size: 13px;
-        line-height: 1.65;
+        font-size: 12px;
+        line-height: 1.55;
       }
 
       .prep-workspace {
@@ -309,23 +305,34 @@
         background: var(--white);
       }
 
+      .prep-workspace::before {
+        display: block;
+        padding: 12px 20px;
+        border-bottom: 1px solid var(--line);
+        color: #657083;
+        background: #fbfcfe;
+        font-size: 13px;
+        line-height: 1.5;
+        content: "整理资料时可按标签逐项核对，示例仅作参考，请结合实际业务改写。";
+      }
+
       .prep-tabs {
         display: flex;
-        gap: 6px;
-        padding: 12px;
+        gap: 4px;
+        padding: 10px;
         overflow-x: auto;
         border-bottom: 1px solid var(--line);
         background: #fbfcfe;
       }
 
       .prep-tab {
-        min-height: 36px;
-        padding: 0 14px;
+        min-height: 34px;
+        padding: 0 13px;
         flex: 0 0 auto;
         border-radius: 8px;
         color: #596477;
         background: transparent;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
       }
 
@@ -336,8 +343,8 @@
 
       .prep-panel {
         display: none;
-        min-height: 420px;
-        padding: 24px;
+        min-height: 360px;
+        padding: 20px;
       }
 
       .prep-panel.active {
@@ -347,30 +354,32 @@
       .prep-columns {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px;
+        gap: 14px;
       }
 
       .prep-columns + .prep-columns {
-        margin-top: 24px;
-        padding-top: 22px;
-        border-top: 1px solid var(--line);
+        margin-top: 14px;
       }
 
       .prep-block {
         min-width: 0;
+        padding: 16px;
+        border: 1px solid #edf1f6;
+        border-radius: 8px;
+        background: #fbfcfe;
       }
 
       .prep-block h4 {
-        margin: 0 0 12px;
+        margin: 0 0 10px;
         color: var(--ink);
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 700;
       }
 
       .prep-list,
       .reference-steps {
         display: grid;
-        gap: 9px;
+        gap: 8px;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -381,8 +390,8 @@
       .reference-copy,
       .reference-note {
         color: #4c5563;
-        font-size: 14px;
-        line-height: 1.72;
+        font-size: 13px;
+        line-height: 1.68;
       }
 
       .prep-list li {
@@ -403,22 +412,22 @@
 
       .prep-fields {
         display: grid;
-        gap: 10px 16px;
+        gap: 9px 12px;
         margin: 0;
-        grid-template-columns: 112px minmax(0, 1fr);
+        grid-template-columns: 92px minmax(0, 1fr);
       }
 
       .prep-fields dt {
         color: var(--ink);
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
       }
 
       .prep-fields dd {
         margin: 0;
         color: #4c5563;
-        font-size: 14px;
-        line-height: 1.65;
+        font-size: 13px;
+        line-height: 1.6;
       }
 
       .reference-copy,
@@ -440,9 +449,9 @@
       }
 
       .reference-steps li {
-        padding: 12px;
+        padding: 10px;
         border-radius: 8px;
-        background: #f6f8fb;
+        background: var(--white);
       }
 
       .reference-steps strong {
@@ -452,19 +461,19 @@
 
       .reference-structure {
         margin: 0;
-        padding: 14px;
+        padding: 12px;
         overflow-x: auto;
         border-radius: 8px;
-        background: #f6f8fb;
+        background: var(--white);
         color: #3f4a5a;
         font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-        font-size: 13px;
-        line-height: 1.65;
+        font-size: 12px;
+        line-height: 1.6;
         white-space: pre;
       }
 
       .reference-image-frame {
-        max-height: 560px;
+        max-height: 520px;
         overflow: auto;
         border: 1px solid var(--line);
         border-radius: 8px;
