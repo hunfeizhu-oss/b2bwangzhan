@@ -1,6 +1,4 @@
-# Themes V3 Replica
-
-复刻 `https://themes.xiaoman.cn/v3/` 的 B2B 跨境独立站模板图库体验。
+# B2B 跨境独立站模板图库。
 
 ## 内容
 
