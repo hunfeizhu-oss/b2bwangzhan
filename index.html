@@ -1,1577 +1,3620 @@
 <!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="个人网站模板案例库，展示 B2B 跨境独立站模板图库、行业筛选、搜索与预览交互。"
-    />
-    <link
-      rel="icon"
-      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="%230a6aff"/><text x="32" y="43" text-anchor="middle" font-size="38" font-family="Arial" font-weight="700" fill="white">T</text></svg>'
-    />
-    <title>模板案例库</title>
-    <style>
-      :root {
-        --blue: #0a6aff;
-        --blue-strong: #1c76fd;
-        --ink: #141414;
-        --text: #333333;
-        --muted: #8c8c8c;
-        --soft: #f6f7f9;
-        --hero: #eef7ff;
-        --line: #ebeef4;
-        --footer: #13151a;
-        --white: #ffffff;
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-        --shadow-strong: 0 18px 44px rgba(20, 30, 54, 0.12);
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAXMOV | Electric Mobility OEM/ODM Supplier</title>
+  <meta name="description" content="MAXMOV electric mobility supplier for scooters, mopeds and motocross models, with OEM/ODM project support, compliance document support and export packaging preparation.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#25849E">
+  <link rel="canonical" href="https://www.maxmovsports.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.maxmovsports.com/">
+  <meta property="og:title" content="MAXMOV | Electric Mobility OEM/ODM Supplier">
+  <meta property="og:description" content="Electric scooters, mopeds and mobility products with OEM/ODM project support, quality review and export preparation.">
+  <meta property="og:image" content="https://www.maxmovsports.com/assets/seo/maxmov-og-image.jpg">
+  <meta property="og:image:secure_url" content="https://www.maxmovsports.com/assets/seo/maxmov-og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MAXMOV EU road legal electric mobility sourcing banner">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MAXMOV | Electric Mobility OEM/ODM Supplier">
+  <meta name="twitter:description" content="Electric mobility sourcing homepage for scooters, mopeds, motocross and OEM/ODM project support.">
+  <meta name="twitter:image" content="https://www.maxmovsports.com/assets/seo/maxmov-og-image.jpg">
+  <meta name="twitter:image:alt" content="MAXMOV EU road legal electric mobility sourcing banner">
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="preload" as="image" href="assets/webp/backgrounds/eu-road-legal-banner.webp" type="image/webp" fetchpriority="high">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.maxmovsports.com/#organization",
+          "name": "MAXMOV",
+          "legalName": "Jinhua Klan Intelligent Technology Co., Ltd.",
+          "url": "https://www.maxmovsports.com/",
+          "logo": "https://www.maxmovsports.com/assets/optimized/logo/maxmov-logo.png",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jinhua",
+            "addressRegion": "Zhejiang",
+            "addressCountry": "CN"
+          },
+          "areaServed": "Global",
+          "knowsAbout": [
+            "Electric scooters",
+            "Electric mopeds",
+            "Electric motocross",
+            "Electric mobility products",
+            "OEM/ODM project support",
+            "Export packaging support"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.maxmovsports.com/#website",
+          "url": "https://www.maxmovsports.com/",
+          "name": "MAXMOV",
+          "publisher": {
+            "@id": "https://www.maxmovsports.com/#organization"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://www.maxmovsports.com/#product-categories",
+          "name": "MAXMOV Product Categories",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Electric Mopeds",
+              "url": "https://www.maxmovsports.com/#models"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Electric Motocross",
+              "url": "https://www.maxmovsports.com/#models"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Electric Scooter",
+              "url": "https://www.maxmovsports.com/#models"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Electric Mobility",
+              "url": "https://www.maxmovsports.com/#models"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <style>
+    :root {
+      --blue-deep: #25849E;
+      --ink: #595757;
+      --muted: rgba(89, 87, 87, 0.72);
+      --line: rgba(89, 87, 87, 0.16);
+      --site-bg: #ffffff;
+      --product-stage: #f4f4f4;
+      --champagne: #25849E;
+      --white: #ffffff;
+      --glow: 0 0 12px rgba(43, 143, 167, 0.032);
+      --radius: 4px;
+      --max: 1400px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      position: relative;
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(43, 143, 167, 0.045), transparent 30%),
+        linear-gradient(180deg, #08111a 0%, #0b1822 54%, #060d14 100%);
+      background-color: var(--site-bg);
+      background-attachment: fixed;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    body.is-loading {
+      cursor: progress;
+    }
+
+    main,
+    .footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      object-position: center;
+    }
+
+    picture {
+      display: contents;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(8, 123, 159, 0.32);
+      outline-offset: 4px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      color: var(--white);
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+      transition: color 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, backdrop-filter 180ms ease;
+    }
+
+    .site-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(2, 7, 12, 0.48), rgba(2, 7, 12, 0.1) 78%, transparent),
+        linear-gradient(90deg, rgba(43, 143, 167, 0.08), transparent 32%, transparent 68%, rgba(43, 143, 167, 0.06));
+      opacity: 0.42;
+    }
+
+    .site-header.is-past-hero {
+      color: var(--ink);
+      background: rgba(7, 16, 24, 0.9);
+      border-bottom-color: rgba(122, 169, 190, 0.18);
+      box-shadow: 0 14px 34px rgba(1, 5, 10, 0.48);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(100% - 48px, 1440px);
+      min-height: 98px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 28px;
+      transition: min-height 180ms ease;
+    }
+
+    .site-header.is-past-hero .nav {
+      min-height: 72px;
+    }
+
+    .nav-group {
+      display: flex;
+      align-items: center;
+      gap: clamp(24px, 2.2vw, 34px);
+      color: currentColor;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
+      transition: text-shadow 180ms ease;
+    }
+
+    .site-header.is-past-hero .nav-group {
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.28);
+    }
+
+    .nav-group.right {
+      justify-content: flex-end;
+      gap: clamp(24px, 2.2vw, 34px);
+    }
+
+    .nav-item {
+      position: relative;
+      display: grid;
+      gap: 2px;
+      white-space: nowrap;
+    }
+
+    .nav-item::after {
+      content: "";
+      width: 0;
+      height: 1px;
+      margin-top: 9px;
+      background: currentColor;
+      opacity: 0.9;
+      transition: width 220ms ease;
+    }
+
+    .nav-item:hover::after {
+      width: 100%;
+    }
+
+    .brand {
+      display: grid;
+      place-items: center;
+      width: 260px;
+    }
+
+    .brand img {
+      width: 204px;
+      height: 90px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.42)) drop-shadow(0 0 12px rgba(43, 143, 167, 0.1));
+      transition: width 180ms ease, height 180ms ease, filter 180ms ease;
+    }
+
+    .site-header.is-past-hero .brand img {
+      width: 154px;
+      height: 66px;
+      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.38)) drop-shadow(0 0 10px rgba(43, 143, 167, 0.12));
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: var(--radius);
+      background: rgba(0, 0, 0, 0.12);
+      color: currentColor;
+      cursor: pointer;
+    }
+
+    .site-header.is-past-hero .menu-toggle {
+      border-color: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+    }
+
+    .mobile-panel {
+      display: none;
+      width: min(100% - 28px, var(--max));
+      margin: -2px auto 14px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      background: rgba(8, 18, 27, 0.9);
+      box-shadow: 0 18px 42px rgba(1, 5, 10, 0.48);
+      backdrop-filter: blur(16px);
+    }
+
+    .mobile-panel.is-open {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mobile-panel a {
+      padding: 10px;
+      border-radius: var(--radius);
+      color: var(--white);
+      font-weight: 800;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      min-height: 0;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 0;
+      border-radius: 0;
+      background: #071018;
+      box-shadow: none;
+    }
+
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 1;
+      height: 250px;
+      background:
+        linear-gradient(180deg, rgba(1, 6, 5, 0.62), rgba(1, 6, 5, 0.16) 58%, rgba(1, 6, 5, 0)),
+        linear-gradient(90deg, rgba(2, 7, 12, 0.18), rgba(2, 7, 12, 0));
+      pointer-events: none;
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 1;
+      height: 26px;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(7, 14, 22, 0), rgba(7, 14, 22, 0.9));
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 0;
+      opacity: 1;
+      transform-origin: center top;
+      filter: saturate(1.01) contrast(1.015);
+      transition: opacity 900ms ease, filter 900ms ease;
+    }
+
+    body.is-loaded .hero-banner img {
+      opacity: 1;
+    }
+
+    .section {
+      position: relative;
+      padding: 78px 0;
+      border-top: 1px solid rgba(122, 169, 190, 0.13);
+      background: linear-gradient(180deg, rgba(12, 26, 37, 0.985), rgba(7, 14, 22, 0.995));
+      overflow: hidden;
+      scroll-margin-top: 112px;
+    }
+
+    .section-light {
+      color: #0b1822;
+      border-top-color: rgba(22, 52, 68, 0.1);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(43, 143, 167, 0.07), transparent 31%),
+        linear-gradient(180deg, #f8fbfc 0%, #eef4f7 100%);
+    }
+
+    .section-light .title-block h2 {
+      color: #0a151e;
+    }
+
+    .section-light .title-block p:not(.kicker) {
+      color: #5e6f7a;
+    }
+
+    .section-light .title-block::after {
+      background: linear-gradient(90deg, transparent, rgba(43, 143, 167, 0.5), transparent);
+    }
+
+    #best {
+      color: var(--ink);
+      background: linear-gradient(180deg, rgba(12, 26, 37, 0.985), rgba(7, 14, 22, 0.995));
+    }
+
+    #best .title-block h2 {
+      color: var(--ink);
+    }
+
+    #best .title-block p:not(.kicker) {
+      color: var(--muted);
+    }
+
+    .section-inner {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 36px, var(--max));
+      margin: 0 auto;
+    }
+
+    .title-block {
+      position: relative;
+      text-align: center;
+      width: min(100%, 820px);
+      margin: 0 auto 42px;
+    }
+
+    .title-block .kicker {
+      margin: 0 0 8px;
+      color: var(--blue-deep);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .title-block h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(36px, 4vw, 52px);
+      line-height: 1.04;
+      font-weight: 800;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .title-block h2 .accent {
+      color: var(--blue-deep);
+    }
+
+    .title-block p:not(.kicker) {
+      max-width: 680px;
+      margin: 12px auto 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .title-block::after {
+      content: "";
+      display: block;
+      width: 68px;
+      height: 1px;
+      margin: 16px auto 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, rgba(43, 143, 167, 0.58), transparent);
+    }
+
+    .category-grid {
+      width: min(100%, 1360px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .category-card {
+      position: relative;
+      aspect-ratio: 3 / 2;
+      min-height: 380px;
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(ellipse at 54% 58%, rgba(43, 143, 167, 0.105), transparent 44%),
+        radial-gradient(ellipse at 50% 62%, rgba(122, 169, 190, 0.024), transparent 34%),
+        linear-gradient(135deg, #162633 0%, #09131c 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.46),
+        0 20px 46px rgba(1, 5, 10, 0.48),
+        var(--glow);
+      isolation: isolate;
+      transition: transform 360ms cubic-bezier(0.2, 0.7, 0.2, 1), border-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .category-card::before {
+      content: "";
+      position: absolute;
+      inset: 66px 72px 62px;
+      z-index: 0;
+      height: auto;
+      border-radius: 50%;
+      background:
+        radial-gradient(ellipse at 50% 48%, rgba(184, 225, 242, 0.12), rgba(43, 143, 167, 0.04) 46%, transparent 70%);
+      filter: blur(10px);
+      opacity: 0.32;
+    }
+
+    .category-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(43, 143, 167, 0.24);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.055),
+        0 22px 42px rgba(1, 5, 10, 0.54);
+    }
+
+    .category-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background:
+        linear-gradient(180deg, rgba(4, 12, 18, 0.48), rgba(11, 24, 35, 0.1) 25%, rgba(11, 24, 35, 0) 54%, rgba(4, 12, 18, 0.46)),
+        linear-gradient(90deg, rgba(43, 143, 167, 0.06), transparent 58%);
+      pointer-events: none;
+    }
+
+    .category-card img {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 66px 40px 54px;
+      background: transparent;
+      filter: brightness(1.04) contrast(1.03) saturate(1.01) drop-shadow(0 14px 20px rgba(0, 0, 0, 0.34));
+      transform: translateY(0);
+      transition: transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 260ms ease;
+    }
+
+    .category-card:hover img {
+      filter: brightness(1.06) contrast(1.04) saturate(1.02) drop-shadow(0 16px 22px rgba(0, 0, 0, 0.36));
+      transform: translateY(-3px) scale(1.018);
+    }
+
+    .category-label {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 30px 32px 26px;
+      color: var(--white);
+      background: transparent;
+      font-size: clamp(23px, 2.45vw, 32px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-shadow: 0 12px 28px rgba(0, 0, 0, 0.56);
+    }
+
+    .category-label span {
+      display: inline-flex;
+      min-height: 30px;
+      align-items: center;
+      padding: 0 13px;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(8, 93, 122, 0.88);
+      box-shadow:
+        0 8px 18px rgba(1, 5, 10, 0.38),
+        0 0 16px rgba(43, 143, 167, 0.12);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1;
+      text-transform: none;
+      backdrop-filter: blur(10px);
+    }
+
+    #models .category-grid {
+      width: min(100%, 1480px);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(22px, 2.6vw, 38px);
+      align-items: end;
+    }
+
+    #models .category-card {
+      aspect-ratio: auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      overflow: visible;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      isolation: auto;
+    }
+
+    #models .category-card::before,
+    #models .category-card::after {
+      display: none;
+    }
+
+    #models .category-card:hover {
+      transform: translateY(-4px);
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    #models .category-card img {
+      position: static;
+      width: 100%;
+      height: clamp(230px, 19vw, 310px);
+      max-width: 360px;
+      padding: 0;
+      object-fit: contain;
+      background: transparent;
+      filter: drop-shadow(0 18px 24px rgba(17, 44, 56, 0.18));
+      transform: translateY(0);
+    }
+
+    #models .category-card:hover img {
+      filter: drop-shadow(0 22px 28px rgba(17, 44, 56, 0.22));
+      transform: translateY(-4px);
+    }
+
+    #models .category-label {
+      position: static;
+      width: 100%;
+      display: flex;
+      min-height: 82px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 12px;
+      padding: 0;
+      color: #0a151e;
+      font-size: initial;
+      line-height: 1;
+      letter-spacing: 0;
+      text-align: center;
+      text-shadow: none;
+    }
+
+    #models .category-label h3 {
+      margin: 0;
+      color: #0a151e;
+      font-size: clamp(16px, 1.35vw, 22px);
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    #models .category-label span {
+      min-height: 28px;
+      padding: 0 12px;
+      border-color: rgba(43, 143, 167, 0.22);
+      background: rgba(16, 124, 153, 0.95);
+      box-shadow: 0 10px 20px rgba(17, 44, 56, 0.14);
+      font-size: 12px;
+    }
+
+    .banner-band {
+      padding: 0 0 82px;
+      background: linear-gradient(180deg, rgba(12, 26, 37, 0.985), rgba(7, 14, 22, 0.995));
+      overflow: hidden;
+    }
+
+    .banner-band-light {
+      background:
+        linear-gradient(180deg, #eef4f7 0%, #f8fbfc 100%);
+    }
+
+    .banner-strip {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      display: block;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .banner-card {
+      position: relative;
+      aspect-ratio: 16 / 5.9;
+      min-height: 390px;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 0;
+      background: #0b1822;
+    }
+
+    .banner-card::before,
+    .banner-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .banner-card::before {
+      display: none;
+    }
+
+    .banner-card::after {
+      display: none;
+    }
+
+    .banner-card img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 0;
+      filter: none;
+      transform: translateY(0);
+      transition: transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 220ms ease;
+    }
+
+    .banner-card:hover img {
+      transform: scale(1.004);
+      filter: none;
+    }
+
+    .banner-copy {
+      position: absolute;
+      right: clamp(28px, 8vw, 148px);
+      top: 50%;
+      z-index: 3;
+      width: min(500px, 34vw);
+      color: #0b1822;
+      text-shadow: 0 1px 14px rgba(255, 255, 255, 0.45);
+      transform: translateY(-50%);
+    }
+
+    .banner-copy span {
+      display: inline-flex;
+      min-height: 26px;
+      align-items: center;
+      padding: 0 10px;
+      border: 1px solid rgba(122, 169, 190, 0.22);
+      border-radius: 3px;
+      color: var(--blue-deep);
+      background: rgba(255, 255, 255, 0.76);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+    }
+
+    .banner-copy h3 {
+      margin: 12px 0 0;
+      font-size: clamp(32px, 3.4vw, 52px);
+      line-height: 1.04;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .banner-copy p {
+      margin: 12px 0 0;
+      max-width: 440px;
+      color: rgba(11, 24, 34, 0.76);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .product-grid,
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .product-card,
+    .blog-card,
+    .advantage-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(43, 143, 167, 0.06), transparent 36%),
+        linear-gradient(180deg, rgba(18, 31, 42, 0.98), rgba(8, 16, 24, 0.99));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.045),
+        0 18px 38px rgba(1, 5, 10, 0.46);
+      transition: transform 360ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    .product-card:hover,
+    .blog-card:hover,
+    .advantage-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(43, 143, 167, 0.24);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.055),
+        0 22px 42px rgba(1, 5, 10, 0.54);
+    }
+
+    .product-image {
+      height: clamp(340px, 28vw, 420px);
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse at 50% 68%, rgba(184, 225, 242, 0.105), transparent 30%),
+        radial-gradient(ellipse at 50% 78%, rgba(43, 143, 167, 0.06), transparent 42%),
+        linear-gradient(135deg, #172632 0%, var(--product-stage) 50%, #09131c 100%);
+      overflow: visible;
+      padding: 24px;
+      box-shadow: inset 0 -30px 55px rgba(0, 0, 0, 0.28);
+    }
+
+    .section-light .category-card,
+    .section-light .product-card,
+    .section-light .advantage-card,
+    .section-light .facility-slide,
+    .section-light .blog-card {
+      border-color: var(--line);
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(43, 143, 167, 0.06), transparent 36%),
+        linear-gradient(180deg, rgba(18, 31, 42, 0.98), rgba(8, 16, 24, 0.99));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.045),
+        0 18px 38px rgba(1, 5, 10, 0.34);
+    }
+
+    .section-light .category-card {
+      background:
+        radial-gradient(ellipse at 54% 58%, rgba(43, 143, 167, 0.105), transparent 44%),
+        radial-gradient(ellipse at 50% 62%, rgba(122, 169, 190, 0.024), transparent 34%),
+        linear-gradient(135deg, #162633 0%, #09131c 100%);
+    }
+
+    .section-light .category-card::after {
+      background:
+        linear-gradient(180deg, rgba(4, 12, 18, 0.48), rgba(11, 24, 35, 0.1) 25%, rgba(11, 24, 35, 0) 54%, rgba(4, 12, 18, 0.46)),
+        linear-gradient(90deg, rgba(43, 143, 167, 0.06), transparent 58%);
+    }
+
+    .section-light .category-label,
+    .section-light .product-body h3,
+    .section-light .advantage-card h3,
+    .section-light .blog-body h3,
+    .section-light .facility-slide span {
+      color: var(--ink);
+    }
+
+    .section-light .product-body p,
+    .section-light .advantage-card p,
+    .section-light .blog-body p {
+      color: var(--muted);
+    }
+
+    .section-light .product-image,
+    .section-light .advantage-media,
+    .section-light .facility-slide img,
+    .section-light .blog-card img {
+      background:
+        radial-gradient(ellipse at 50% 68%, rgba(184, 225, 242, 0.105), transparent 30%),
+        radial-gradient(ellipse at 50% 78%, rgba(43, 143, 167, 0.06), transparent 42%),
+        linear-gradient(135deg, #172632 0%, var(--product-stage) 50%, #09131c 100%);
+      box-shadow: inset 0 -30px 55px rgba(0, 0, 0, 0.28);
+    }
+
+    .product-image img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: brightness(1.04) contrast(1.03) saturate(1.01) drop-shadow(0 14px 20px rgba(0, 0, 0, 0.34));
+      transform: translateY(0);
+      transition: transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 220ms ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: translateY(-4px) scale(1.018);
+      filter: brightness(1.06) contrast(1.04) saturate(1.02) drop-shadow(0 16px 22px rgba(0, 0, 0, 0.36));
+    }
+
+    .product-body {
+      padding: 22px 24px 24px;
+    }
+
+    .product-body h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 21px;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    .product-body p {
+      margin: 4px 0 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .spec-list {
+      display: grid;
+      gap: 9px;
+      margin: 0 0 18px;
+      padding: 0;
+      list-style: none;
+      color: #c1d9d2;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .spec-list li {
+      display: grid;
+      grid-template-columns: 16px 1fr;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spec-list li::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--champagne);
+      box-shadow:
+        inset 0 0 0 3px rgba(3, 14, 22, 0.62),
+        0 0 10px rgba(43, 143, 167, 0.22);
+    }
+
+    .link-more {
+      color: var(--blue-deep);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .advantage-grid {
+      width: min(100%, 1400px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px;
+    }
+
+    .advantage-card {
+      position: relative;
+      min-height: 404px;
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 28px;
+      text-align: center;
+      border-radius: 8px;
+      border-color: var(--line);
+      box-shadow: 0 18px 42px rgba(0, 6, 5, 0.56);
+    }
+
+    .advantage-media {
+      aspect-ratio: 3 / 2;
+      height: auto;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      overflow: hidden;
+      border-radius: var(--radius) var(--radius) 0 0;
+      background:
+        radial-gradient(ellipse at 50% 70%, rgba(43, 143, 167, 0.052), transparent 36%),
+        linear-gradient(135deg, #172632 0%, var(--product-stage) 52%, #09131c 100%);
+      box-shadow: inset 0 -26px 50px rgba(0, 0, 0, 0.26);
+    }
+
+    .advantage-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+      background: transparent;
+      filter: brightness(1.04) contrast(1.03) saturate(1.01) drop-shadow(0 14px 20px rgba(0, 0, 0, 0.34));
+      transform: translateY(0);
+      transition: transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 220ms ease;
+    }
+
+    .advantage-card:hover .advantage-media img {
+      transform: translateY(-3px) scale(1.012);
+      filter: brightness(1.06) contrast(1.04) saturate(1.02) drop-shadow(0 16px 22px rgba(0, 0, 0, 0.36));
+    }
+
+    .advantage-icon {
+      position: relative;
+      z-index: 2;
+      width: 60px;
+      height: 60px;
+      margin: -30px auto 20px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(122, 169, 190, 0.18);
+      border-radius: 50%;
+      color: var(--blue-deep);
+      background: rgba(10, 22, 32, 0.96);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 8px 18px rgba(0, 8, 12, 0.32);
+    }
+
+    .advantage-icon svg {
+      width: 31px;
+      height: 31px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .advantage-card h3 {
+      margin: 0 24px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.18;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    .advantage-card h3::after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 2px;
+      margin: 14px auto 0;
+      border-radius: 999px;
+      background: var(--champagne);
+    }
+
+    .advantage-card p {
+      margin: 14px auto 0;
+      max-width: 250px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .center-action {
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .btn {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 26px;
+      border: 1px solid rgba(122, 169, 190, 0.26);
+      border-radius: 5px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 34%),
+        linear-gradient(180deg, #12384a, #0b1822);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 14px 30px rgba(0, 8, 12, 0.36);
+      transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(110deg, transparent 0 34%, rgba(255, 255, 255, 0.22) 48%, transparent 62% 100%);
+      opacity: 0;
+      transform: translateX(-140%);
+      transition: opacity 220ms ease, transform 620ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(43, 143, 167, 0.46);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 20px 38px rgba(0, 12, 18, 0.48);
+    }
+
+    .btn:hover::after {
+      opacity: 1;
+      transform: translateX(140%);
+    }
+
+    .about-redesign {
+      position: relative;
+    }
+
+    .about-feature {
+      display: grid;
+      grid-template-columns: minmax(340px, 0.84fr) minmax(0, 1.16fr);
+      align-items: stretch;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(circle at 70% 8%, rgba(43, 143, 167, 0.064), transparent 32%),
+        linear-gradient(135deg, #142534, #09131c);
+      box-shadow: 0 22px 54px rgba(1, 5, 10, 0.5);
+    }
+
+    .about-copy-panel {
+      padding: 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #0b1822;
+    }
+
+    .about-copy-panel h3 {
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(28px, 2.8vw, 40px);
+      line-height: 1.12;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    .about-lede {
+      margin: 16px 0 0;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 16px;
+      line-height: 1.62;
+    }
+
+    .about-visual {
+      position: relative;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: #0d1b26;
+      box-shadow: none;
+      padding: 16px;
+    }
+
+    .about-visual img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      background: #0d1b26;
+      border-radius: 6px;
+      box-shadow: 0 14px 30px rgba(0, 8, 12, 0.42);
+      transform: scale(1.01);
+      transition: transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .about-stat-bar {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin: 22px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      border-radius: 8px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(43, 143, 167, 0.058), transparent 38%),
+        linear-gradient(180deg, #122533, #09131c);
+      box-shadow: 0 18px 42px rgba(1, 5, 10, 0.46);
+    }
+
+    .about-stat-bar.flow-bar {
+      overflow: visible;
+      border: 1px solid rgba(122, 169, 190, 0.16);
+      box-shadow:
+        0 18px 42px rgba(1, 5, 10, 0.46);
+    }
+
+    .about-stat {
+      position: relative;
+      min-height: 92px;
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 18px 26px;
+      border-right: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .flow-step {
+      grid-template-columns: 60px 1fr;
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -13px;
+      z-index: 4;
+      width: 26px;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(43, 143, 167, 0), rgba(43, 143, 167, 0.74), rgba(122, 169, 190, 0));
+      box-shadow: 0 0 12px rgba(43, 143, 167, 0.24);
+    }
+
+    .about-stat:last-child {
+      border-right: 0;
+    }
+
+    .about-stat-icon {
+      width: 36px;
+      height: 36px;
+      color: rgba(43, 143, 167, 0.96);
+    }
+
+    .about-stat-index {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(122, 169, 190, 0.26);
+      border-radius: 50%;
+      color: var(--blue-deep);
+      background:
+        radial-gradient(circle at 50% 35%, rgba(43, 143, 167, 0.14), rgba(10, 22, 32, 0.96) 62%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 12px rgba(43, 143, 167, 0.1);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .about-stat-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .about-stat b {
+      display: block;
+      color: var(--white);
+      font-size: 20px;
+      line-height: 1.05;
+      text-transform: none;
+    }
+
+    .about-stat span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .factory-showcase {
+      display: block;
+      overflow: hidden;
+    }
+
+    .facility-track {
+      width: max-content;
+      display: flex;
+      gap: 22px;
+      animation: factory-scroll 34s linear infinite;
+    }
+
+    .facility-slide {
+      position: relative;
+      flex: 0 0 clamp(320px, 25vw, 380px);
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(43, 143, 167, 0.06), transparent 38%),
+        linear-gradient(180deg, #122533, #0b1822);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.055),
+        0 16px 34px rgba(1, 5, 10, 0.48);
+      transition: transform 360ms cubic-bezier(0.2, 0.7, 0.2, 1), border-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .facility-slide:hover {
+      transform: translateY(-3px);
+      border-color: rgba(43, 143, 167, 0.24);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.055),
+        0 22px 42px rgba(1, 5, 10, 0.54);
+    }
+
+    .facility-slide img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      min-height: 0;
+      object-fit: contain;
+      padding: 12px;
+      background:
+        radial-gradient(ellipse at 50% 70%, rgba(43, 143, 167, 0.06), transparent 36%),
+        linear-gradient(135deg, #172632 0%, var(--product-stage) 52%, #09131c 100%);
+      filter: saturate(1.04) contrast(1.03);
+    }
+
+    .facility-slide span {
+      position: static;
+      display: block;
+      padding: 12px 14px;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(43, 143, 167, 0.07), rgba(10, 22, 32, 0.96));
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .factory-showcase:hover .facility-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes factory-scroll {
+      from {
+        transform: translateX(0);
       }
 
-      * {
-        box-sizing: border-box;
+      to {
+        transform: translateX(calc(-50% - 11px));
+      }
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      object-fit: contain;
+      padding: 18px;
+      background:
+        radial-gradient(ellipse at 50% 70%, rgba(43, 143, 167, 0.06), transparent 36%),
+        linear-gradient(135deg, #172632 0%, var(--product-stage) 52%, #09131c 100%);
+      filter: brightness(1.04) contrast(1.03) saturate(1.01) drop-shadow(0 14px 20px rgba(0, 0, 0, 0.34));
+      transform: translateY(0);
+      transition: transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 220ms ease;
+    }
+
+    .blog-card:hover > img {
+      transform: translateY(-3px) scale(1.014);
+      filter: brightness(1.06) contrast(1.04) saturate(1.02) drop-shadow(0 16px 22px rgba(0, 0, 0, 0.36));
+    }
+
+    .blog-body {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 22px 22px;
+    }
+
+    .blog-body time,
+    .resource-tag {
+      display: inline-flex;
+      min-height: 26px;
+      align-items: center;
+      width: fit-content;
+      padding: 0 10px;
+      border-radius: 4px;
+      color: var(--blue-deep);
+      background:
+        linear-gradient(135deg, rgba(13, 54, 82, 0.42), rgba(255, 255, 255, 0.025));
+      border: 1px solid rgba(122, 169, 190, 0.2);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .blog-body h3 {
+      margin: 10px 0;
+      color: var(--ink);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .blog-body p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .blog-body .link-more {
+      margin-top: auto;
+    }
+
+    .footer {
+      padding: 58px 0 24px;
+      color: rgba(229, 241, 247, 0.82);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(43, 143, 167, 0.054), transparent 30%),
+        linear-gradient(145deg, #071018, #050b11);
+    }
+
+    .footer-grid {
+      width: min(100% - 36px, var(--max));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.85fr 0.85fr 1fr;
+      gap: 44px;
+    }
+
+    .footer-logo {
+      width: 124px;
+      height: 54px;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.34)) drop-shadow(0 0 10px rgba(43, 143, 167, 0.1));
+      margin-bottom: 16px;
+    }
+
+    .footer h3 {
+      margin: 0 0 18px;
+      color: var(--white);
+      font-size: 15px;
+      text-transform: none;
+    }
+
+    .footer p,
+    .footer li {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: inherit;
+    }
+
+    .footer a:hover {
+      color: var(--blue-deep);
+    }
+
+    .footer ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .socials {
+      display: flex;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .socials span {
+      min-width: 36px;
+      height: 28px;
+      padding: 0 8px;
+      display: grid;
+      place-items: center;
+      border-radius: 5px;
+      color: var(--blue-deep);
+      background: rgba(13, 54, 82, 0.28);
+      border: 1px solid rgba(122, 169, 190, 0.14);
+      font-size: 11px;
+      font-weight: 800;
+      box-shadow: 0 0 14px rgba(43, 143, 167, 0.06);
+    }
+
+    .footer-inquiry {
+      display: inline-flex;
+      min-height: 34px;
+      align-items: center;
+      margin-top: 18px;
+      padding: 0 14px;
+      color: var(--white);
+      background: rgba(43, 143, 167, 0.84);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .reveal-ready {
+      opacity: 0;
+      transform: translateY(30px) scale(0.985);
+      filter: blur(8px);
+      clip-path: inset(0 0 10% 0);
+      transition:
+        opacity 760ms cubic-bezier(0.2, 0.72, 0.2, 1),
+        transform 760ms cubic-bezier(0.2, 0.72, 0.2, 1),
+        filter 760ms ease,
+        clip-path 760ms cubic-bezier(0.2, 0.72, 0.2, 1);
+      will-change: opacity, transform, filter, clip-path;
+    }
+
+    .reveal-ready.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+      clip-path: inset(0 0 0 0);
+    }
+
+    .footer-bottom {
+      width: min(100% - 36px, var(--max));
+      margin: 34px auto 0;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 12px;
+    }
+
+    .site-header::before {
+      background: linear-gradient(180deg, rgba(2, 7, 12, 0.62), rgba(2, 7, 12, 0.08) 82%, transparent);
+    }
+
+    .reveal-ready {
+      filter: none;
+      clip-path: none;
+    }
+
+    /* Open layout pass: reduce repeated card shells across the homepage. */
+    .product-card,
+    .blog-card,
+    .advantage-card,
+    .about-feature,
+    .facility-slide,
+    .section-light .product-card,
+    .section-light .blog-card,
+    .section-light .advantage-card,
+    .section-light .facility-slide {
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .product-card:hover,
+    .blog-card:hover,
+    .advantage-card:hover,
+    .facility-slide:hover {
+      transform: translateY(-2px);
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    .product-grid,
+    .blog-grid {
+      gap: clamp(32px, 4vw, 56px);
+    }
+
+    .product-card,
+    .blog-card {
+      padding-top: 22px;
+      border-top: 1px solid rgba(122, 169, 190, 0.18);
+    }
+
+    .product-image,
+    .blog-card img,
+    .advantage-media,
+    .facility-slide img,
+    .section-light .product-image,
+    .section-light .blog-card img,
+    .section-light .advantage-media,
+    .section-light .facility-slide img {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .product-image {
+      height: clamp(250px, 20vw, 320px);
+      align-items: end;
+      padding: 0 0 26px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      max-height: clamp(220px, 18vw, 286px);
+      object-fit: contain;
+    }
+
+    .product-body,
+    .blog-body {
+      padding: 22px 0 0;
+    }
+
+    .advantage-grid {
+      gap: clamp(30px, 4vw, 52px);
+    }
+
+    .advantage-card {
+      min-height: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .advantage-media {
+      border-radius: 0;
+      overflow: hidden;
+    }
+
+    .advantage-media img {
+      padding: 0;
+      filter: none;
+    }
+
+    .advantage-icon {
+      width: 34px;
+      height: 34px;
+      margin: 18px 0 12px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .advantage-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .advantage-card h3 {
+      margin: 0;
+      text-align: left;
+    }
+
+    .advantage-card h3::after {
+      width: 38px;
+      margin: 12px 0 0;
+    }
+
+    .advantage-card p {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+    }
+
+    .about-feature {
+      grid-template-columns: minmax(320px, 0.84fr) minmax(0, 1.16fr);
+      gap: clamp(34px, 5vw, 76px);
+      align-items: center;
+    }
+
+    .about-copy-panel {
+      padding: 0;
+      background: transparent;
+    }
+
+    .about-visual {
+      padding: 0;
+      background: transparent;
+    }
+
+    .about-visual img {
+      background: transparent;
+      border-radius: 0;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .about-stat-bar,
+    .about-stat-bar.flow-bar {
+      margin-top: 44px;
+      border: 0;
+      border-top: 1px solid rgba(122, 169, 190, 0.18);
+      border-bottom: 1px solid rgba(122, 169, 190, 0.18);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .about-stat {
+      border-right: 0;
+      padding: 22px 0;
+    }
+
+    .flow-step:not(:last-child)::after {
+      display: none;
+    }
+
+    .about-stat-index {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .facility-track {
+      gap: clamp(28px, 4vw, 54px);
+    }
+
+    .facility-slide {
+      flex-basis: clamp(360px, 29vw, 480px);
+    }
+
+    .facility-slide img {
+      padding: 0;
+      object-fit: contain;
+      filter: none;
+    }
+
+    .facility-slide span {
+      padding: 12px 0 0;
+      background: transparent;
+    }
+
+    .section-light .facility-slide span,
+    .section-light .advantage-card h3,
+    .section-light .advantage-card p {
+      color: #0a151e;
+    }
+
+    .section-light .advantage-card p {
+      color: #5e6f7a;
+    }
+
+    .blog-card img {
+      padding: 0;
+      filter: none;
+    }
+
+    .blog-card:hover > img {
+      filter: none;
+    }
+
+    .resource-tag {
+      min-height: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    /* Flatter homepage pass: keep the content, remove repeated card-like shells. */
+    .product-grid {
+      gap: clamp(38px, 5vw, 76px);
+      border-top: 0;
+    }
+
+    .product-card,
+    .blog-card {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .product-card {
+      padding: 0;
+      border-left: 0;
+    }
+
+    .product-card:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .product-card:last-child {
+      padding-right: 0;
+    }
+
+    .product-card:hover,
+    .blog-card:hover,
+    .advantage-card:hover,
+    .facility-slide:hover {
+      transform: none;
+    }
+
+    .product-image {
+      height: clamp(270px, 22vw, 350px);
+      padding: 0 0 18px;
+      border-bottom: 0;
+    }
+
+    .product-image img {
+      max-height: clamp(236px, 19vw, 306px);
+      filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.28));
+    }
+
+    .product-card:hover .product-image img {
+      transform: none;
+      filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.28));
+    }
+
+    .product-body {
+      padding-top: 20px;
+    }
+
+    .why-editorial {
+      display: grid;
+      grid-template-columns: minmax(420px, 0.94fr) minmax(0, 1.06fr);
+      gap: clamp(42px, 6vw, 92px);
+      align-items: center;
+    }
+
+    .why-visual {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .why-visual img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: none;
+    }
+
+    .why-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid rgba(22, 52, 68, 0.16);
+      border-bottom: 1px solid rgba(22, 52, 68, 0.16);
+      counter-reset: why;
+    }
+
+    .why-list .advantage-card {
+      counter-increment: why;
+      min-height: 0;
+      padding: clamp(24px, 3vw, 36px);
+      border-top: 0;
+      border-left: 0;
+      text-align: left;
+    }
+
+    .why-list .advantage-card:nth-child(2n) {
+      border-left: 1px solid rgba(22, 52, 68, 0.12);
+    }
+
+    .why-list .advantage-card:nth-child(n + 3) {
+      border-top: 1px solid rgba(22, 52, 68, 0.12);
+    }
+
+    .why-list .advantage-card::before {
+      content: "0" counter(why);
+      display: block;
+      margin-bottom: 16px;
+      color: rgba(43, 143, 167, 0.86);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+    }
+
+    .why-list .advantage-icon {
+      width: 30px;
+      height: 30px;
+      margin: 0 0 14px;
+      color: var(--blue-deep);
+    }
+
+    .why-list .advantage-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .why-list .advantage-card h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.22;
+    }
+
+    .why-list .advantage-card h3::after {
+      display: none;
+    }
+
+    .why-list .advantage-card p {
+      max-width: 290px;
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 1.58;
+    }
+
+    .resource-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-top: 1px solid rgba(122, 169, 190, 0.18);
+    }
+
+    .resource-row {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+      gap: clamp(28px, 5vw, 78px);
+      align-items: center;
+      padding: clamp(30px, 4vw, 48px) 0;
+      border-bottom: 1px solid rgba(122, 169, 190, 0.14);
+    }
+
+    .resource-row:last-child {
+      border-bottom: 0;
+    }
+
+    .resource-media {
+      margin: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .resource-row img,
+    .resource-row:hover > img {
+      width: 100%;
+      height: clamp(190px, 16vw, 250px);
+      max-height: none;
+      object-fit: cover;
+      padding: 0;
+      background: transparent;
+      filter: none;
+      transform: none;
+    }
+
+    .resource-row .blog-body {
+      min-height: 0;
+      padding: 0;
+    }
+
+    .resource-row .blog-body h3 {
+      margin-top: 12px;
+      font-size: clamp(22px, 2.4vw, 34px);
+      line-height: 1.08;
+    }
+
+    .resource-row .blog-body p {
+      max-width: 580px;
+      font-size: 15px;
+      line-height: 1.58;
+    }
+
+    /* Light brand palette pass: #25849E blue, #595757 gray, white / #f4f4f4 backgrounds. */
+    body {
+      color: #595757;
+      background: #ffffff;
+      background-color: #ffffff;
+    }
+
+    .site-header.is-past-hero {
+      color: #595757;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom-color: rgba(89, 87, 87, 0.14);
+      box-shadow: 0 12px 30px rgba(89, 87, 87, 0.12);
+    }
+
+    .site-header.is-past-hero::before {
+      background: none;
+      opacity: 0;
+    }
+
+    .site-header.is-past-hero .nav-group {
+      text-shadow: none;
+    }
+
+    .mobile-panel {
+      border-color: rgba(89, 87, 87, 0.14);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 18px 42px rgba(89, 87, 87, 0.14);
+    }
+
+    .mobile-panel a {
+      color: #595757;
+      background: #f4f4f4;
+    }
+
+    .section,
+    #best {
+      color: #595757;
+      border-top-color: rgba(89, 87, 87, 0.12);
+      background: #ffffff;
+    }
+
+    .section-light,
+    .banner-band,
+    .banner-band-light,
+    #why,
+    #factory,
+    #models {
+      color: #595757;
+      border-top-color: rgba(89, 87, 87, 0.1);
+      background: #f4f4f4;
+    }
+
+    .hero-banner,
+    .banner-card {
+      background: #f4f4f4;
+    }
+
+    .title-block h2,
+    .section-light .title-block h2,
+    #best .title-block h2,
+    .product-body h3,
+    .section-light .product-body h3,
+    .advantage-card h3,
+    .section-light .advantage-card h3,
+    .blog-body h3,
+    .section-light .blog-body h3,
+    .about-copy-panel h3,
+    .about-stat b,
+    .facility-slide span,
+    .section-light .facility-slide span,
+    #models .category-label h3 {
+      color: #595757;
+    }
+
+    .title-block p:not(.kicker),
+    .section-light .title-block p:not(.kicker),
+    #best .title-block p:not(.kicker),
+    .product-body p,
+    .section-light .product-body p,
+    .advantage-card p,
+    .section-light .advantage-card p,
+    .blog-body p,
+    .section-light .blog-body p,
+    .about-lede,
+    .about-stat span,
+    .footer p,
+    .footer li {
+      color: rgba(89, 87, 87, 0.72);
+    }
+
+    .title-block .kicker,
+    .title-block h2 .accent,
+    .link-more,
+    .resource-tag,
+    .why-list .advantage-card::before,
+    .why-list .advantage-icon,
+    .advantage-icon,
+    .footer a:hover {
+      color: #25849E;
+    }
+
+    .title-block::after,
+    .section-light .title-block::after,
+    .advantage-card h3::after {
+      background: linear-gradient(90deg, transparent, rgba(37, 132, 158, 0.55), transparent);
+    }
+
+    .spec-list {
+      color: #595757;
+    }
+
+    .spec-list li::before {
+      background: #25849E;
+      box-shadow:
+        inset 0 0 0 3px #ffffff,
+        0 0 0 1px rgba(37, 132, 158, 0.22);
+    }
+
+    .btn,
+    .footer-inquiry,
+    #models .category-label span {
+      color: #ffffff;
+      border-color: rgba(37, 132, 158, 0.2);
+      background: #25849E;
+      box-shadow: 0 14px 28px rgba(37, 132, 158, 0.18);
+    }
+
+    .btn:hover {
+      border-color: rgba(37, 132, 158, 0.34);
+      box-shadow: 0 18px 34px rgba(37, 132, 158, 0.22);
+    }
+
+    .product-image,
+    .section-light .product-image,
+    .advantage-media,
+    .section-light .advantage-media,
+    .blog-card img,
+    .section-light .blog-card img,
+    .facility-slide img,
+    .section-light .facility-slide img,
+    .about-visual,
+    .about-visual img {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .product-image img,
+    .resource-row img,
+    .product-card:hover .product-image img {
+      filter: drop-shadow(0 16px 22px rgba(89, 87, 87, 0.16));
+    }
+
+    .about-stat-bar,
+    .about-stat-bar.flow-bar,
+    .resource-list,
+    .resource-row,
+    .why-list {
+      border-color: rgba(89, 87, 87, 0.14);
+    }
+
+    .why-list .advantage-card:nth-child(2n),
+    .why-list .advantage-card:nth-child(n + 3) {
+      border-color: rgba(89, 87, 87, 0.12);
+    }
+
+    .about-stat-index {
+      color: #25849E;
+      border-color: rgba(37, 132, 158, 0.28);
+      background: #ffffff;
+    }
+
+    .footer {
+      padding: 64px 0 28px;
+      color: rgba(255, 255, 255, 0.9);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.14), transparent 30%),
+        linear-gradient(135deg, #25849E 0%, #228da5 48%, #18788e 100%);
+    }
+
+    .footer-grid {
+      width: min(100% - 48px, 1460px);
+      grid-template-columns: minmax(300px, 1.2fr) minmax(150px, 0.72fr) minmax(150px, 0.72fr) minmax(340px, 1.12fr);
+      gap: clamp(46px, 6vw, 92px);
+    }
+
+    .footer h3 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .footer p,
+    .footer li {
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.58;
+    }
+
+    .footer a {
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .footer a:hover {
+      color: #ffffff;
+    }
+
+    .footer-logo {
+      width: 118px;
+      height: 56px;
+      object-position: left center;
+      filter: brightness(0) invert(1) drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+    }
+
+    .footer-inquiry {
+      min-height: 38px;
+      justify-content: center;
+      padding: 0 18px;
+      color: #25849E !important;
+      background: #ffffff;
+      border-radius: 2px;
+      line-height: 1;
+      white-space: nowrap;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .socials span {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      box-shadow: none;
+    }
+
+    .footer-bottom {
+      color: rgba(255, 255, 255, 0.74);
+      border-top-color: rgba(255, 255, 255, 0.22);
+    }
+
+    #why .section-inner {
+      width: min(100% - 48px, 1340px);
+    }
+
+    #why .why-editorial {
+      display: block;
+      margin-top: 44px;
+    }
+
+    #why .advantage-grid.why-list {
+      width: min(100%, 1260px);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(26px, 2.6vw, 36px);
+      border: 0;
+      counter-reset: none;
+    }
+
+    #why .why-list .advantage-card {
+      min-height: 390px;
+      padding: 0 0 28px;
+      overflow: hidden;
+      text-align: center;
+      border: 1px solid rgba(89, 87, 87, 0.12);
+      border-bottom: 4px solid #25849E;
+      border-radius: 0;
+      background: #ffffff;
+      box-shadow: 0 18px 36px rgba(13, 26, 32, 0.08);
+    }
+
+    #why .why-list .advantage-card::before {
+      content: none;
+      display: none;
+    }
+
+    #why .advantage-media {
+      aspect-ratio: 4 / 3;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 0;
+      background: #eef3f5;
+      box-shadow: none;
+    }
+
+    #why .advantage-media img {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      object-fit: cover;
+      filter: none;
+      transform: none;
+    }
+
+    #why .advantage-card:hover .advantage-media img {
+      transform: scale(1.025);
+      filter: none;
+    }
+
+    #why .advantage-icon,
+    #why .why-list .advantage-icon {
+      width: 66px;
+      height: 66px;
+      margin: -33px auto 22px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      color: #ffffff;
+      background: #25849E;
+      box-shadow:
+        0 0 0 6px rgba(255, 255, 255, 0.94),
+        0 10px 20px rgba(37, 132, 158, 0.18);
+    }
+
+    #why .advantage-icon svg,
+    #why .why-list .advantage-icon svg {
+      width: 31px;
+      height: 31px;
+      stroke-width: 1.8;
+    }
+
+    #why .advantage-card h3,
+    #why .why-list .advantage-card h3 {
+      margin: 0 22px;
+      color: #1f1f1f;
+      font-size: 18px;
+      line-height: 1.22;
+      font-weight: 850;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    #why .advantage-card h3::after,
+    #why .why-list .advantage-card h3::after {
+      display: none;
+    }
+
+    #why .advantage-card p,
+    #why .why-list .advantage-card p {
+      max-width: 250px;
+      margin: 16px auto 0;
+      color: rgba(31, 31, 31, 0.78);
+      font-size: 14px;
+      line-height: 1.58;
+      text-align: center;
+    }
+
+    #factory .section-inner {
+      width: min(100% - 48px, 1720px);
+    }
+
+    #factory .factory-showcase {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #factory .facility-track {
+      --facility-gap: clamp(22px, 2.2vw, 34px);
+      width: max-content;
+      display: flex;
+      grid-template-columns: none;
+      gap: var(--facility-gap);
+      animation: factory-scroll 30s linear infinite;
+    }
+
+    #factory .facility-slide {
+      min-width: 0;
+      flex: 0 0 clamp(260px, calc((100vw - 150px) / 4), 405px);
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    #factory .facility-slide:hover {
+      transform: none;
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    #factory .facility-slide img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      padding: 0;
+      object-fit: contain;
+      background: #ffffff;
+      filter: none;
+    }
+
+    #factory .facility-slide span {
+      padding: 14px 0 0;
+      color: #595757;
+      background: transparent;
+      font-size: 13px;
+      letter-spacing: 0.01em;
+    }
+
+    #factory .factory-showcase:hover .facility-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes factory-scroll {
+      from {
+        transform: translateX(0);
       }
 
-      html {
-        scroll-behavior: smooth;
+      to {
+        transform: translateX(calc(-50% - var(--facility-gap) / 2));
       }
+    }
 
-      body {
-        margin: 0;
-        color: var(--text);
-        background: var(--white);
-        font-family:
-          "PingFang SC", "Microsoft YaHei", "Source Han Sans CN", "Noto Sans SC",
-          -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.5;
+    /* Featured model stage, inspired by series showcase layouts. */
+    #best {
+      min-height: 760px;
+      padding: 58px 0 42px;
+      color: #2b2b2b;
+      background:
+        radial-gradient(ellipse at 50% 58%, rgba(37, 132, 158, 0.06), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+      overflow: hidden;
+    }
+
+    #best .section-inner {
+      width: min(100% - 28px, 1560px);
+    }
+
+    #best .title-block {
+      width: min(100%, 860px);
+      margin-bottom: 34px;
+    }
+
+    #best .title-block .kicker {
+      display: block;
+      color: #25849E;
+    }
+
+    #best .title-block h2 {
+      color: #595757;
+    }
+
+    #best .title-block h2 .accent {
+      color: #25849E;
+    }
+
+    #best .title-block h2 {
+      font-size: clamp(36px, 4vw, 52px);
+      line-height: 1.04;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    #best .title-block p:not(.kicker) {
+      margin-top: 12px;
+      color: rgba(89, 87, 87, 0.72);
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    #best .title-block::after {
+      display: block;
+      background: linear-gradient(90deg, transparent, rgba(37, 132, 158, 0.58), transparent);
+    }
+
+    .model-stage {
+      position: relative;
+      min-height: 570px;
+      display: grid;
+      align-content: center;
+      padding-top: 18px;
+      isolation: isolate;
+    }
+
+    .model-word {
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      top: 44%;
+      width: 100vw;
+      transform: translate(-50%, -50%);
+      color: rgba(89, 87, 87, 0.055);
+      font-size: clamp(150px, 25vw, 430px);
+      line-height: 0.72;
+      font-weight: 900;
+      letter-spacing: 0.035em;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .model-slides {
+      position: relative;
+      z-index: 1;
+      min-height: 405px;
+      display: grid;
+      place-items: center;
+    }
+
+    .model-slide {
+      display: none;
+      width: 100%;
+      min-height: 405px;
+      place-items: center;
+    }
+
+    .model-slide.is-active {
+      display: grid;
+      animation: modelFade 420ms ease both;
+    }
+
+    @keyframes modelFade {
+      from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.985);
       }
-
-      body.modal-open {
-        overflow: hidden;
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
       }
+    }
 
-      button,
-      input {
-        font: inherit;
-      }
+    .model-product {
+      width: min(72vw, 900px);
+      min-height: 405px;
+      margin: 0;
+      display: grid;
+      place-items: center;
+    }
 
-      button {
-        border: 0;
-        background: none;
-        cursor: pointer;
-      }
+    .model-product img {
+      width: 100%;
+      max-width: 860px;
+      max-height: 430px;
+      object-fit: contain;
+      filter: drop-shadow(0 30px 26px rgba(89, 87, 87, 0.19));
+      transform: translateZ(0);
+    }
 
-      img {
-        display: block;
-        max-width: 100%;
-      }
+    .model-slide[data-model="ejoy"] .model-product img {
+      max-width: 560px;
+      max-height: 430px;
+    }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+    .model-slide[data-model="motocross"] .model-product img {
+      max-width: 730px;
+      max-height: 420px;
+    }
 
-      .page {
-        min-height: 100vh;
-        background: var(--white);
-      }
+    .model-arrow {
+      position: absolute;
+      z-index: 3;
+      top: 43%;
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #14c5c8;
+      border-radius: 50%;
+      color: #14c5c8;
+      background: rgba(255, 255, 255, 0.56);
+      cursor: pointer;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    }
 
-      .topbar {
+    .model-arrow:hover {
+      transform: translateY(-2px);
+      color: #ffffff;
+      background: #14aabd;
+    }
+
+    .model-arrow svg {
+      width: 34px;
+      height: 34px;
+      stroke-width: 1.6;
+    }
+
+    .model-arrow.prev {
+      left: clamp(14px, 3.8vw, 66px);
+    }
+
+    .model-arrow.next {
+      right: clamp(14px, 3.8vw, 66px);
+    }
+
+    .model-bottom {
+      position: relative;
+      z-index: 2;
+      width: min(720px, 72vw);
+      margin: 4px auto 0;
+      display: grid;
+      justify-items: center;
+      gap: 14px;
+    }
+
+    .model-series-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      color: rgba(43, 43, 43, 0.68);
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .model-series-link svg {
+      width: 18px;
+      height: 18px;
+      color: #14aabd;
+    }
+
+    .model-tabs {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid rgba(89, 87, 87, 0.24);
+    }
+
+    .model-tab {
+      position: relative;
+      min-height: 42px;
+      padding: 14px 10px 0;
+      border: 0;
+      color: rgba(89, 87, 87, 0.46);
+      background: transparent;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .model-tab::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: transparent;
+    }
+
+    .model-tab.is-active {
+      color: #595757;
+    }
+
+    .model-tab.is-active::before {
+      background: #595757;
+    }
+
+    @media (max-width: 980px) {
+      .nav {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+      }
+
+      .nav-group {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .product-grid,
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-card:nth-child(2n + 1) {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      .about-feature,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-editorial {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .resource-list {
+        grid-template-columns: 1fr;
+      }
+
+      .banner-card {
+        min-height: 300px;
+      }
+
+      .about-copy-panel {
+        padding: 30px;
+      }
+
+      .about-stat-bar {
         width: 100%;
-        min-height: 80px;
-        padding: 20px 72px;
-        background: var(--white);
+        margin-top: 16px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .flow-step:not(:last-child)::after {
+        display: none;
+      }
+
+      .advantage-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .advantage-card {
+        min-height: 0;
+      }
+
+      .advantage-media {
+        height: auto;
+      }
+
+      .resource-row {
+        grid-template-columns: minmax(240px, 0.38fr) minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .category-card {
+        min-height: 340px;
+      }
+
+      #models .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #models .category-card img {
+        height: 280px;
+      }
+
+      .hero-banner {
+        height: auto;
+      }
+
+      #factory .section-inner {
+        width: min(100% - 36px, var(--max));
+      }
+
+      #factory .facility-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #best {
+        min-height: 660px;
+      }
+
+      .model-stage {
+        min-height: 470px;
+      }
+
+      .model-word {
+        top: 42%;
+        font-size: clamp(112px, 28vw, 250px);
+      }
+
+      .model-slides,
+      .model-slide,
+      .model-product {
+        min-height: 340px;
+      }
+
+      .model-product {
+        width: min(78vw, 680px);
+      }
+
+      .model-product img {
+        max-height: 350px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 48px 0;
+      }
+
+      .banner-band {
+        padding-bottom: 48px;
       }
 
       .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        color: #121419;
-        font-size: 28px;
-        font-weight: 800;
-        letter-spacing: 0;
+        width: auto;
       }
 
-      .brand-mark {
-        display: grid;
-        width: 38px;
-        height: 38px;
-        place-items: center;
-        border-radius: 12px;
-        color: var(--white);
-        background: var(--blue);
-        font-size: 23px;
-        font-weight: 900;
-        line-height: 1;
+      .brand img {
+        width: 126px;
+        height: 62px;
       }
 
-      .portfolio-badge {
-        margin-left: 16px;
-        padding: 7px 12px;
-        border: 1px solid rgba(10, 106, 255, 0.14);
-        border-radius: 999px;
-        color: var(--blue);
-        background: #f4f9ff;
+      .title-block .kicker {
         font-size: 13px;
-        font-weight: 700;
       }
 
-      .top-actions {
-        display: inline-flex;
-        align-items: center;
-        gap: 14px;
+      .title-block h2 {
+        font-size: 32px;
       }
 
-      .search-trigger,
-      .icon-button {
-        display: inline-grid;
-        width: 32px;
-        height: 32px;
-        place-items: center;
-        border-radius: 8px;
-        color: var(--ink);
-        transition:
-          color 180ms ease,
-          background 180ms ease,
-          transform 180ms ease;
-      }
-
-      .search-trigger:hover,
-      .icon-button:hover {
-        color: var(--blue);
-        background: rgba(10, 106, 255, 0.08);
-        transform: translateY(-1px);
-      }
-
-      .search-trigger svg,
-      .search-trigger img,
-      .icon-button svg {
-        width: 24px;
-        height: 24px;
-      }
-
-      .head-bg {
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        min-height: 208px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 58px 24px;
-        text-align: center;
-        background: #eef7ff url("assets/template-bg.png") center / cover no-repeat;
-      }
-
-      .head-bg::before,
-      .head-bg::after {
-        display: none;
-      }
-
-      .head-bg::before {
-        top: -96px;
-        left: 5%;
-        rotate: -10deg;
-      }
-
-      .head-bg::after {
-        right: 8%;
-        bottom: -118px;
-        rotate: 13deg;
-      }
-
-      .head-bg h1 {
-        position: relative;
-        z-index: 1;
-        margin: 0 0 20px;
-        color: var(--ink);
-        font-size: 48px;
-        font-weight: 600;
-        letter-spacing: 0;
-        line-height: 1.18;
-      }
-
-      .head-bg p {
-        position: relative;
-        z-index: 1;
-        margin: 0;
-        color: var(--text);
-        font-size: 18px;
-      }
-
-      .prep-section {
-        width: 100%;
-        padding: 50px 72px 58px;
-        background: #f5f7fb;
-      }
-
-      .prep-inner {
-        width: min(1320px, 100%);
-        margin: 0 auto;
-      }
-
-      .prep-head {
-        max-width: 760px;
-        margin-bottom: 22px;
-      }
-
-      .prep-head h2 {
-        margin: 0 0 8px;
-        color: var(--ink);
-        font-size: 26px;
-        font-weight: 700;
-        letter-spacing: 0;
-        line-height: 1.25;
-      }
-
-      .prep-head p {
-        margin: 0;
-        color: #657083;
+      .title-block p:not(.kicker) {
+        max-width: 310px;
         font-size: 14px;
-        line-height: 1.75;
+        overflow-wrap: anywhere;
       }
 
-      .prep-layout {
-        display: grid;
-        grid-template-columns: 270px minmax(0, 1fr);
-        gap: 18px;
-        align-items: start;
-      }
-
-      .prep-checklist {
-        padding: 18px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--white);
-      }
-
-      .prep-checklist h3,
-      .prep-panel h3 {
-        margin: 0 0 14px;
-        color: var(--ink);
-        font-size: 17px;
-        font-weight: 700;
-      }
-
-      .prep-steps {
-        display: grid;
-        gap: 10px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .prep-steps li {
-        display: grid;
-        grid-template-columns: 28px minmax(0, 1fr);
-        gap: 10px;
-        align-items: start;
-      }
-
-      .prep-steps span {
-        display: grid;
-        width: 28px;
-        height: 28px;
-        place-items: center;
-        border-radius: 8px;
-        color: var(--white);
-        background: var(--blue);
-        font-size: 12px;
-        font-weight: 800;
-      }
-
-      .prep-steps strong {
-        display: block;
-        margin-bottom: 2px;
-        color: var(--ink);
-        font-size: 13px;
-      }
-
-      .prep-steps p {
-        margin: 0;
-        color: #657083;
-        font-size: 12px;
-        line-height: 1.55;
-      }
-
-      .prep-workspace {
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--white);
-      }
-
-      .prep-workspace::before {
-        display: block;
-        padding: 12px 20px;
-        border-bottom: 1px solid var(--line);
-        color: #657083;
-        background: #fbfcfe;
-        font-size: 13px;
-        line-height: 1.5;
-        content: "整理资料时可按标签逐项核对，示例仅作参考，请结合实际业务改写。";
-      }
-
-      .prep-tabs {
-        display: flex;
-        gap: 4px;
-        padding: 10px;
-        overflow-x: auto;
-        border-bottom: 1px solid var(--line);
-        background: #fbfcfe;
-      }
-
-      .prep-tab {
-        min-height: 34px;
-        padding: 0 13px;
-        flex: 0 0 auto;
-        border-radius: 8px;
-        color: #596477;
-        background: transparent;
-        font-size: 13px;
-        font-weight: 700;
-      }
-
-      .prep-tab.active {
-        color: var(--white);
-        background: var(--blue);
-      }
-
-      .prep-panel {
-        display: none;
-        min-height: 360px;
-        padding: 20px;
-      }
-
-      .prep-panel.active {
-        display: block;
-      }
-
-      .prep-columns {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .prep-columns + .prep-columns {
-        margin-top: 14px;
-      }
-
-      .prep-block {
-        min-width: 0;
-        padding: 16px;
-        border: 1px solid #edf1f6;
-        border-radius: 8px;
-        background: #fbfcfe;
-      }
-
-      .prep-block h4 {
-        margin: 0 0 10px;
-        color: var(--ink);
-        font-size: 15px;
-        font-weight: 700;
-      }
-
-      .prep-list,
-      .reference-steps {
-        display: grid;
-        gap: 8px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .prep-list li,
-      .reference-steps li,
-      .reference-copy,
-      .reference-note {
-        color: #4c5563;
-        font-size: 13px;
-        line-height: 1.68;
-      }
-
-      .prep-list li {
-        position: relative;
-        padding-left: 16px;
-      }
-
-      .prep-list li::before {
-        position: absolute;
-        top: 0.72em;
-        left: 0;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #b8c2d2;
-        content: "";
-      }
-
-      .prep-fields {
-        display: grid;
-        gap: 9px 12px;
-        margin: 0;
-        grid-template-columns: 92px minmax(0, 1fr);
-      }
-
-      .prep-fields dt {
-        color: var(--ink);
-        font-size: 13px;
-        font-weight: 700;
-      }
-
-      .prep-fields dd {
-        margin: 0;
-        color: #4c5563;
-        font-size: 13px;
-        line-height: 1.6;
-      }
-
-      .reference-copy,
-      .reference-note {
-        margin: 0;
-      }
-
-      .reference-copy + .reference-copy,
-      .reference-copy + .reference-note,
-      .reference-note + .reference-copy {
+      .title-block::after {
         margin-top: 12px;
       }
 
-      .reference-copy strong,
-      .reference-note strong,
-      .reference-steps strong {
-        color: var(--ink);
-        font-weight: 700;
+      .category-grid,
+      .product-grid,
+      .blog-grid,
+      .advantage-grid,
+      .about-stat-bar {
+        grid-template-columns: 1fr;
       }
 
-      .reference-steps li {
-        padding: 10px;
-        border-radius: 8px;
-        background: var(--white);
+      .product-grid {
+        border-top: 0;
       }
 
-      .reference-steps strong {
-        display: block;
-        margin-bottom: 4px;
+      .product-card,
+      .product-card:first-child,
+      .product-card:last-child {
+        padding: 28px 0 0;
+        border-left: 0;
+        border-top: 1px solid rgba(122, 169, 190, 0.16);
       }
 
-      .reference-structure {
-        margin: 0;
-        padding: 12px;
-        overflow-x: auto;
-        border-radius: 8px;
-        background: var(--white);
-        color: #3f4a5a;
-        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-        font-size: 12px;
-        line-height: 1.6;
-        white-space: pre;
+      .product-card:first-child {
+        padding-top: 0;
+        border-top: 0;
       }
 
-      .reference-image-frame {
-        max-height: 520px;
-        overflow: auto;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--white);
+      .category-card {
+        min-height: 304px;
       }
 
-      .reference-image-frame img {
+      #models .category-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      #models .category-card img {
+        height: 220px;
+        max-width: 280px;
+      }
+
+      .banner-card {
+        aspect-ratio: 4 / 3;
+        min-height: 280px;
+      }
+
+      #best {
+        min-height: 560px;
+        padding: 46px 0 34px;
+      }
+
+      .model-stage {
+        min-height: 390px;
+        padding-top: 4px;
+      }
+
+      .model-word {
+        top: 38%;
+        font-size: clamp(78px, 32vw, 148px);
+      }
+
+      .model-slides,
+      .model-slide,
+      .model-product {
+        min-height: 280px;
+      }
+
+      .model-product {
+        width: min(82vw, 420px);
+      }
+
+      .model-product img,
+      .model-slide[data-model="ejoy"] .model-product img,
+      .model-slide[data-model="motocross"] .model-product img {
+        max-width: 100%;
+        max-height: 260px;
+      }
+
+      .model-arrow {
+        top: 42%;
+        width: 46px;
+        height: 46px;
+      }
+
+      .model-arrow svg {
+        width: 25px;
+        height: 25px;
+      }
+
+      .model-bottom {
         width: 100%;
-        height: auto;
-      }
-
-      .search-result-bar {
-        display: none;
-        align-items: center;
-        width: 100%;
-        padding: 16px 72px 8px;
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      .search-result-bar.active {
-        display: inline-flex;
-      }
-
-      .search-result-bar svg {
-        width: 16px;
-        height: 16px;
-        margin-right: 4px;
-        color: var(--blue);
-      }
-
-      .search-result-bar button {
-        padding: 0;
-        color: var(--blue-strong);
-        font-size: 14px;
-      }
-
-      .industry {
-        position: relative;
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 10px;
-        padding: 24px 72px 18px;
-        background: var(--white);
       }
 
-      .chip {
-        min-height: 38px;
-        padding: 9px 14px;
-        border-radius: 8px;
-        color: var(--text);
-        background: var(--soft);
-        font-size: 13px;
-        font-weight: 600;
-        white-space: nowrap;
-        transition:
-          color 180ms ease,
-          background 180ms ease,
-          box-shadow 180ms ease;
-      }
-
-      .chip:hover {
-        box-shadow: 0 6px 18px rgba(18, 28, 45, 0.08);
-      }
-
-      .chip.active {
-        color: var(--white);
-        background: var(--blue);
-        box-shadow: 0 8px 18px rgba(10, 106, 255, 0.2);
-      }
-
-      .industry-fold {
-        position: absolute;
-        right: 20px;
-        top: 34px;
-        display: none;
-        width: 28px;
-        height: 28px;
-        place-items: center;
-        border-radius: 50%;
-        background: var(--white);
-        box-shadow: var(--shadow);
-      }
-
-      .industry-fold svg {
-        width: 16px;
-        height: 16px;
-        transition: rotate 240ms ease;
-      }
-
-      .industry.collapsed .industry-fold svg {
-        rotate: 180deg;
-      }
-
-      .templates-wrap {
-        width: 100%;
-        min-height: 420px;
-        padding: 28px 72px 36px;
-      }
-
-      .templates-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 36px;
-      }
-
-      .template-card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        background: var(--white);
-        box-shadow: var(--shadow);
-        cursor: pointer;
-        transition: box-shadow 220ms ease;
-      }
-
-      .template-card:hover {
-        box-shadow: var(--shadow-strong);
-      }
-
-      .template-cover {
-        position: relative;
-        height: 320px;
-        overflow: hidden;
-        background: #eef2fa;
-      }
-
-      .template-cover img {
-        width: 100%;
-        height: auto;
-        min-height: 320px;
-        object-fit: cover;
-        object-position: top center;
-      }
-
-      .feature-ribbon {
-        position: absolute;
-        left: 18px;
-        top: 0;
-        z-index: 2;
-        width: 28px;
-        height: auto;
-      }
-
-      .template-title {
-        overflow: hidden;
-        width: 100%;
-        padding: 20px 16px 34px;
-        color: var(--ink);
-        font-size: 18px;
-        font-weight: 700;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .template-overlay {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding: 0 20px 20px 0;
-        border-radius: 12px;
-        background: rgba(0, 0, 0, 0.7);
-        opacity: 0;
-        transition: opacity 220ms ease;
-      }
-
-      .template-card:hover .template-overlay {
-        opacity: 1;
-      }
-
-      .preview-button {
-        min-width: 56px;
-        height: 30px;
-        border: 1px solid var(--white);
-        border-radius: 8px;
-        color: var(--text);
-        background: var(--soft);
+      .model-series-link {
         font-size: 14px;
-        line-height: 30px;
-        text-align: center;
       }
 
-      .empty-state {
-        display: none;
-        min-height: 360px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: var(--muted);
-        text-align: center;
+      .model-tab {
+        min-height: 38px;
+        padding: 12px 4px 0;
+        font-size: 11px;
       }
 
-      .empty-state.active {
-        display: flex;
+      .banner-copy {
+        left: 18px;
+        bottom: 18px;
+        right: 18px;
+        width: auto;
       }
 
-      .empty-icon {
-        position: relative;
-        width: 68px;
-        height: 56px;
-        margin-bottom: 16px;
-        background: url("assets/template-empty.png") center / contain no-repeat;
+      .banner-copy h3 {
+        font-size: 26px;
+        max-width: 320px;
+        overflow-wrap: anywhere;
       }
 
-      .empty-icon::before {
-        display: none;
+      .banner-copy p {
+        max-width: 310px;
+        font-size: 13px;
+        overflow-wrap: anywhere;
       }
 
-      .empty-icon::after {
-        display: none;
+      .advantage-card {
+        min-height: 0;
       }
 
-      .empty-state strong {
-        color: #000000;
-        font-size: 16px;
-        font-weight: 600;
+      .why-list {
+        grid-template-columns: 1fr;
       }
 
-      .empty-state span {
-        margin-top: 8px;
+      .why-list .advantage-card,
+      .why-list .advantage-card:nth-child(2n),
+      .why-list .advantage-card:nth-child(n + 3) {
+        padding: 22px 0;
+        border-left: 0;
+        border-top: 1px solid rgba(22, 52, 68, 0.12);
       }
 
-      .site-footer {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 36px 20px;
-        color: var(--white);
-        background: var(--footer);
+      .why-list .advantage-card:first-child {
+        border-top: 0;
       }
 
-      .footer-logo {
-        margin-bottom: 18px;
-        color: var(--white);
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: 0;
+      .advantage-media {
+        height: auto;
       }
 
-      .copyright {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        opacity: 0.4;
-        color: var(--white);
-        font-size: 12px;
+      .advantage-icon,
+      .why-list .advantage-icon {
+        width: 30px;
+        height: 30px;
+        margin: 0 0 14px;
       }
 
-      .search-modal {
-        position: fixed;
-        inset: 0;
-        z-index: 50;
-        display: none;
-        background: rgba(0, 0, 0, 0.7);
+      .advantage-icon svg {
+        width: 30px;
+        height: 30px;
       }
 
-      .search-modal.active {
-        display: block;
+      #why .why-editorial {
+        margin-top: 28px;
       }
 
-      .search-box {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        padding: 40px 32px 60px;
-        background: var(--white);
-      }
-
-      .search-panel {
-        width: min(1110px, 100%);
-      }
-
-      .search-row {
-        display: flex;
-        width: 100%;
-        align-items: center;
-      }
-
-      .search-input-wrap {
-        display: inline-flex;
-        flex: 1;
-        align-items: center;
-        border-bottom: 1px solid #bebebe;
-      }
-
-      .search-input-wrap svg {
-        flex: 0 0 auto;
-        width: 24px;
-        height: 24px;
-        margin: 0 16px 0 28px;
-      }
-
-      .search-input {
-        width: 100%;
-        height: 58px;
+      #why .advantage-grid.why-list {
+        grid-template-columns: 1fr;
+        gap: 24px;
         border: 0;
-        outline: none;
-        color: var(--ink);
-        font-size: 18px;
       }
 
-      .clear-search {
-        display: none;
-        flex: 0 0 auto;
-        width: 36px;
-        height: 36px;
-        margin-right: 6px;
-        place-items: center;
+      #why .why-list .advantage-card,
+      #why .why-list .advantage-card:nth-child(2n),
+      #why .why-list .advantage-card:nth-child(n + 3) {
+        padding: 0 0 28px;
+        border: 1px solid rgba(89, 87, 87, 0.12);
+        border-bottom: 4px solid #25849E;
+      }
+
+      #why .advantage-icon,
+      #why .why-list .advantage-icon {
+        width: 62px;
+        height: 62px;
+        margin: -31px auto 20px;
         border-radius: 50%;
-        color: #b6bdc8;
       }
 
-      .clear-search.active {
-        display: grid;
+      #why .advantage-icon svg,
+      #why .why-list .advantage-icon svg {
+        width: 29px;
+        height: 29px;
       }
 
-      .cancel-search {
-        flex-shrink: 0;
-        margin-left: 14px;
-        padding: 8px 0;
-        color: var(--text);
-        font-size: 16px;
+      .product-image {
+        height: 320px;
       }
 
-      .cancel-search:hover {
-        color: var(--blue-strong);
+      .hero-banner {
+        margin-top: 0;
       }
 
-      .quick-link {
-        width: 100%;
-        margin-top: 40px;
+      .facility-slide {
+        flex-basis: 286px;
       }
 
-      .quick-label {
-        margin-bottom: 10px;
-        color: var(--muted);
-        font-size: 12px;
+      .facility-slide img {
+        height: auto;
       }
 
-      .quick-item {
-        width: 100%;
-        padding: 9px 10px;
-        color: var(--text);
-        font-size: 16px;
-        text-align: left;
+      #factory .facility-track {
+        grid-template-columns: 1fr;
       }
 
-      .quick-item:hover {
-        background: rgba(0, 0, 0, 0.04);
+      .about-copy-panel {
+        padding-bottom: 18px;
       }
 
-      .suggestions {
-        max-height: 220px;
-        overflow-y: auto;
+      .about-visual {
+        padding: 0;
       }
 
-      .highlight {
-        color: var(--blue);
+      .about-copy-panel h3 {
+        font-size: 32px;
       }
 
-      .to-top {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        z-index: 20;
-        display: inline-grid;
-        width: 50px;
-        height: 50px;
-        place-items: center;
-        border: 1px solid var(--white);
-        border-radius: 50%;
-        color: var(--white);
-        background: rgba(0, 0, 0, 0.3);
+      .about-lede {
+        font-size: 14px;
       }
 
-      .to-top svg {
-        width: 28px;
-        height: 28px;
+      .about-stat {
+        min-height: 84px;
+        grid-template-columns: 38px 1fr;
+        padding: 16px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(42, 100, 125, 0.12);
       }
 
-      .to-top img {
-        width: 28px;
-        height: 28px;
+      .about-stat:last-child {
+        border-bottom: 0;
       }
 
-      @media (max-width: 1199px) {
-        .templates-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
+      .footer-bottom {
+        flex-direction: column;
       }
 
-      @media (max-width: 1024px) {
-        .topbar,
-        .search-result-bar,
-        .industry,
-        .prep-section,
-        .templates-wrap {
-          padding-right: 32px;
-          padding-left: 32px;
-        }
-
-        .prep-layout {
-          grid-template-columns: 1fr;
-        }
-
-        .templates-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
+      .resource-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
       }
 
-      @media (max-width: 768px) {
-        .topbar {
-          min-height: 76px;
-          padding: 18px 20px;
-        }
-
-        .brand {
-          gap: 9px;
-          font-size: 24px;
-        }
-
-        .brand-mark {
-          width: 34px;
-          height: 34px;
-          border-radius: 10px;
-          font-size: 20px;
-        }
-
-        .portfolio-badge {
-          display: none;
-        }
-
-        .head-bg {
-          min-height: 176px;
-          padding: 48px 24px;
-        }
-
-        .head-bg h1 {
-          margin-bottom: 16px;
-          font-size: 28px;
-        }
-
-        .head-bg p {
-          font-size: 14px;
-        }
-
-        .prep-section {
-          padding: 42px 20px 48px;
-        }
-
-        .prep-head {
-          align-items: flex-start;
-          flex-direction: column;
-          gap: 10px;
-        }
-
-        .prep-head h2 {
-          font-size: 23px;
-        }
-
-        .prep-layout,
-        .prep-columns {
-          grid-template-columns: 1fr;
-        }
-
-        .prep-checklist,
-        .prep-panel {
-          padding: 18px;
-        }
-
-        .prep-tabs {
-          padding: 10px;
-        }
-
-        .prep-fields {
-          grid-template-columns: 1fr;
-          gap: 4px;
-        }
-
-        .search-result-bar {
-          padding: 16px 20px 8px;
-        }
-
-        .industry {
-          justify-content: flex-start;
-          padding: 24px 50px 20px 20px;
-        }
-
-        .industry.collapsed {
-          max-height: 64px;
-          overflow: hidden;
-          padding-bottom: 50px;
-        }
-
-        .industry-fold {
-          display: grid;
-        }
-
-        .chip {
-          min-height: 38px;
-          padding: 9px 14px;
-        }
-
-        .templates-wrap {
-          padding: 28px 20px 36px;
-        }
-
-        .templates-grid {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-
-        .template-overlay {
-          display: none;
-        }
-
-        .search-box {
-          padding: 0 20px 24px 0;
-        }
-
-        .search-panel {
-          padding-top: 20px;
-        }
-
-        .search-input-wrap svg {
-          margin-left: 20px;
-        }
-
-        .search-input {
-          font-size: 16px;
-        }
-
-        .quick-link {
-          margin-top: 24px;
-          padding-left: 20px;
-        }
-
-        .copyright {
-          flex-direction: column;
-          gap: 2px;
-        }
-
-        .to-top {
-          width: 36px;
-          height: 36px;
-        }
-
-        .to-top svg,
-        .to-top img {
-          width: 20px;
-          height: 20px;
-        }
+      .resource-row img {
+        max-height: 210px;
       }
-    </style>
-  </head>
-  <body>
-    <main class="page" id="top">
-      <header class="topbar">
-        <a class="brand" href="#top" aria-label="模板案例库首页">
-          <span class="brand-mark">T</span>
-          <span>模板案例库</span>
-        </a>
-        <div class="top-actions">
-          <button class="search-trigger" type="button" aria-label="打开搜索" id="openSearch">
-            <img src="assets/template-search.png" alt="search" width="24" />
-          </button>
-        </div>
-      </header>
 
-      <section class="head-bg" id="hero">
-        <h1>B2B跨境独立站模版</h1>
-        <p>面向高质量转化打造、每个模板均满足高标准、能够快速加载、适应移动端</p>
-      </section>
+      .nav {
+        min-height: 82px;
+        width: min(100% - 24px, var(--max));
+      }
 
-      <div class="search-result-bar" id="searchResultBar">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="7"></circle>
-          <path d="m20 20-3.2-3.2"></path>
-        </svg>
-        <span id="searchResultText"></span>
-        <button type="button" id="resetSearch">点击返回首页</button>
+      .category-card img {
+        padding: 54px 18px 40px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .facility-track {
+        animation: none;
+      }
+
+      .category-card img {
+        transition: none;
+        transform: none;
+      }
+
+      .product-card,
+      .blog-card,
+      .advantage-card,
+      .banner-card,
+      .facility-slide,
+      .btn,
+      .reveal-ready {
+        transition: none;
+      }
+
+      .reveal-ready {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        clip-path: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-group">
+        <a class="nav-item" href="#models">Models</a>
+        <a class="nav-item" href="#best">Products</a>
+        <a class="nav-item" href="#factory">Factory</a>
       </div>
-
-      <nav class="industry" id="industryFilters" aria-label="行业筛选"></nav>
-
-      <section class="templates-wrap" aria-label="模板列表">
-        <div class="templates-grid" id="templatesGrid"></div>
-        <div class="empty-state" id="emptyState">
-          <div class="empty-icon" aria-hidden="true"></div>
-          <strong>暂无数据</strong>
-          <span>换个配方试试吧</span>
-        </div>
-      </section>
-
-      <section class="prep-section" aria-label="独立站资料准备清单">
-        <div class="prep-inner">
-          <div class="prep-head">
-            <h2>独立站资料准备清单</h2>
-            <p>模板选定后，按这份清单整理公司文案、优势表达、图片素材和产品资料，后续搭建会更顺。</p>
-          </div>
-
-          <div class="prep-layout">
-            <aside class="prep-checklist">
-              <h3>交付清单</h3>
-              <ol class="prep-steps">
-                <li>
-                  <span>01</span>
-                  <div>
-                    <strong>公司介绍</strong>
-                    <p>300-500字，讲清公司定位、所在地、行业领域、OEM/ODM能力和近期成就。</p>
-                  </div>
-                </li>
-                <li>
-                  <span>02</span>
-                  <div>
-                    <strong>公司优势</strong>
-                    <p>准备3个优势，标题2-5个英文词，描述约30词，突出工厂、证书、出口经验等。</p>
-                  </div>
-                </li>
-                <li>
-                  <span>03</span>
-                  <div>
-                    <strong>图片素材</strong>
-                    <p>至少准备工厂图3张、公司外观图2张，并补充产品主图、细节图和场景图。</p>
-                  </div>
-                </li>
-                <li>
-                  <span>04</span>
-                  <div>
-                    <strong>产品资料</strong>
-                    <p>明确一级和二级分类，至少50%产品具备主图、副图、详情描述和产品优势。</p>
-                  </div>
-                </li>
-              </ol>
-            </aside>
-
-            <div class="prep-workspace">
-              <div class="prep-tabs" role="tablist" aria-label="独立站资料准备内容">
-                <button class="prep-tab active" type="button" data-prep-tab="checklist">清单要求</button>
-                <button class="prep-tab" type="button" data-prep-tab="copy">文案参考</button>
-                <button class="prep-tab" type="button" data-prep-tab="product">产品参考</button>
-                <button class="prep-tab" type="button" data-prep-tab="detail">详情图参考</button>
-              </div>
-
-              <div class="prep-panel active" data-prep-panel="checklist">
-                <h3>资料整理要求</h3>
-                <div class="prep-columns">
-                  <div class="prep-block">
-                    <h4>公司与优势</h4>
-                    <ul class="prep-list">
-                      <li>公司介绍优先写清品牌名称、核心定位、地理位置和供应链优势。</li>
-                      <li>明确所属行业和细分赛道，避免泛泛而谈。</li>
-                      <li>公司优势可围绕工厂面积、员工人数、专利数量、出口国家、证书和价值观来写。</li>
-                    </ul>
-                  </div>
-                  <div class="prep-block">
-                    <h4>图片与产品</h4>
-                    <ul class="prep-list">
-                      <li>公司形象图建议包含办公楼、公司门面或团队合影。</li>
-                      <li>工厂图重点展示厂房全景、生产设备、自动化流水线和整洁环境。</li>
-                      <li>产品资料包含标题、主图、副图、视频、描述、规格、应用、优势和FAQ。</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="prep-columns">
-                  <div class="prep-block">
-                    <h4>产品资料字段</h4>
-                    <dl class="prep-fields">
-                      <dt>产品标题</dt>
-                      <dd>控制在80个字符以内，并包含主关键词。</dd>
-                      <dt>视频素材</dt>
-                      <dd>可提供YouTube链接，或约20MB的MP4文件；暂时没有视频可以先不放。</dd>
-                      <dt>详情描述</dt>
-                      <dd>建议500字符以上，可加入起订量、应用场景和核心卖点。</dd>
-                      <dt>规格参数</dt>
-                      <dd>尽量用表格展示，包含产地、品牌名、型号、认证等信息。</dd>
-                      <dt>应用与FAQ</dt>
-                      <dd>补充客户使用场景、案例图片、产品优势，以及访客常问问题和答复。</dd>
-                    </dl>
-                  </div>
-                  <div class="prep-block">
-                    <h4>图片规范</h4>
-                    <dl class="prep-fields">
-                      <dt>主图</dt>
-                      <dd>建议800x800或600x600，主体清楚，无其他品牌水印。</dd>
-                      <dt>副图</dt>
-                      <dd>每个产品准备3-5张，展示细节、材质、角度和应用场景。</dd>
-                      <dt>产品图</dt>
-                      <dd>可补充正面、侧面、背面、俯视图和功能演示图。</dd>
-                      <dt>文件格式</dt>
-                      <dd>主图优先JPG，透明背景用PNG，素材按文件夹标注清楚。</dd>
-                    </dl>
-                  </div>
-                </div>
-              </div>
-
-              <div class="prep-panel" data-prep-panel="copy">
-                <h3>文案参考</h3>
-                <div class="prep-columns">
-                  <div class="prep-block">
-                    <h4>公司介绍参考</h4>
-                    <p class="reference-copy">
-                      <strong>English:</strong>
-                      Demark (Wuhan) Technology Co., Ltd, based in Wuhan Optics Valley, is a high-tech enterprise specializing in laser cleaning and welding equipment. With over a decade of experience and collaboration with Huazhong University of Science and Technology, the company has developed several core laser technologies and holds more than 60 patents. DMK Laser is a leading provider of research, development, production, and sales of professional laser equipment.
-                    </p>
-                    <p class="reference-copy">
-                      <strong>中文翻译：</strong>
-                      德马克（武汉）科技有限公司位于武汉光谷，是一家专业从事激光清洗和焊接设备的高新技术企业。公司拥有十多年的研发经验，并与华中科技大学合作，开发了多项激光核心技术，拥有60多项专利。DMK Laser是一家集研发、生产、销售为一体的专业激光设备供应商。
-                    </p>
-                  </div>
-                  <div class="prep-block">
-                    <h4>公司优势参考</h4>
-                    <ul class="reference-steps">
-                      <li>
-                        <strong>Our Factory</strong>
-                        As a global supplier in laser cutting machines, laser welding machines and other laser machines and parts, xxx is to create added value for customers around the world.
-                      </li>
-                      <li>
-                        <strong>Our Product</strong>
-                        We supply laser machines all over the world to a wide range of companies worldwide, ranging from large manufacturing organizations to small fabricators.
-                      </li>
-                      <li>
-                        <strong>Product Application</strong>
-                        Laser cutting machines and laser welding machines are widely used in industries such as sheet metal fabrication, metallic job-shops and elevator manufacturing.
-                      </li>
-                    </ul>
-                    <p class="reference-note">
-                      <strong>中文方向：</strong>
-                      可围绕“我们的工厂、我们的产品、产品应用”三条来写，分别说明供应能力、客户覆盖范围和应用行业。正式使用时请结合公司真实情况改写。
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="prep-panel" data-prep-panel="product">
-                <h3>产品参考</h3>
-                <div class="prep-columns">
-                  <div class="prep-block">
-                    <h4>产品分类参考</h4>
-                    <pre class="reference-structure">一级分类A
-  - 二级分类1
-    - 三级分类1
-  - 二级分类2
-  - 二级分类3
-
-一级分类B
-  - 二级分类1
-    - 三级分类1
-  - 二级分类2
-  - 二级分类3</pre>
-                  </div>
-                  <div class="prep-block">
-                    <h4>产品标题参考</h4>
-                    <p class="reference-copy">
-                      <strong>示例标题：</strong>
-                      Portable Reusable Waterproof Single-Person Motorcycle Rain Coat
-                    </p>
-                    <p class="reference-note">
-                      <strong>关键词拆解：</strong>
-                      “防水雨衣、摩托车雨衣”是主关键词，“便携式、可重复使用、单人”是修饰词。产品标题建议控制在80个字符以内，并把主关键词放进去。
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="prep-panel" data-prep-panel="detail">
-                <h3>产品详情示例图</h3>
-                <div class="reference-image-frame">
-                  <img src="assets/prep-product-detail-reference.jpg" alt="产品详情页示例图" width="1200" height="4338" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="site-footer">
-        <div class="footer-logo">模板案例库</div>
-        <div class="copyright">
-          <span>© 2026 Personal Website. All rights reserved.</span>
-          <span>Template inspiration gallery.</span>
-        </div>
-      </footer>
-
-      <button class="to-top" type="button" aria-label="回到顶部" id="toTop">
-        <img src="assets/template-top.png" alt="top" />
+      <a class="brand" href="#top" aria-label="MAXMOV home">
+        <img src="assets/optimized/logo/maxmov-logo.png" alt="MAXMOV logo" width="360" height="288" decoding="async">
+      </a>
+      <div class="nav-group right">
+        <a class="nav-item" href="#about">About Us</a>
+        <a class="nav-item" href="#why">Advantages</a>
+        <a class="nav-item" href="#contact">Contact Us</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-    </main>
+    </nav>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="#models">Models</a>
+      <a href="#best">Products</a>
+      <a href="#factory">Factory</a>
+      <a href="#about">About Us</a>
+      <a href="#why">Advantages</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </header>
 
-    <div class="search-modal" id="searchModal" aria-hidden="true">
-      <div class="search-box">
-        <div class="search-panel">
-          <div class="search-row">
-            <div class="search-input-wrap">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="7"></circle>
-                <path d="m20 20-3.2-3.2"></path>
-              </svg>
-              <input class="search-input" id="searchInput" type="text" placeholder="搜索" autocomplete="off" />
-              <button class="clear-search" id="clearSearch" type="button" aria-label="清除搜索">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-                  <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm3.7 12.3a1 1 0 0 1-1.4 1.4L12 13.4l-2.3 2.3a1 1 0 0 1-1.4-1.4l2.3-2.3-2.3-2.3a1 1 0 0 1 1.4-1.4l2.3 2.3 2.3-2.3a1 1 0 0 1 1.4 1.4L13.4 12l2.3 2.3Z"></path>
-                </svg>
-              </button>
-            </div>
-            <button class="cancel-search" id="cancelSearch" type="button">取消</button>
-          </div>
-          <div class="quick-link" id="quickLink"></div>
+  <main id="top">
+    <h1 class="sr-only">MAXMOV Electric Mobility OEM/ODM Supplier</h1>
+    <section class="hero-banner" aria-label="EU road legal MAXMOV banner">
+      <picture>
+        <source type="image/webp" srcset="assets/webp/backgrounds/eu-road-legal-banner.webp">
+        <img src="assets/backgrounds/eu-road-legal-banner.png" alt="EU Road Legal MAXMOV electric scooter banner" width="2916" height="1222" fetchpriority="high" decoding="async">
+      </picture>
+    </section>
+
+    <section class="section section-light" id="models">
+      <div class="section-inner">
+        <div class="title-block">
+          <p class="kicker">Product Range</p>
+          <h2>Our <span class="accent">Categories</span></h2>
+          <p>Explore electric mobility product ranges for sourcing projects.</p>
         </div>
+        <div class="category-grid">
+          <a class="category-card" href="#best">
+            <img src="assets/animated/cruiser-side.gif" alt="Electric moped animated view" width="520" height="379" loading="lazy" decoding="async">
+            <div class="category-label"><h3>Electric Mopeds</h3><span>More&nbsp;&gt;</span></div>
+          </a>
+          <a class="category-card" href="#best">
+            <img src="assets/animated/dirtbike.gif" alt="Electric motocross animated view" width="500" height="396" loading="lazy" decoding="async">
+            <div class="category-label"><h3>Electric Motocross</h3><span>More&nbsp;&gt;</span></div>
+          </a>
+          <a class="category-card" href="#best">
+            <img src="assets/animated/nova-scooter.gif" alt="Electric scooter animated view" width="390" height="390" loading="lazy" decoding="async">
+            <div class="category-label"><h3>Electric Scooter</h3><span>More&nbsp;&gt;</span></div>
+          </a>
+          <a class="category-card" href="#best">
+            <img src="assets/animated/electric-mobility.gif" alt="Electric mobility animated view" width="430" height="434" loading="lazy" decoding="async">
+            <div class="category-label"><h3>Electric Mobility</h3><span>More&nbsp;&gt;</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner-band banner-band-light" aria-label="MAXMOV product banner highlights">
+      <div class="banner-strip">
+        <figure class="banner-card" style="--banner-bg: url('assets/backgrounds/why-us-seaside.jpg');">
+          <picture>
+            <img src="assets/backgrounds/why-us-seaside.jpg" alt="MAXMOV electric scooter by the seaside" width="2200" height="1167" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="banner-copy">
+            <span>OEM/ODM Ready</span>
+            <h3>Electric Mobility for Global Sourcing</h3>
+            <p>Factory-direct project support with model selection, private label options and export packaging preparation.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="best">
+      <div class="section-inner">
+        <div class="title-block">
+          <p class="kicker">Featured Models</p>
+          <h2>Selected <span class="accent">Models</span></h2>
+          <p>Selected models for distributors, brand owners and sourcing teams.</p>
+        </div>
+        <div class="model-stage" data-model-stage>
+          <div class="model-word" aria-hidden="true">STREET</div>
+          <button class="model-arrow prev" type="button" data-model-action="prev" aria-label="Previous model">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M9 12h11" fill="none" stroke="currentColor" stroke-linecap="round"></path>
+            </svg>
+          </button>
+          <button class="model-arrow next" type="button" data-model-action="next" aria-label="Next model">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M4 12h11" fill="none" stroke="currentColor" stroke-linecap="round"></path>
+            </svg>
+          </button>
+          <div class="model-slides">
+            <article class="model-slide" data-model="ejoy" data-word="E-JOY" aria-hidden="true">
+              <figure class="model-product">
+                <img src="assets/optimized/products/nova-scooter-transparent.png" alt="E-JOY 20 foldable electric scooter" width="1400" height="1400" loading="lazy" decoding="async">
+              </figure>
+            </article>
+            <article class="model-slide is-active" data-model="street" data-word="STREET" aria-hidden="false">
+              <figure class="model-product">
+                <img src="assets/optimized/products/cruiser-side.png" alt="Street 20 road-legal electric moped" width="1800" height="1312" loading="lazy" decoding="async">
+              </figure>
+            </article>
+            <article class="model-slide" data-model="motocross" data-word="MOTO" aria-hidden="true">
+              <figure class="model-product">
+                <img src="assets/optimized/products/dirtbike.png" alt="MAXMOV electric motocross series" width="1800" height="1426" loading="lazy" decoding="async">
+              </figure>
+            </article>
+          </div>
+          <div class="model-bottom">
+            <a class="model-series-link" href="#contact">
+              Request details
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14" fill="none" stroke="currentColor" stroke-linecap="round"></path>
+                <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            <div class="model-tabs" role="tablist" aria-label="Selected model series">
+              <button class="model-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-model-index="0">E-JOY 20</button>
+              <button class="model-tab is-active" type="button" role="tab" aria-selected="true" data-model-index="1">Street 20</button>
+              <button class="model-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-model-index="2">Motocross</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="why">
+      <div class="section-inner">
+        <div class="title-block">
+          <p class="kicker">Why Us</p>
+          <h2>MAXMOV <span class="accent">Advantages</span></h2>
+          <p>Practical factory-backed support for international electric mobility buyers.</p>
+        </div>
+        <div class="why-editorial">
+          <div class="advantage-grid why-list">
+            <article class="advantage-card">
+              <figure class="advantage-media">
+                <picture>
+                  <source type="image/webp" srcset="assets/webp/optimized/factory/qc-room.webp">
+                  <img src="assets/optimized/factory/qc-room.jpg" alt="MAXMOV quality control testing room" width="1800" height="1200" loading="lazy" decoding="async">
+                </picture>
+              </figure>
+              <div class="advantage-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg>
+              </div>
+              <h3>Conformity Production</h3>
+              <p>Quality review and production standards support consistent project handover.</p>
+            </article>
+            <article class="advantage-card">
+              <figure class="advantage-media">
+                <img src="assets/backgrounds/road-legal-rider.jpg" alt="MAXMOV road legal electric mobility riding scene" width="1600" height="1054" loading="lazy" decoding="async">
+              </figure>
+              <div class="advantage-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3l3.6 6.2 6.4.8-4.7 4.4 1.2 6.6L12 17.8 5.5 21l1.2-6.6L2 10l6.4-.8L12 3z"></path></svg>
+              </div>
+              <h3>Road-Legal</h3>
+              <p>Road-legal model options and document support help buyers prepare local programs.</p>
+            </article>
+            <article class="advantage-card">
+              <figure class="advantage-media">
+                <img src="assets/products/component-deck.jpg" alt="MAXMOV electric mobility technology and component detail" width="1800" height="1197" loading="lazy" decoding="async">
+              </figure>
+              <div class="advantage-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2v20"></path><path d="M6.5 5.5h11"></path><path d="M4 9h16"></path><path d="M6.5 18.5h11"></path><path d="M8 2l-3 7 7 13 7-13-3-7"></path></svg>
+              </div>
+              <h3>Technology</h3>
+              <p>Component selection and configuration support keep every sourcing project practical.</p>
+            </article>
+            <article class="advantage-card">
+              <figure class="advantage-media">
+                <img src="assets/factory/office.jpg" alt="MAXMOV OEM ODM office and project support scene" width="6000" height="4000" loading="lazy" decoding="async">
+              </figure>
+              <div class="advantage-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 19l5-1 10-10a2.1 2.1 0 0 0-3-3L6 15l-2 4z"></path><path d="M13 6l5 5"></path><path d="M3 22h18"></path></svg>
+              </div>
+              <h3>OEM &amp; ODM</h3>
+              <p>OEM/ODM communication, packaging and export support for sourcing teams.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-inner">
+        <div class="title-block">
+          <p class="kicker">OEM/ODM Blueprint</p>
+          <h2>OEM/ODM <span class="accent">Project Flow</span></h2>
+          <p>Transparent project steps from brief to export preparation.</p>
+        </div>
+        <div class="about-redesign">
+          <div class="about-feature">
+            <div class="about-copy-panel">
+              <h3>Jinhua Klan Intelligent Technology Co., Ltd.</h3>
+              <p class="about-lede">Jinhua Klan Intelligent Technology Co., Ltd. is a professional manufacturer specializing in electric vehicles and electric scooters in China. Located in Jinhua, Zhejiang, we provide road-legal electric mobility products, OEM/ODM customization, and reliable production support for global partners.</p>
+            </div>
+            <figure class="about-visual">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/brand-entrance.webp">
+                <img src="assets/optimized/factory/brand-entrance.jpg" alt="Jinhua Klan Intelligent Technology and MAXMOV brand entrance" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+          </div>
+          <div class="about-stat-bar flow-bar" aria-label="OEM ODM project flow">
+            <div class="about-stat flow-step">
+              <div class="about-stat-index" aria-hidden="true">01</div>
+              <div>
+                <b>Project Brief</b>
+                <span>Market, model and target requirements</span>
+              </div>
+            </div>
+            <div class="about-stat flow-step">
+              <div class="about-stat-index" aria-hidden="true">02</div>
+              <div>
+                <b>Configuration</b>
+                <span>Motor, battery, color and accessories</span>
+              </div>
+            </div>
+            <div class="about-stat flow-step">
+              <div class="about-stat-index" aria-hidden="true">03</div>
+              <div>
+                <b>Sample Review</b>
+                <span>Prototype, documents and packaging check</span>
+              </div>
+            </div>
+            <div class="about-stat flow-step">
+              <div class="about-stat-index" aria-hidden="true">04</div>
+              <div>
+                <b>Production & Export</b>
+                <span>Batch assembly and shipment support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="factory">
+      <div class="section-inner">
+        <div class="title-block">
+          <p class="kicker">Our Facilities</p>
+          <h2>Our <span class="accent">Factory</span></h2>
+          <p>Workshop, QC, warehouse and showroom review for buyer confidence.</p>
+        </div>
+        <div class="factory-showcase" aria-label="Factory image carousel">
+          <div class="facility-track">
+            <article class="facility-slide">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/brand-entrance.webp">
+                <img src="assets/optimized/factory/brand-entrance.jpg" alt="MAXMOV brand entrance" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+              <span>Brand Entrance</span>
+            </article>
+            <article class="facility-slide">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/assembly-floor.webp">
+                <img src="assets/optimized/factory/assembly-floor.jpg" alt="Production workshop" width="1800" height="1106" loading="lazy" decoding="async">
+              </picture>
+              <span>Production Workshop</span>
+            </article>
+            <article class="facility-slide">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/qc-room.webp">
+                <img src="assets/optimized/factory/qc-room.jpg" alt="Quality control room" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+              <span>Quality Control</span>
+            </article>
+            <article class="facility-slide">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/warehouse-packaging.webp">
+                <img src="assets/optimized/factory/warehouse-packaging.jpg" alt="Warehouse and packaging area" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+              <span>Warehouse</span>
+            </article>
+            <article class="facility-slide" aria-hidden="true">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/brand-entrance.webp">
+                <img src="assets/optimized/factory/brand-entrance.jpg" alt="" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+              <span>Brand Entrance</span>
+            </article>
+            <article class="facility-slide" aria-hidden="true">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/assembly-floor.webp">
+                <img src="assets/optimized/factory/assembly-floor.jpg" alt="" width="1800" height="1106" loading="lazy" decoding="async">
+              </picture>
+              <span>Production Workshop</span>
+            </article>
+            <article class="facility-slide" aria-hidden="true">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/qc-room.webp">
+                <img src="assets/optimized/factory/qc-room.jpg" alt="" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+              <span>Quality Control</span>
+            </article>
+            <article class="facility-slide" aria-hidden="true">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/warehouse-packaging.webp">
+                <img src="assets/optimized/factory/warehouse-packaging.jpg" alt="" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+              <span>Warehouse</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="section-inner">
+        <div class="title-block">
+          <p class="kicker">Blog</p>
+          <h2>MAXMOV <span class="accent">Blog</span></h2>
+          <p>Insights for electric mobility sourcing, compliance and OEM/ODM projects.</p>
+        </div>
+        <div class="blog-grid resource-list">
+          <article class="blog-card resource-row">
+            <figure class="resource-media">
+              <picture>
+                <img src="assets/backgrounds/road-legal-rider.jpg" alt="Road-legal electric mobility use case" width="1600" height="1054" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="blog-body">
+              <span class="resource-tag">Sourcing Blog</span>
+              <h3>How to Select Electric Scooter Models for Your Market</h3>
+              <p>Key points buyers should confirm before model selection, sample request and quotation.</p>
+              <a class="link-more" href="#contact">Read Article</a>
+            </div>
+          </article>
+          <article class="blog-card resource-row">
+            <figure class="resource-media">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/qc-room.webp">
+                <img src="assets/optimized/factory/qc-room.jpg" alt="MAXMOV quality control testing room" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="blog-body">
+              <span class="resource-tag">Compliance Blog</span>
+              <h3>Road-Legal Project Preparation for EU Buyers</h3>
+              <p>How EEC, COC and market requirements affect electric mobility sourcing projects.</p>
+              <a class="link-more" href="#contact">Read Article</a>
+            </div>
+          </article>
+          <article class="blog-card resource-row">
+            <figure class="resource-media">
+              <picture>
+                <source type="image/webp" srcset="assets/webp/optimized/factory/warehouse-packaging.webp">
+                <img src="assets/optimized/factory/warehouse-packaging.jpg" alt="MAXMOV export packaging and warehouse preparation" width="1800" height="1200" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="blog-body">
+              <span class="resource-tag">OEM/ODM Blog</span>
+              <h3>OEM/ODM Project Support From Sample to Export</h3>
+              <p>How documentation, packaging and customization support help sourcing teams.</p>
+              <a class="link-more" href="#contact">Read Article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/optimized/logo/maxmov-logo.png" alt="MAXMOV logo" width="360" height="288" loading="lazy" decoding="async">
+        <p>MAXMOV supports electric mobility sourcing projects with factory-direct supply, OEM/ODM options, compliance document support and export packaging preparation.</p>
+        <a class="footer-inquiry" href="https://www.maxmovsports.com" target="_blank" rel="noopener">Contact Sales Team</a>
+        <div class="socials" aria-label="Support tags">
+          <span>OEM</span>
+          <span>ODM</span>
+          <span>QC</span>
+          <span>DOC</span>
+          <span>EXP</span>
+        </div>
+      </div>
+      <div>
+        <h3>Products</h3>
+        <ul>
+          <li>Electric Scooters</li>
+          <li>Electric Mopeds</li>
+          <li>Electric Motocross</li>
+          <li>Electric Mobility</li>
+          <li>Accessories</li>
+          <li>Private Label Projects</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#factory">Our Factory</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">OEM/ODM Support</a></li>
+          <li><a href="#contact">Inquiry Support</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get In Touch</h3>
+        <ul>
+          <li>Website: <a href="https://www.maxmovsports.com" target="_blank" rel="noopener">www.maxmovsports.com</a></li>
+          <li>Inquiry: model, market, quantity and certificate needs</li>
+          <li>Sample Request: target configuration and packaging needs</li>
+          <li>Documents: certification or test report support upon request</li>
+          <li>Location: Jinhua, Zhejiang, China</li>
+        </ul>
       </div>
     </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jinhua Klan Intelligent Technology Co., Ltd. All rights reserved.</span>
+      <span>Policy documents available on request</span>
+    </div>
+  </footer>
 
-    <script src="assets/templates-v3-data.js"></script>
-    <script>
-      const industries = window.TEMPLATE_LIBRARY_INDUSTRIES || [
-        "全部",
-        "工业机械",
-        "家居园艺",
-        "五金工具",
-        "包装印刷",
-        "汽车零配件",
-        "建材与房地产",
-        "金属与合金",
-        "运动及娱乐",
-        "电器设备及用品",
-        "可再生能源",
-        "面料及纺织品",
-        "电子元器件",
-        "家用电器",
-        "其他"
-      ];
+  <script>
+    const body = document.body;
+    const header = document.querySelector(".site-header");
+    const hero = document.querySelector(".hero-banner");
+    const toggle = document.getElementById("menuToggle");
+    const panel = document.getElementById("mobilePanel");
 
-      const quickLinks = ["工业机械", "家居园艺", "五金工具", "汽车零配件"];
-      const templates = window.TEMPLATE_LIBRARY_ITEMS || [];
+    const syncHeaderTone = () => {
+      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      const switchPoint = Math.max(80, heroBottom - 112);
+      header.classList.toggle("is-past-hero", window.scrollY > switchPoint);
+    };
 
-      const state = {
-        industry: "全部",
-        search: "",
-        resultMode: false,
-        mobileCollapsed: window.innerWidth < 768
+    toggle.addEventListener("click", () => {
+      const isOpen = panel.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    panel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        panel.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    window.addEventListener("scroll", syncHeaderTone, { passive: true });
+    window.addEventListener("resize", syncHeaderTone);
+    window.addEventListener("load", () => {
+      body.classList.remove("is-loading");
+      body.classList.add("is-loaded");
+      syncHeaderTone();
+    });
+
+    if (document.readyState === "complete") {
+      body.classList.remove("is-loading");
+      body.classList.add("is-loaded");
+    }
+
+    syncHeaderTone();
+
+    const modelStage = document.querySelector("[data-model-stage]");
+    if (modelStage) {
+      const slides = Array.from(modelStage.querySelectorAll(".model-slide"));
+      const tabs = Array.from(modelStage.querySelectorAll(".model-tab"));
+      const word = modelStage.querySelector(".model-word");
+      const actions = modelStage.querySelectorAll("[data-model-action]");
+      let currentModel = Math.max(0, slides.findIndex((slide) => slide.classList.contains("is-active")));
+
+      const setModel = (index) => {
+        if (!slides.length) return;
+        currentModel = (index + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => {
+          const isActive = slideIndex === currentModel;
+          slide.classList.toggle("is-active", isActive);
+          slide.setAttribute("aria-hidden", String(!isActive));
+        });
+        tabs.forEach((tab, tabIndex) => {
+          const isActive = tabIndex === currentModel;
+          tab.classList.toggle("is-active", isActive);
+          tab.setAttribute("aria-selected", String(isActive));
+          tab.tabIndex = isActive ? 0 : -1;
+        });
+        if (word) {
+          word.textContent = slides[currentModel].dataset.word || tabs[currentModel]?.textContent || "";
+        }
       };
 
-      const filtersEl = document.getElementById("industryFilters");
-      const gridEl = document.getElementById("templatesGrid");
-      const emptyEl = document.getElementById("emptyState");
-      const searchModal = document.getElementById("searchModal");
-      const searchInput = document.getElementById("searchInput");
-      const clearSearch = document.getElementById("clearSearch");
-      const quickLink = document.getElementById("quickLink");
-      const resultBar = document.getElementById("searchResultBar");
-      const resultText = document.getElementById("searchResultText");
-      const hero = document.getElementById("hero");
-      const prepTabs = Array.from(document.querySelectorAll(".prep-tab"));
-      const prepPanels = Array.from(document.querySelectorAll(".prep-panel"));
-
-      function normalize(value) {
-        return String(value || "").trim().toLowerCase();
-      }
-
-      function getVisibleTemplates() {
-        const keyword = normalize(state.search);
-        return templates.filter((item) => {
-          const inIndustry =
-            state.industry === "全部" ||
-            (Array.isArray(item.industries) && item.industries.includes(state.industry));
-          if (!inIndustry) return false;
-          if (!keyword) return true;
-          return normalize(`${item.name} ${item.industry} ${item.tags}`).includes(keyword);
+      actions.forEach((button) => {
+        button.addEventListener("click", () => {
+          const step = button.dataset.modelAction === "next" ? 1 : -1;
+          setModel(currentModel + step);
         });
-      }
-
-      function renderFilters() {
-        filtersEl.innerHTML = "";
-        filtersEl.classList.toggle("collapsed", state.mobileCollapsed);
-
-        industries.forEach((industry) => {
-          const button = document.createElement("button");
-          button.type = "button";
-          button.className = `chip${state.industry === industry ? " active" : ""}`;
-          button.textContent = industry;
-          button.addEventListener("click", () => {
-            state.industry = industry;
-            state.resultMode = false;
-            state.search = "";
-            searchInput.value = "";
-            render();
-          });
-          filtersEl.appendChild(button);
-        });
-
-        const fold = document.createElement("button");
-        fold.type = "button";
-        fold.className = "industry-fold";
-        fold.setAttribute("aria-label", state.mobileCollapsed ? "展开行业筛选" : "收起行业筛选");
-        fold.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>';
-        fold.addEventListener("click", () => {
-          state.mobileCollapsed = !state.mobileCollapsed;
-          renderFilters();
-        });
-        filtersEl.appendChild(fold);
-      }
-
-      function renderTemplates() {
-        const items = getVisibleTemplates();
-        gridEl.innerHTML = "";
-        emptyEl.classList.toggle("active", items.length === 0);
-
-        items.forEach((item) => {
-          const card = document.createElement("article");
-          card.className = "template-card";
-          card.setAttribute("tabindex", "0");
-          card.setAttribute("aria-label", `${item.name}，${(item.primaryTags || [item.industry]).join("，")}`);
-          card.innerHTML = `
-            ${item.featured ? '<img class="feature-ribbon" src="assets/template-feature.png" alt="feature" width="28" />' : ""}
-            <div class="template-cover">
-              <img src="${item.cover}" alt="${item.name}" />
-            </div>
-            <div class="template-title">${item.name}</div>
-            <div class="template-overlay" aria-hidden="true">
-              <div class="preview-button">预览</div>
-            </div>
-          `;
-          card.addEventListener("click", () => previewTemplate(item));
-          card.addEventListener("keydown", (event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              previewTemplate(item);
-            }
-          });
-          gridEl.appendChild(card);
-        });
-      }
-
-      function renderResultMode() {
-        const showResult = state.resultMode && state.search;
-        hero.style.display = showResult ? "none" : "";
-        resultBar.classList.toggle("active", showResult);
-        resultText.textContent = showResult ? `以下为"${state.search}"的搜索结果，` : "";
-      }
-
-      function renderQuickLinks() {
-        const keyword = searchInput.value.trim();
-        clearSearch.classList.toggle("active", Boolean(keyword));
-        quickLink.innerHTML = "";
-
-        const label = document.createElement("div");
-        label.className = "quick-label";
-        label.textContent = keyword ? "搜索建议" : "快速链接";
-        quickLink.appendChild(label);
-
-        const source = keyword
-          ? templates
-              .filter((item) =>
-                normalize(`${item.name} ${item.industry} ${item.tags}`).includes(normalize(keyword))
-              )
-              .slice(0, 8)
-              .map((item) => item.name)
-          : quickLinks;
-
-        const list = document.createElement("div");
-        list.className = keyword ? "suggestions" : "";
-
-        source.forEach((text) => {
-          const item = document.createElement("button");
-          item.type = "button";
-          item.className = "quick-item";
-          item.innerHTML = keyword ? highlight(text, keyword) : text;
-          item.addEventListener("click", () => {
-            if (quickLinks.includes(text)) {
-              state.industry = text;
-              state.search = "";
-              state.resultMode = false;
-            } else {
-              state.search = text;
-              state.industry = "全部";
-              state.resultMode = true;
-            }
-            closeSearch();
-            render();
-          });
-          list.appendChild(item);
-        });
-
-        if (source.length === 0) {
-          const empty = document.createElement("div");
-          empty.className = "quick-item";
-          empty.textContent = "没有匹配的模板";
-          list.appendChild(empty);
-        }
-
-        quickLink.appendChild(list);
-      }
-
-      function highlight(text, keyword) {
-        const safeKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        return text.replace(new RegExp(`(${safeKeyword})`, "gi"), '<span class="highlight">$1</span>');
-      }
-
-      function showPrepPanel(name) {
-        prepTabs.forEach((tab) => {
-          const active = tab.dataset.prepTab === name;
-          tab.classList.toggle("active", active);
-          tab.setAttribute("aria-selected", String(active));
-        });
-        prepPanels.forEach((panel) => {
-          panel.classList.toggle("active", panel.dataset.prepPanel === name);
-        });
-      }
-
-      function render() {
-        renderFilters();
-        renderResultMode();
-        renderTemplates();
-      }
-
-      function openSearch() {
-        searchModal.classList.add("active");
-        searchModal.setAttribute("aria-hidden", "false");
-        document.body.classList.add("modal-open");
-        renderQuickLinks();
-        window.setTimeout(() => searchInput.focus(), 40);
-      }
-
-      function closeSearch() {
-        searchModal.classList.remove("active");
-        searchModal.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("modal-open");
-      }
-
-      function runSearch(value) {
-        const keyword = value.trim();
-        if (!keyword) return;
-        state.search = keyword;
-        state.industry = "全部";
-        state.resultMode = true;
-        closeSearch();
-        render();
-      }
-
-      function previewTemplate(item) {
-        if (item.url) {
-          window.location.href = item.url;
-          return;
-        }
-        window.location.href = item.previewUrl;
-      }
-
-      document.getElementById("openSearch").addEventListener("click", openSearch);
-      document.getElementById("cancelSearch").addEventListener("click", closeSearch);
-      document.getElementById("clearSearch").addEventListener("click", () => {
-        searchInput.value = "";
-        renderQuickLinks();
-        searchInput.focus();
       });
 
-      prepTabs.forEach((tab) => {
-        tab.setAttribute("aria-selected", String(tab.classList.contains("active")));
-        tab.addEventListener("click", () => showPrepPanel(tab.dataset.prepTab));
+      tabs.forEach((tab, tabIndex) => {
+        tab.addEventListener("click", () => setModel(tabIndex));
+        tab.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+            event.preventDefault();
+            const step = event.key === "ArrowRight" ? 1 : -1;
+            setModel(currentModel + step);
+            tabs[currentModel]?.focus();
+          }
+        });
       });
 
-      searchModal.addEventListener("click", (event) => {
-        if (event.target === searchModal) closeSearch();
+      setModel(currentModel);
+    }
+
+    const revealTargets = document.querySelectorAll(
+      ".title-block, .category-card, .banner-card, .model-stage, .product-card, .advantage-card, .about-feature, .flow-step, .facility-slide, .blog-card"
+    );
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!prefersReducedMotion && "IntersectionObserver" in window) {
+      revealTargets.forEach((target, index) => {
+        target.classList.add("reveal-ready");
+        target.style.transitionDelay = `${Math.min(index % 6, 5) * 55}ms`;
       });
 
-      searchInput.addEventListener("input", renderQuickLinks);
-      searchInput.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") runSearch(searchInput.value);
-        if (event.key === "Escape") closeSearch();
-      });
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
 
-      document.getElementById("resetSearch").addEventListener("click", () => {
-        state.search = "";
-        state.industry = "全部";
-        state.resultMode = false;
-        searchInput.value = "";
-        render();
-      });
-
-      document.getElementById("toTop").addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      window.addEventListener("resize", () => {
-        const shouldCollapse = window.innerWidth < 768;
-        if (shouldCollapse !== state.mobileCollapsed) {
-          state.mobileCollapsed = shouldCollapse;
-          renderFilters();
-        }
-      });
-
-      render();
-    </script>
-  </body>
+      revealTargets.forEach((target) => revealObserver.observe(target));
+    } else {
+      revealTargets.forEach((target) => target.classList.add("is-visible"));
+    }
+  </script>
+</body>
 </html>

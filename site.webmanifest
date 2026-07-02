@@ -1,0 +1,22 @@
+{
+  "name": "MAXMOV Electric Mobility",
+  "short_name": "MAXMOV",
+  "description": "Electric mobility sourcing homepage for scooters, mopeds, motocross and OEM/ODM project support.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#25849E",
+  "icons": [
+    {
+      "src": "/assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
