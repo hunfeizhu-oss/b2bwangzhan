@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 const stats = [
@@ -97,13 +98,13 @@ const blogs = [
   ['Mar 15, 2024', 'Top 5 Trends in Personal Care Products in 2024'],
 ];
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
+function SectionLabel({ children }: { children: ReactNode }) {
   return <span className="section-label">{children}</span>;
 }
 
 function AssetSlot({ label, variant = 'product', tall = false }: { label: string; variant?: 'product' | 'factory' | 'equipment' | 'cert' | 'export'; tall?: boolean }) {
   return (
-    <div className={`asset-slot asset-${variant} ${tall ? 'asset-tall' : ''}`}>
+    <div className={`asset-slot asset-${variant} ${tall ? 'asset-tall' : ''}`} role="img" aria-label={label}>
       <div className="asset-orb" />
       <div className="asset-frame">
         <span>Replace Image</span>
@@ -117,14 +118,14 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-forest/10 bg-ivory/90 backdrop-blur-xl">
       <div className="site-container flex h-20 items-center justify-between">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="#top" className="flex items-center gap-3" aria-label="SIMAN homepage">
           <div className="grid h-11 w-11 place-items-center rounded-full bg-forest text-sm font-bold text-ivory">S</div>
           <div>
             <p className="text-lg font-bold tracking-[0.22em] text-forest">SIMAN</p>
             <p className="text-xs uppercase tracking-[0.22em] text-moss">丝曼生物科技</p>
           </div>
         </a>
-        <nav className="hidden items-center gap-7 text-sm font-semibold text-ink/70 lg:flex">
+        <nav className="hidden items-center gap-7 text-sm font-semibold text-ink/70 lg:flex" aria-label="Main navigation">
           <a href="#products">Products</a>
           <a href="#oem">OEM / ODM</a>
           <a href="#factory">Factory</a>
