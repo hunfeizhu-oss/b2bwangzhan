@@ -54,20 +54,31 @@ npm run build
 
 The build output will be generated in `dist/`.
 
+## Image replacement workflow
+
+The homepage now supports gradual image replacement.
+
+1. Put optimized real images into `public/assets/`.
+2. Open `src/siteAssets.ts`.
+3. Fill the matching path, for example `hero: '/assets/hero/hero-soap-family.webp'`.
+4. Empty fields automatically keep the designed placeholder blocks.
+5. Detailed instructions are in `IMAGE_REPLACEMENT_GUIDE.md`.
+
 ## Delivery workflow
 
 1. Put optimized real images into `public/assets/`.
 2. Follow `public/assets/README.md` for asset naming and recommended dimensions.
-3. Replace `AssetSlot` placeholders in `src/App.tsx` with real images.
-4. Confirm phone, email, address and logo.
-5. Confirm all certificate/report wording against actual files.
-6. Run `npm run build` and check desktop + mobile layouts.
-7. Deploy using `DEPLOYMENT.md`.
+3. Confirm phone, email, address and logo.
+4. Confirm all certificate/report wording against actual files.
+5. Run `npm run build` and check desktop + mobile layouts.
+6. Deploy using `DEPLOYMENT.md`.
 
 ## Handoff files
 
 - `SIMAN_CONTENT_MAP.md` — homepage copy and real-asset replacement map
 - `public/assets/README.md` — real website image folder structure and image rules
+- `src/siteAssets.ts` — editable image path map
+- `IMAGE_REPLACEMENT_GUIDE.md` — step-by-step image replacement guide
 - `DEPLOYMENT.md` — Vite static deployment instructions
 
 ## Compliance note
