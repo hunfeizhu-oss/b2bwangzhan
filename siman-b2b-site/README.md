@@ -4,11 +4,11 @@ A React + TypeScript + Tailwind one-page B2B independent-site homepage for Zheji
 
 ## Positioning
 
-SIMAN is presented as an OEM / ODM soap manufacturing partner for global brands, wholesalers, distributors, supermarkets and project buyers.
+SIMAN is presented as an OEM / ODM soap and personal-care manufacturing partner for global brands, wholesalers, distributors, supermarkets and project buyers.
 
 ## Product scope
 
-- Toilet Soap
+- Soap / Toilet Soap
 - Handmade Soap
 - Laundry Soap
 - Soap Base
@@ -19,12 +19,12 @@ SIMAN is presented as an OEM / ODM soap manufacturing partner for global brands,
 1. Header Navigation
 2. Hero Banner
 3. Product Categories
-4. OEM / ODM Solutions
-5. Manufacturing Capacity
-6. Equipment Advantage
-7. Featured Products
+4. Featured Products
+5. OEM / ODM Solutions
+6. Factory & Production Capacity
+7. Advanced Equipment
 8. Quality & Certifications
-9. Packing & Export Support
+9. Export Support
 10. About SIMAN
 11. Latest Blog
 12. CTA + Footer
@@ -35,6 +35,7 @@ SIMAN is presented as an OEM / ODM soap manufacturing partner for global brands,
 - Support color: `#F7F4EE`
 - Accent: muted copper / warm clay
 - Style: premium B2B, clean manufacturing, low-AI, high trust
+- Layout: conversion-first one-page homepage with real-image replacement slots
 
 ## Run locally
 
@@ -47,17 +48,28 @@ npm run dev
 ## Build
 
 ```bash
+cd siman-b2b-site
 npm run build
 ```
 
-## Asset replacement
+The build output will be generated in `dist/`.
 
-The current layout uses placeholder blocks. Replace them with real assets in later iterations:
+## Delivery workflow
 
-- Product images
-- Factory exterior / workshop / equipment images
-- Certificate images
-- Packing and shipment photos
-- Logo and contact details
+1. Put optimized real images into `public/assets/`.
+2. Follow `public/assets/README.md` for asset naming and recommended dimensions.
+3. Replace `AssetSlot` placeholders in `src/App.tsx` with real images.
+4. Confirm phone, email, address and logo.
+5. Confirm all certificate/report wording against actual files.
+6. Run `npm run build` and check desktop + mobile layouts.
+7. Deploy using `DEPLOYMENT.md`.
 
-Do not invent certificates, client logos, partner brands or unverified factory data.
+## Handoff files
+
+- `SIMAN_CONTENT_MAP.md` — homepage copy and real-asset replacement map
+- `public/assets/README.md` — real website image folder structure and image rules
+- `DEPLOYMENT.md` — Vite static deployment instructions
+
+## Compliance note
+
+Do not invent certificates, client logos, partner brands, certificate numbers, export approvals or unverified testing claims. Use safe wording such as `Test Reports Available`, `Certification Support`, `MSDS Report Available`, and `Certificate of Origin Support` unless the real document is provided.
