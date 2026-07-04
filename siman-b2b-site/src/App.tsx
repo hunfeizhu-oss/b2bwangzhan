@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import { siteAssets } from './siteAssets';
 
 const stats = [
   { value: '15,000 m²+', label: 'Plant Area' },
@@ -16,35 +17,39 @@ const categories = [
     subtitle: 'Daily cleansing bar solutions',
     text: 'Toilet soap and transparent soap for retailers, importers and private-label brands.',
     tags: ['Private Label', 'Custom Scent', 'Retail Pack'],
+    image: siteAssets.products.soap,
   },
   {
     title: 'Handmade Soap',
     subtitle: 'Gift-ready natural style',
     text: 'Custom color, fragrance, mold shape, logo embossing and branded gift box support.',
     tags: ['Gift Box', 'Color Design', 'Logo Mold'],
+    image: siteAssets.products.handmadeSoap,
   },
   {
     title: 'Laundry Soap',
     subtitle: 'Dense and crack-resistant',
     text: 'Factory supply for household cleaning channels, regional distributors and supermarkets.',
     tags: ['Bulk Supply', 'Strong Cleaning', 'Carton Pack'],
+    image: siteAssets.products.laundrySoap,
   },
   {
     title: 'Soap Base',
     subtitle: 'Bulk raw material supply',
     text: 'Soap-base blocks for workshops, soap brands and downstream product development partners.',
     tags: ['Bulk Block', 'Stable Quality', 'B2B Supply'],
+    image: siteAssets.products.soapBase,
   },
 ];
 
 const featured = [
-  ['Olive Oil Soap', 'Gentle & Moisturizing'],
-  ['Handmade Essential Oil Soap', 'Natural & Aromatic'],
-  ['Laundry Soap', 'Strong Cleaning Power'],
-  ['Transparent Soap', 'Pure & Transparent'],
-  ['Soap Base', 'Premium Quality'],
-  ['Goat Milk Soap', 'Nourishing & Mild'],
-];
+  ['Olive Oil Soap', 'Gentle & Moisturizing', siteAssets.products.oliveOilSoap],
+  ['Handmade Essential Oil Soap', 'Natural & Aromatic', siteAssets.products.essentialOilSoap],
+  ['Laundry Soap', 'Strong Cleaning Power', siteAssets.products.laundrySoap],
+  ['Transparent Soap', 'Pure & Transparent', siteAssets.products.transparentSoap],
+  ['Soap Base', 'Premium Quality', siteAssets.products.soapBase],
+  ['Goat Milk Soap', 'Nourishing & Mild', siteAssets.products.goatMilkSoap],
+] as const;
 
 const oemSteps = [
   'Formula Customization',
@@ -74,13 +79,13 @@ const equipment = [
   ['High-density Plodder', 'Screw length 2 meters'],
   ['Compression Ratio 1:9', 'Normal machine ratio 1:6'],
   ['Stable Bar Quality', 'High density, no cracking, rich foam'],
-];
+] as const;
 
 const quality = [
   ['Strict Quality Control', 'Multiple inspection process'],
   ['Test Reports', 'Available upon request'],
   ['Certification Support', 'Based on product and market'],
-];
+] as const;
 
 const exportSupport = [
   ['MSDS Report', 'Available'],
@@ -88,28 +93,64 @@ const exportSupport = [
   ['Customs Documents', 'Full set support'],
   ['Packing Solutions', 'Safe & secure'],
   ['FOB Quotation', 'Flexible terms'],
-];
+] as const;
+
+const factoryAssets = [
+  ['Factory Exterior', siteAssets.factory.exterior],
+  ['Clean Production Line', siteAssets.factory.productionLine],
+  ['Workers & Machines', siteAssets.factory.workersMachines],
+  ['Warehouse & Packing', siteAssets.factory.warehousePacking],
+] as const;
+
+const certificateAssets = [
+  ['ISO / GMP certificate slot', siteAssets.certificates.certificate01],
+  ['Intertek / SGS test report slot', siteAssets.certificates.report01],
+  ['Chinese certificate slot', siteAssets.certificates.certificate02],
+  ['Inspection record slot', siteAssets.certificates.inspectionRecord],
+] as const;
 
 const blogs = [
-  ['May 12, 2024', 'How to Choose the Right Soap for Your Brand?'],
-  ['Apr 25, 2024', 'Benefits of Natural Ingredients in Soap Making'],
-  ['Apr 10, 2024', 'OEM Soap Manufacturing Process Explained'],
-  ['Mar 28, 2024', 'Laundry Soap vs. Detergent Soap: What’s the Difference?'],
-  ['Mar 15, 2024', 'Top 5 Trends in Personal Care Products in 2024'],
-];
+  ['May 12, 2024', 'How to Choose the Right Soap for Your Brand?', siteAssets.blog.soapBrandGuide],
+  ['Apr 25, 2024', 'Benefits of Natural Ingredients in Soap Making', siteAssets.blog.naturalIngredients],
+  ['Apr 10, 2024', 'OEM Soap Manufacturing Process Explained', siteAssets.blog.oemProcess],
+  ['Mar 28, 2024', 'Laundry Soap vs. Detergent Soap: What’s the Difference?', siteAssets.blog.laundrySoapGuide],
+  ['Mar 15, 2024', 'Top 5 Trends in Personal Care Products in 2024', siteAssets.blog.personalCareTrends],
+] as const;
+
+type AssetVariant = 'product' | 'factory' | 'equipment' | 'cert' | 'export';
+
+type AssetSlotProps = {
+  label: string;
+  src?: string;
+  alt?: string;
+  variant?: AssetVariant;
+  tall?: boolean;
+};
+
+function toSrc(value: string) {
+  return value.trim() || undefined;
+}
 
 function SectionLabel({ children }: { children: ReactNode }) {
   return <span className="section-label">{children}</span>;
 }
 
-function AssetSlot({ label, variant = 'product', tall = false }: { label: string; variant?: 'product' | 'factory' | 'equipment' | 'cert' | 'export'; tall?: boolean }) {
+function AssetSlot({ label, src, alt, variant = 'product', tall = false }: AssetSlotProps) {
+  const imageSrc = src ? toSrc(src) : undefined;
+
   return (
-    <div className={`asset-slot asset-${variant} ${tall ? 'asset-tall' : ''}`} role="img" aria-label={label}>
-      <div className="asset-orb" />
-      <div className="asset-frame">
-        <span>Replace Image</span>
-        <strong>{label}</strong>
-      </div>
+    <div className={`asset-slot asset-${variant} ${tall ? 'asset-tall' : ''} ${imageSrc ? 'asset-has-image' : ''}`} role={imageSrc ? undefined : 'img'} aria-label={imageSrc ? undefined : label}>
+      {imageSrc ? (
+        <img className="asset-img" src={imageSrc} alt={alt ?? label} loading="lazy" />
+      ) : (
+        <>
+          <div className="asset-orb" />
+          <div className="asset-frame">
+            <span>Replace Image</span>
+            <strong>{label}</strong>
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -119,7 +160,11 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-forest/10 bg-ivory/90 backdrop-blur-xl">
       <div className="site-container flex h-20 items-center justify-between">
         <a href="#top" className="flex items-center gap-3" aria-label="SIMAN homepage">
-          <div className="grid h-11 w-11 place-items-center rounded-full bg-forest text-sm font-bold text-ivory">S</div>
+          {toSrc(siteAssets.logo) ? (
+            <img className="h-11 w-auto object-contain" src={siteAssets.logo} alt="SIMAN logo" />
+          ) : (
+            <div className="grid h-11 w-11 place-items-center rounded-full bg-forest text-sm font-bold text-ivory">S</div>
+          )}
           <div>
             <p className="text-lg font-bold tracking-[0.22em] text-forest">SIMAN</p>
             <p className="text-xs uppercase tracking-[0.22em] text-moss">丝曼生物科技</p>
@@ -165,7 +210,7 @@ function Hero() {
           </div>
         </motion.div>
         <motion.div className="hero-visual-wrap" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }}>
-          <AssetSlot label="Hero soap product family + factory background" variant="product" tall />
+          <AssetSlot label="Hero soap product family + factory background" src={siteAssets.hero} variant="product" tall />
           <div className="floating-card top-8 left-6">OEM / ODM</div>
           <div className="floating-card bottom-12 left-10">Fast Sampling</div>
           <div className="floating-card right-8 top-1/2">Global Export</div>
@@ -187,7 +232,7 @@ function ProductCategories() {
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {categories.map((item) => (
             <article className="category-card" key={item.title}>
-              <AssetSlot label={`${item.title} image`} />
+              <AssetSlot label={`${item.title} image`} src={item.image} alt={`${item.title} product`} />
               <h3>{item.title}</h3>
               <p className="subtitle">{item.subtitle}</p>
               <p>{item.text}</p>
@@ -212,9 +257,9 @@ function FeaturedProducts() {
           <a href="#contact" className="btn-secondary">View All Products</a>
         </div>
         <div className="grid gap-5 md:grid-cols-3 xl:grid-cols-6">
-          {featured.map(([name, desc]) => (
+          {featured.map(([name, desc, image]) => (
             <article className="featured-card" key={name}>
-              <AssetSlot label={name} />
+              <AssetSlot label={name} src={image} alt={`${name} product`} />
               <h3>{name}</h3>
               <p>{desc}</p>
             </article>
@@ -229,7 +274,7 @@ function Oem() {
   return (
     <section id="oem" className="section-block bg-white">
       <div className="site-container grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-        <AssetSlot label="YOUR BRAND soap packaging mockup" variant="product" tall />
+        <AssetSlot label="YOUR BRAND soap packaging mockup" src={siteAssets.oem.packaging} alt="Custom private label soap packaging" variant="product" tall />
         <div>
           <SectionLabel>OEM / ODM SOLUTIONS</SectionLabel>
           <h2 className="section-title">From Formula to Retail-ready Packaging.</h2>
@@ -271,8 +316,8 @@ function Factory() {
           ))}
         </div>
         <div className="mt-10 grid gap-5 lg:grid-cols-4">
-          {['Factory Exterior', 'Clean Production Line', 'Workers & Machines', 'Warehouse & Packing'].map((label) => (
-            <AssetSlot key={label} label={label} variant="factory" />
+          {factoryAssets.map(([label, image]) => (
+            <AssetSlot key={label} label={label} src={image} alt={`SIMAN ${label}`} variant="factory" />
           ))}
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-4">
@@ -314,8 +359,8 @@ function Equipment() {
           </div>
         </div>
         <div className="grid gap-5 md:grid-cols-[1.2fr_0.8fr]">
-          <AssetSlot label="Green industrial equipment" variant="equipment" tall />
-          <AssetSlot label="Soap bars on conveyor" variant="equipment" tall />
+          <AssetSlot label="Green industrial equipment" src={siteAssets.equipment.threeRollGrinder || siteAssets.equipment.plodder} alt="SIMAN soap production equipment" variant="equipment" tall />
+          <AssetSlot label="Soap bars on conveyor" src={siteAssets.equipment.conveyor} alt="Soap bars on conveyor" variant="equipment" tall />
         </div>
       </div>
     </section>
@@ -340,8 +385,8 @@ function Quality() {
           </div>
         </div>
         <div className="cert-wall">
-          {['ISO / GMP certificate slot', 'Intertek / SGS test report slot', 'Chinese certificate slot', 'Inspection record slot'].map((label) => (
-            <AssetSlot key={label} label={label} variant="cert" />
+          {certificateAssets.map(([label, image]) => (
+            <AssetSlot key={label} label={label} src={image} alt={label} variant="cert" />
           ))}
         </div>
       </div>
@@ -367,7 +412,7 @@ function Export() {
             ))}
           </div>
         </div>
-        <AssetSlot label="Container / warehouse / export cartons" variant="export" tall />
+        <AssetSlot label="Container / warehouse / export cartons" src={siteAssets.export.container || siteAssets.export.loading || siteAssets.export.cartons} alt="SIMAN export cartons and loading" variant="export" tall />
       </div>
     </section>
   );
@@ -384,9 +429,9 @@ function About() {
           <a className="btn-primary mt-8" href="#contact">Learn More</a>
         </div>
         <div className="about-collage">
-          <AssetSlot label="SIMAN building exterior" variant="factory" />
-          <AssetSlot label="Office / lab scene" variant="factory" />
-          <AssetSlot label="Team photo" variant="factory" />
+          <AssetSlot label="SIMAN building exterior" src={siteAssets.about.building || siteAssets.factory.exterior} alt="SIMAN building exterior" variant="factory" />
+          <AssetSlot label="Office / lab scene" src={siteAssets.about.officeLab} alt="SIMAN office or lab scene" variant="factory" />
+          <AssetSlot label="Team photo" src={siteAssets.about.team} alt="SIMAN team" variant="factory" />
         </div>
       </div>
     </section>
@@ -405,9 +450,9 @@ function Blog() {
           <a href="#contact" className="btn-secondary">View All Blog</a>
         </div>
         <div className="blog-scroll">
-          {blogs.map(([date, title]) => (
+          {blogs.map(([date, title, image]) => (
             <article className="blog-card" key={title}>
-              <AssetSlot label="Blog thumbnail" />
+              <AssetSlot label="Blog thumbnail" src={image} alt={title} />
               <p>{date}</p>
               <h3>{title}</h3>
               <a href="#contact">Read More</a>
