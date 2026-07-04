@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 
 export default defineConfig({
-  base: isGitHubPages ? '/b2bwangzhan/siman-b2b-site/' : '/',
+  base: isGitHubPages ? '/b2bwangzhan/' : '/',
   plugins: [react()],
   server: {
     port: 5173,
