@@ -1,47 +1,65 @@
 import { motion } from 'framer-motion';
 
-const companyStats = [
-  { value: '20+ Years', label: 'Soap production experience' },
-  { value: '35,000 m²', label: 'Production area' },
-  { value: '200+', label: 'Skilled employees' },
-  { value: '24 Lines', label: 'Multi-category production lines' },
+const stats = [
+  { value: '15,000 m²+', label: 'Plant Area' },
+  { value: '35,000 m²+', label: 'Production Area' },
+  { value: '200+', label: 'Skilled Employees' },
+  { value: '20+ Years', label: 'Production Experience' },
+  { value: '20+', label: 'Own Brands' },
+  { value: '5,000+', label: 'Serving Customers' },
 ];
 
 const categories = [
   {
-    title: 'Toilet Soap',
-    text: 'Daily cleansing bars for wholesale, private label and retail-ready packaging projects.',
-    moq: 'OEM MOQ: 10,000 pcs',
+    title: 'Soap',
+    subtitle: 'Daily cleansing bar solutions',
+    text: 'Toilet soap and transparent soap for retailers, importers and private-label brands.',
+    tags: ['Private Label', 'Custom Scent', 'Retail Pack'],
   },
   {
     title: 'Handmade Soap',
-    text: 'Custom shapes, colors, fragrance concepts and gift-box solutions for lifestyle brands.',
-    moq: 'OEM MOQ: 5,000 pcs',
+    subtitle: 'Gift-ready natural style',
+    text: 'Custom color, fragrance, mold shape, logo embossing and branded gift box support.',
+    tags: ['Gift Box', 'Color Design', 'Logo Mold'],
   },
   {
     title: 'Laundry Soap',
-    text: 'Dense, crack-resistant laundry bars built for household channels and regional distributors.',
-    moq: 'OEM MOQ: 5 tons',
+    subtitle: 'Dense and crack-resistant',
+    text: 'Factory supply for household cleaning channels, regional distributors and supermarkets.',
+    tags: ['Bulk Supply', 'Strong Cleaning', 'Carton Pack'],
   },
   {
     title: 'Soap Base',
-    text: 'Bulk soap-base supply for factories, soap workshops and formulation partners.',
-    moq: 'OEM MOQ: 2 tons',
+    subtitle: 'Bulk raw material supply',
+    text: 'Soap-base blocks for workshops, soap brands and downstream product development partners.',
+    tags: ['Bulk Block', 'Stable Quality', 'B2B Supply'],
   },
 ];
 
-const capabilityCards = [
-  'Vertical three-roll grinding for finer raw-material processing',
-  'High-density extrusion with a 2 m screw system',
-  '1:9 compression ratio for dense, stable soap texture',
-  'Formula, shape, fragrance and packaging adjustment support',
+const featured = [
+  ['Olive Oil Soap', 'Gentle & Moisturizing'],
+  ['Handmade Essential Oil Soap', 'Natural & Aromatic'],
+  ['Laundry Soap', 'Strong Cleaning Power'],
+  ['Transparent Soap', 'Pure & Transparent'],
+  ['Soap Base', 'Premium Quality'],
+  ['Goat Milk Soap', 'Nourishing & Mild'],
+];
+
+const oemSteps = [
+  'Formula Customization',
+  'Fragrance & Color',
+  'Shape & Size',
+  'Packaging Design',
+  'Logo & Label',
+  'Fast Sampling',
+  'Mass Production',
 ];
 
 const productionLines = [
-  { name: 'Toilet Soap + Laundry Soap', lines: '6 lines' },
-  { name: 'Handmade Soap', lines: '10 lines' },
-  { name: 'Household Cleaning', lines: '4 lines' },
-  { name: 'Cosmetics', lines: '4 lines' },
+  { name: 'Toilet Soap + Laundry Soap', value: '6 Lines' },
+  { name: 'Handmade Soap', value: '10 Lines' },
+  { name: 'Household Cleaning', value: '4 Lines' },
+  { name: 'Cosmetics', value: '4 Lines' },
 ];
 
 const capacities = [
@@ -50,35 +68,46 @@ const capacities = [
   { name: 'Laundry Soap', value: '10,000 tons / year' },
 ];
 
-const serviceSteps = [
-  'Requirement Review',
-  'Formula & Sample Proofing',
-  'Packaging Design',
-  'Mass Production',
-  'QC & Documentation',
-  'Export Delivery',
+const equipment = [
+  ['Vertical Three-roll Grinder', 'Raw materials ground finer than hair'],
+  ['High-density Plodder', 'Screw length 2 meters'],
+  ['Compression Ratio 1:9', 'Normal machine ratio 1:6'],
+  ['Stable Bar Quality', 'High density, no cracking, rich foam'],
+];
+
+const quality = [
+  ['Strict Quality Control', 'Multiple inspection process'],
+  ['Test Reports', 'Available upon request'],
+  ['Certification Support', 'Based on product and market'],
 ];
 
 const exportSupport = [
-  'FOB quotation support',
-  'Customs declaration assistance',
-  'Commodity inspection support',
-  'MSDS / Certificate of Origin / customs documents',
+  ['MSDS Report', 'Available'],
+  ['Certificate of Origin', 'Support'],
+  ['Customs Documents', 'Full set support'],
+  ['Packing Solutions', 'Safe & secure'],
+  ['FOB Quotation', 'Flexible terms'],
+];
+
+const blogs = [
+  ['May 12, 2024', 'How to Choose the Right Soap for Your Brand?'],
+  ['Apr 25, 2024', 'Benefits of Natural Ingredients in Soap Making'],
+  ['Apr 10, 2024', 'OEM Soap Manufacturing Process Explained'],
+  ['Mar 28, 2024', 'Laundry Soap vs. Detergent Soap: What’s the Difference?'],
+  ['Mar 15, 2024', 'Top 5 Trends in Personal Care Products in 2024'],
 ];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return <span className="section-label">{children}</span>;
 }
 
-function PlaceholderImage({ label, tall = false }: { label: string; tall?: boolean }) {
+function AssetSlot({ label, variant = 'product', tall = false }: { label: string; variant?: 'product' | 'factory' | 'equipment' | 'cert' | 'export'; tall?: boolean }) {
   return (
-    <div className={`image-placeholder ${tall ? 'min-h-[520px]' : 'min-h-[360px]'}`}>
-      <div className="orb orb-one" />
-      <div className="orb orb-two" />
-      <div className="relative z-10 text-center">
-        <div className="mx-auto mb-4 h-20 w-20 rounded-full border border-white/40 bg-white/20 backdrop-blur" />
-        <p className="text-sm uppercase tracking-[0.32em] text-white/70">Replace with real asset</p>
-        <p className="mt-2 text-2xl font-semibold text-white">{label}</p>
+    <div className={`asset-slot asset-${variant} ${tall ? 'asset-tall' : ''}`}>
+      <div className="asset-orb" />
+      <div className="asset-frame">
+        <span>Replace Image</span>
+        <strong>{label}</strong>
       </div>
     </div>
   );
@@ -86,20 +115,21 @@ function PlaceholderImage({ label, tall = false }: { label: string; tall?: boole
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-forest/10 bg-ivory/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-forest/10 bg-ivory/90 backdrop-blur-xl">
       <div className="site-container flex h-20 items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
           <div className="grid h-11 w-11 place-items-center rounded-full bg-forest text-sm font-bold text-ivory">S</div>
           <div>
             <p className="text-lg font-bold tracking-[0.22em] text-forest">SIMAN</p>
-            <p className="text-xs uppercase tracking-[0.22em] text-moss">Biotechnology</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-moss">丝曼生物科技</p>
           </div>
         </a>
-        <nav className="hidden items-center gap-8 text-sm font-semibold text-ink/70 lg:flex">
+        <nav className="hidden items-center gap-7 text-sm font-semibold text-ink/70 lg:flex">
           <a href="#products">Products</a>
           <a href="#oem">OEM / ODM</a>
           <a href="#factory">Factory</a>
           <a href="#quality">Quality</a>
+          <a href="#export">Export</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="btn-primary hidden sm:inline-flex" href="#contact">Request a Quote</a>
@@ -111,52 +141,56 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="hero-section">
-      <div className="site-container grid items-center gap-12 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
+      <div className="site-container grid items-center gap-12 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:py-28">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <SectionLabel>OEM / ODM SOAP MANUFACTURING PARTNER</SectionLabel>
-          <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[1.04] text-forest md:text-7xl">
-            Scalable Soap Manufacturing for Global Brands.
+          <SectionLabel>OEM / ODM SOAP & PERSONAL CARE MANUFACTURER</SectionLabel>
+          <h1 className="mt-6 max-w-5xl text-5xl font-semibold leading-[1.02] text-forest md:text-7xl">
+            Reliable Soap Manufacturing for Global Brands.
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/68">
-            Zhejiang Siman Biotechnology Co., Ltd. supports soap brands, wholesalers, distributors and project buyers with formula adjustment, shape development, packaging design and export-ready delivery.
+            Zhejiang Siman Biotechnology Co., Ltd. provides soap, handmade soap, laundry soap and soap-base solutions with formula, fragrance, shape, label and packaging customization support.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
-            <a className="btn-primary" href="#oem">Start Your OEM Project</a>
-            <a className="btn-secondary" href="#factory">View Manufacturing Capability</a>
+            <a className="btn-primary" href="#oem">Start OEM Project</a>
+            <a className="btn-secondary" href="#factory">View Factory Capacity</a>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-4">
-            {companyStats.map((item) => (
-              <div key={item.value} className="stat-card">
-                <p className="text-2xl font-bold text-forest">{item.value}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.18em] text-ink/55">{item.label}</p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {stats.slice(0, 3).map((item) => (
+              <div className="stat-card" key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
               </div>
             ))}
           </div>
         </motion.div>
-        <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }}>
-          <PlaceholderImage label="Hero Product / Factory Visual" tall />
+        <motion.div className="hero-visual-wrap" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }}>
+          <AssetSlot label="Hero soap product family + factory background" variant="product" tall />
+          <div className="floating-card top-8 left-6">OEM / ODM</div>
+          <div className="floating-card bottom-12 left-10">Fast Sampling</div>
+          <div className="floating-card right-8 top-1/2">Global Export</div>
         </motion.div>
       </div>
     </section>
   );
 }
 
-function Products() {
+function ProductCategories() {
   return (
     <section id="products" className="section-block bg-white">
       <div className="site-container">
         <div className="section-heading">
-          <SectionLabel>PRODUCT SYSTEM</SectionLabel>
-          <h2>Main Soap Categories for Wholesale and Private Label</h2>
-          <p>Build a clear product entrance for buyers: stock wholesale, OEM private label and ODM development can be presented without overloading the first screen.</p>
+          <SectionLabel>PRODUCT CATEGORIES</SectionLabel>
+          <h2>Four Core Product Lines for B2B Buyers</h2>
+          <p>Clear product entrances help importers, wholesalers and brand owners quickly find the right cooperation model.</p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {categories.map((item) => (
-            <article key={item.title} className="category-card">
-              <div className="product-visual" />
+            <article className="category-card" key={item.title}>
+              <AssetSlot label={`${item.title} image`} />
               <h3>{item.title}</h3>
+              <p className="subtitle">{item.subtitle}</p>
               <p>{item.text}</p>
-              <span>{item.moq}</span>
+              <div className="tag-row">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
             </article>
           ))}
         </div>
@@ -165,29 +199,52 @@ function Products() {
   );
 }
 
-function OemSolutions() {
+function FeaturedProducts() {
   return (
-    <section id="oem" className="section-block bg-ivory">
+    <section className="section-block bg-ivory">
+      <div className="site-container">
+        <div className="split-heading">
+          <div>
+            <SectionLabel>FEATURED PRODUCTS</SectionLabel>
+            <h2>Buyer-facing Product Display Area</h2>
+          </div>
+          <a href="#contact" className="btn-secondary">View All Products</a>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3 xl:grid-cols-6">
+          {featured.map(([name, desc]) => (
+            <article className="featured-card" key={name}>
+              <AssetSlot label={name} />
+              <h3>{name}</h3>
+              <p>{desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Oem() {
+  return (
+    <section id="oem" className="section-block bg-white">
       <div className="site-container grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-        <PlaceholderImage label="Custom Shape / Packaging / Formula" />
+        <AssetSlot label="YOUR BRAND soap packaging mockup" variant="product" tall />
         <div>
           <SectionLabel>OEM / ODM SOLUTIONS</SectionLabel>
-          <h2 className="section-title">From Formula Adjustment to Export Packaging.</h2>
-          <p className="section-copy">
-            SIMAN is positioned for serious B2B orders, not scattered retail fulfillment. The homepage should communicate an efficient project path for brand owners, wholesalers and importers.
-          </p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {['Private Label Soap', 'ODM Formula + Shape', 'Finished Goods Wholesale', 'Sample Replication'].map((item) => (
-              <div className="check-card" key={item}>{item}</div>
+          <h2 className="section-title">From Formula to Retail-ready Packaging.</h2>
+          <p className="section-copy">Build this section as the conversion core: show what can be customized, how buyers start, and why SIMAN is suitable for repeat B2B orders.</p>
+          <div className="timeline-grid">
+            {oemSteps.map((step, index) => (
+              <div className="step-card" key={step}>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <strong>{step}</strong>
+              </div>
             ))}
           </div>
-          <div className="mt-8 rounded-[2rem] border border-forest/10 bg-white p-6 shadow-soft">
-            <p className="text-sm uppercase tracking-[0.28em] text-moss">Typical project timing</p>
-            <div className="mt-5 grid gap-4 sm:grid-cols-3">
-              <div><strong>3-5 days</strong><span>Sampling cycle</span></div>
-              <div><strong>15-20 days</strong><span>OEM production</span></div>
-              <div><strong>~20 days</strong><span>Export delivery</span></div>
-            </div>
+          <div className="timing-panel">
+            <div><strong>3-5 Days</strong><span>Sample proofing</span></div>
+            <div><strong>15-20 Days</strong><span>OEM production</span></div>
+            <div><strong>~20 Days</strong><span>Export delivery cycle</span></div>
           </div>
         </div>
       </div>
@@ -199,24 +256,33 @@ function Factory() {
   return (
     <section id="factory" className="section-block bg-forest text-ivory">
       <div className="site-container">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <SectionLabel>MANUFACTURING CAPACITY</SectionLabel>
-            <h2 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">Factory strength expressed as a reliable supply system.</h2>
-            <p className="mt-7 text-lg leading-8 text-ivory/70">
-              The homepage should make the factory easier to trust: facility scale, production lines, capacity and equipment advantages are presented with clean B2B data cards.
-            </p>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {productionLines.map((item) => (
-              <div className="dark-card" key={item.name}>
-                <p>{item.name}</p>
-                <strong>{item.lines}</strong>
-              </div>
-            ))}
-          </div>
+        <div className="section-heading text-ivory">
+          <SectionLabel>OUR FACTORY & PRODUCTION CAPACITY</SectionLabel>
+          <h2>Modern facilities built for stable soap supply.</h2>
+          <p className="text-ivory/68">Use real exterior, workshop, production floor and warehouse photos in this section.</p>
         </div>
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3 xl:grid-cols-6">
+          {stats.map((item) => (
+            <div className="dark-stat" key={item.label}>
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 grid gap-5 lg:grid-cols-4">
+          {['Factory Exterior', 'Clean Production Line', 'Workers & Machines', 'Warehouse & Packing'].map((label) => (
+            <AssetSlot key={label} label={label} variant="factory" />
+          ))}
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-4">
+          {productionLines.map((item) => (
+            <div className="line-dark" key={item.name}>
+              <span>{item.name}</span>
+              <strong>{item.value}</strong>
+            </div>
+          ))}
+        </div>
+        <div className="mt-5 grid gap-5 md:grid-cols-3">
           {capacities.map((item) => (
             <div className="capacity-card" key={item.name}>
               <p>{item.name}</p>
@@ -232,38 +298,23 @@ function Factory() {
 function Equipment() {
   return (
     <section className="section-block bg-white">
-      <div className="site-container grid items-center gap-12 lg:grid-cols-2">
+      <div className="site-container grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
         <div>
-          <SectionLabel>EQUIPMENT ADVANTAGE</SectionLabel>
-          <h2 className="section-title">Dense Texture. Fine Grinding. Stable Bar Quality.</h2>
-          <p className="section-copy">Turn equipment details into buyer-facing quality language. The visual should use real machine photos when available, with concise technical callouts.</p>
-          <div className="mt-8 grid gap-4">
-            {capabilityCards.map((item) => <div className="line-card" key={item}>{item}</div>)}
+          <SectionLabel>ADVANCED EQUIPMENT</SectionLabel>
+          <h2 className="section-title">Superior Quality Starts from Better Processing.</h2>
+          <p className="section-copy">Present equipment details as buyer benefits: finer material processing, higher density, stable bar texture and reduced cracking risk.</p>
+          <div className="equipment-list">
+            {equipment.map(([name, desc]) => (
+              <div className="equipment-card" key={name}>
+                <strong>{name}</strong>
+                <span>{desc}</span>
+              </div>
+            ))}
           </div>
         </div>
-        <PlaceholderImage label="Grinding / Extrusion Equipment" />
-      </div>
-    </section>
-  );
-}
-
-function Featured() {
-  return (
-    <section className="section-block bg-ivory">
-      <div className="site-container">
-        <div className="section-heading">
-          <SectionLabel>FEATURED PRODUCTS</SectionLabel>
-          <h2>Product Display Area with Easy Replacement</h2>
-          <p>Use clean product cards first, then replace placeholders with real soap, laundry soap, soap base, shampoo, shower gel and bath salt images.</p>
-        </div>
-        <div className="grid gap-5 md:grid-cols-3">
-          {['Transparent Soap Bar', 'Laundry Soap Bar', 'Gift Handmade Soap', 'Soap Base Block', 'Shampoo / Shower Gel', 'Bath Salt Collection'].map((item) => (
-            <div className="featured-card" key={item}>
-              <div className="featured-visual" />
-              <h3>{item}</h3>
-              <p>Replace with real product photo and concise specification tags.</p>
-            </div>
-          ))}
+        <div className="grid gap-5 md:grid-cols-[1.2fr_0.8fr]">
+          <AssetSlot label="Green industrial equipment" variant="equipment" tall />
+          <AssetSlot label="Soap bars on conveyor" variant="equipment" tall />
         </div>
       </div>
     </section>
@@ -272,45 +323,50 @@ function Featured() {
 
 function Quality() {
   return (
-    <section id="quality" className="section-block bg-white">
-      <div className="site-container grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+    <section id="quality" className="section-block bg-ivory">
+      <div className="site-container grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <SectionLabel>QUALITY & CERTIFICATION SUPPORT</SectionLabel>
-          <h2 className="section-title">Documentation-ready supply for overseas buyers.</h2>
-          <p className="section-copy">Avoid false certificate claims. Present the real support scope clearly: factory certificate copies, third-party test report copies, MSDS, certificate of origin and export customs documents.</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {exportSupport.map((item) => <div className="check-card" key={item}>{item}</div>)}
+          <SectionLabel>QUALITY & CERTIFICATIONS</SectionLabel>
+          <h2 className="section-title">Inspection and documentation support for overseas orders.</h2>
+          <p className="section-copy">Use verified certificate images only. Keep wording safe: report and certification availability depends on product model and target market.</p>
+          <div className="quality-grid">
+            {quality.map(([name, desc]) => (
+              <div className="check-card" key={name}>
+                <strong>{name}</strong>
+                <span>{desc}</span>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="rounded-[2rem] bg-forest p-8 text-ivory shadow-soft">
-          <p className="text-sm uppercase tracking-[0.28em] text-ivory/55">Quality flow</p>
-          <ol className="mt-8 space-y-5">
-            {['Raw Material Review', 'Formula & Sample Check', 'Process Control', 'Finished Product Inspection', 'Packing Verification', 'Document Preparation'].map((item, index) => (
-              <li className="flex gap-4" key={item}>
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ivory text-sm font-bold text-forest">{index + 1}</span>
-                <span className="pt-1 text-lg">{item}</span>
-              </li>
-            ))}
-          </ol>
+        <div className="cert-wall">
+          {['ISO / GMP certificate slot', 'Intertek / SGS test report slot', 'Chinese certificate slot', 'Inspection record slot'].map((label) => (
+            <AssetSlot key={label} label={label} variant="cert" />
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function Packing() {
+function Export() {
   return (
-    <section className="section-block bg-ivory">
-      <div className="site-container grid items-center gap-12 lg:grid-cols-2">
-        <PlaceholderImage label="Packaging / Carton / Export Delivery" />
+    <section id="export" className="section-block bg-white">
+      <div className="site-container grid items-center gap-12 lg:grid-cols-[1fr_0.95fr]">
         <div>
-          <SectionLabel>PACKING & EXPORT SUPPORT</SectionLabel>
-          <h2 className="section-title">Packaging design support for brand-ready orders.</h2>
-          <p className="section-copy">Use this section to show neutral packaging, custom labels, gift boxes, export cartons and shipment documentation. Keep cooperation details concise and procurement-focused.</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {['Neutral Packing', 'Private Label Design', 'Export Carton', 'FOB Delivery Support'].map((item) => <div className="line-card" key={item}>{item}</div>)}
+          <SectionLabel>EXPORT SUPPORT</SectionLabel>
+          <h2 className="section-title">Documents, packing and FOB quotation support.</h2>
+          <p className="section-copy">This section answers the procurement team’s practical concerns before they send an inquiry.</p>
+          <div className="export-grid">
+            {exportSupport.map(([name, desc]) => (
+              <div className="export-card" key={name}>
+                <i />
+                <strong>{name}</strong>
+                <span>{desc}</span>
+              </div>
+            ))}
           </div>
         </div>
+        <AssetSlot label="Container / warehouse / export cartons" variant="export" tall />
       </div>
     </section>
   );
@@ -318,37 +374,18 @@ function Packing() {
 
 function About() {
   return (
-    <section className="section-block bg-white">
-      <div className="site-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+    <section className="section-block bg-ivory">
+      <div className="site-container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <SectionLabel>ABOUT SIMAN</SectionLabel>
-          <h2 className="section-title">A soap manufacturer built for repeatable B2B supply.</h2>
+          <h2 className="section-title">A professional manufacturer of soap and personal care products.</h2>
+          <p className="section-copy">With production experience, advanced production lines and quality-control processes, SIMAN provides OEM / ODM solutions to customers worldwide.</p>
+          <a className="btn-primary mt-8" href="#contact">Learn More</a>
         </div>
-        <div className="text-lg leading-8 text-ink/68">
-          <p>Zhejiang Siman Biotechnology Co., Ltd. focuses on soap, handmade soap, laundry soap and soap base manufacturing, with extended personal-care and household-cleaning product capability for global procurement projects.</p>
-          <p className="mt-5">The website should not over-explain every trade term. It should help buyers quickly understand product range, customization capability, factory scale and export support.</p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Process() {
-  return (
-    <section className="section-block bg-forest text-ivory">
-      <div className="site-container">
-        <div className="section-heading text-left text-ivory">
-          <SectionLabel>COOPERATION PROCESS</SectionLabel>
-          <h2>Clear steps from inquiry to shipment.</h2>
-          <p className="text-ivory/68">Use this as a conversion bridge before the final CTA.</p>
-        </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-3 xl:grid-cols-6">
-          {serviceSteps.map((item, index) => (
-            <div className="process-card" key={item}>
-              <span>0{index + 1}</span>
-              <strong>{item}</strong>
-            </div>
-          ))}
+        <div className="about-collage">
+          <AssetSlot label="SIMAN building exterior" variant="factory" />
+          <AssetSlot label="Office / lab scene" variant="factory" />
+          <AssetSlot label="Team photo" variant="factory" />
         </div>
       </div>
     </section>
@@ -359,17 +396,20 @@ function Blog() {
   return (
     <section className="section-block bg-white">
       <div className="site-container">
-        <div className="section-heading">
-          <SectionLabel>LATEST INSIGHTS</SectionLabel>
-          <h2>Content that supports buyer education.</h2>
-          <p>These article cards can later connect to SEO topics around soap base, private label soap, laundry soap density and export packaging.</p>
+        <div className="split-heading">
+          <div>
+            <SectionLabel>LATEST BLOG</SectionLabel>
+            <h2>Buyer education topics for SEO and trust building.</h2>
+          </div>
+          <a href="#contact" className="btn-secondary">View All Blog</a>
         </div>
-        <div className="grid gap-5 md:grid-cols-3">
-          {['How to Plan a Private Label Soap Project', 'What Affects Soap Bar Density and Stability?', 'Export Packing Checklist for Soap Orders'].map((item) => (
-            <article className="blog-card" key={item}>
-              <p>Buyer Guide</p>
-              <h3>{item}</h3>
-              <a href="#contact">Read more</a>
+        <div className="blog-scroll">
+          {blogs.map(([date, title]) => (
+            <article className="blog-card" key={title}>
+              <AssetSlot label="Blog thumbnail" />
+              <p>{date}</p>
+              <h3>{title}</h3>
+              <a href="#contact">Read More</a>
             </article>
           ))}
         </div>
@@ -378,24 +418,44 @@ function Blog() {
   );
 }
 
-function Footer() {
+function CtaFooter() {
   return (
-    <footer id="contact" className="bg-ink text-ivory">
-      <div className="site-container grid gap-10 py-16 lg:grid-cols-[1fr_0.8fr]">
-        <div>
-          <p className="text-sm uppercase tracking-[0.32em] text-ivory/50">Ready for OEM / ODM development</p>
-          <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight md:text-6xl">Send your soap project requirement.</h2>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-ivory/68">Share your target product, quantity, formula direction, packaging idea and destination market. SIMAN can support sampling, production planning and export documentation.</p>
-        </div>
-        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-          <p className="text-2xl font-semibold">Zhejiang Siman Biotechnology Co., Ltd.</p>
-          <div className="mt-8 space-y-4 text-ivory/65">
-            <p>Email: sales@example.com</p>
-            <p>WhatsApp: +86 000 0000 0000</p>
-            <p>Address: Zhejiang, China</p>
+    <footer id="contact" className="footer-section">
+      <div className="site-container">
+        <div className="cta-band">
+          <div>
+            <h2>Looking for a Reliable Soap Manufacturer?</h2>
+            <p>Contact us today for catalog, quotation and sample support.</p>
           </div>
-          <a className="btn-light mt-8" href="mailto:sales@example.com">Request a Custom Quote</a>
+          <a className="btn-light" href="mailto:sale@zjmsw.com">Contact Us Now</a>
         </div>
+        <div className="footer-grid">
+          <div>
+            <div className="footer-logo">SIMAN<span>丝曼生物科技</span></div>
+            <p>OEM/ODM soap and personal care manufacturer with factory direct supply and global export support.</p>
+          </div>
+          <div>
+            <h3>Quick Links</h3>
+            <a href="#top">Home</a>
+            <a href="#products">Products</a>
+            <a href="#oem">OEM / ODM</a>
+            <a href="#factory">Factory</a>
+          </div>
+          <div>
+            <h3>Products</h3>
+            <a href="#products">Soap</a>
+            <a href="#products">Handmade Soap</a>
+            <a href="#products">Laundry Soap</a>
+            <a href="#products">Soap Base</a>
+          </div>
+          <div>
+            <h3>Contact Us</h3>
+            <p>Tel: +86 571 87103032</p>
+            <p>Email: sale@zjmsw.com</p>
+            <p>Add: Jinhua, Zhejiang, China</p>
+          </div>
+        </div>
+        <div className="copyright">© 2024 Zhejiang Siman Biotechnology Co., Ltd. All Rights Reserved.</div>
       </div>
     </footer>
   );
@@ -406,17 +466,16 @@ export default function App() {
     <main>
       <Header />
       <Hero />
-      <Products />
-      <OemSolutions />
+      <ProductCategories />
+      <FeaturedProducts />
+      <Oem />
       <Factory />
       <Equipment />
-      <Featured />
       <Quality />
-      <Packing />
+      <Export />
       <About />
-      <Process />
       <Blog />
-      <Footer />
+      <CtaFooter />
     </main>
   );
 }
