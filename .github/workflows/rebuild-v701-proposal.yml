@@ -1,0 +1,145 @@
+name: Rebuild exact V7.0.1 proposal
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'proposal-build/**'
+      - '.github/workflows/rebuild-v701-proposal.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact image dependency
+        run: pip install Pillow==12.3.0 numpy
+
+      - name: Rebuild exact proposal
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageChops
+          import numpy as np, math, io, base64, gzip, hashlib
+
+          root = Path("proposal-build")
+
+          def join_parts(prefix):
+              files = sorted(root.glob(prefix + ".*.part"))
+              if not files:
+                  raise SystemExit(f"Missing parts: {prefix}")
+              return "".join(p.read_text(encoding="utf-8") for p in files)
+
+          template = gzip.decompress(base64.b64decode(join_parts("template.gz.b64"))).decode("utf-8")
+          static_raw = base64.b64decode(join_parts("static.webp.b64"))
+          demo_raw = base64.b64decode(join_parts("demo.png.b64"))
+
+          base = Image.open(io.BytesIO(static_raw)).convert("RGBA")
+          W,H = base.size
+          grad = np.zeros((H,W), dtype=np.uint8)
+          for y in range(H):
+              if y <= 345:
+                  v = 255
+              elif y >= 430:
+                  v = 0
+              else:
+                  v = int(255 * (430-y) / 85)
+              grad[y,:] = v
+
+          head_mask = ImageChops.multiply(Image.fromarray(grad, "L"), base.getchannel("A"))
+          body_mask = Image.eval(head_mask, lambda p: 255-p)
+
+          def render_frame(t):
+              head = Image.new("RGBA",(W,H),(0,0,0,0))
+              head.paste(base,(0,0),head_mask)
+              body = Image.new("RGBA",(W,H),(0,0,0,0))
+              body.paste(base,(0,0),body_mask)
+
+              breathe = math.sin(2*math.pi*t)
+              nod = math.exp(-((t-0.43)/0.12)**2)
+              angle = 0.72*math.sin(2*math.pi*t+0.55) - 0.95*nod
+              dx = 0.8*math.sin(2*math.pi*t*0.72)
+              dy = -1.6*math.sin(2*math.pi*t+0.15) + 2.8*nod
+              scale = 1 + 0.0022*breathe
+
+              crop = head.crop((120,0,545,445))
+              cw,ch = crop.size
+              crop = crop.resize((round(cw*scale),round(ch*scale)), Image.Resampling.BILINEAR)
+              crop = crop.rotate(angle, resample=Image.Resampling.BILINEAR, expand=True)
+
+              x = 120 - (crop.width-cw)//2 + round(dx)
+              y = -(crop.height-ch)//2 + round(dy)
+              body.alpha_composite(crop,(x,y))
+
+              sy = 1 + 0.0028*breathe
+              nh = round(H*sy)
+              torso = body.resize((W,nh), Image.Resampling.BILINEAR)
+              if nh >= H:
+                  torso = torso.crop((0,nh-H,W,nh))
+              else:
+                  canvas = Image.new("RGBA",(W,H),(0,0,0,0))
+                  canvas.alpha_composite(torso,(0,H-nh))
+                  torso = canvas
+              return torso
+
+          frames = [render_frame(i/32) for i in range(32)]
+          bio = io.BytesIO()
+          frames[0].save(
+              bio, format="WEBP", save_all=True, append_images=frames[1:],
+              duration=50, loop=0, lossless=False, quality=72,
+              alpha_quality=88, method=2
+          )
+          dynamic_raw = bio.getvalue()
+
+          checks = {
+              "static": (static_raw, "52dbd9f4ec71eba6b8420d0ab5fce194334ac9e4df461ce06887dc0395a99e3b"),
+              "demo": (demo_raw, "4e53b11ed0ae063bf6c729ceda2cb4a363a58f2be11d4e076b42d4f4f297c6b9"),
+              "dynamic": (dynamic_raw, "8dd04ba5d5cb5d0625e57801ef2bce92e40f0305c14984699ca018868c2ab57e"),
+          }
+          for name,(raw,expected) in checks.items():
+              actual = hashlib.sha256(raw).hexdigest()
+              if actual != expected:
+                  raise SystemExit(f"{name} SHA mismatch: {actual}")
+
+          replacements = {
+              "__ASSET_DYNAMIC_WEBP__": "data:image/webp;base64," + base64.b64encode(dynamic_raw).decode("ascii"),
+              "__ASSET_STATIC_WEBP__": "data:image/webp;base64," + base64.b64encode(static_raw).decode("ascii"),
+              "__ASSET_DEMO_PNG__": "data:image/png;base64," + base64.b64encode(demo_raw).decode("ascii"),
+          }
+          html = template
+          for token,value in replacements.items():
+              html = html.replace(token, value)
+
+          out = html.encode("utf-8")
+          expected_html_sha = "4c7c05dd3f4ff1c1616d606700e5e5c0fc4856888fbd7f9635b84db7a3866c6e"
+          actual_html_sha = hashlib.sha256(out).hexdigest()
+          if actual_html_sha != expected_html_sha:
+              raise SystemExit(f"HTML SHA mismatch: {actual_html_sha}")
+
+          Path("proposal").mkdir(exist_ok=True)
+          Path("proposal/index.html").write_bytes(out)
+          print(f"Exact V7.0.1 rebuilt: {len(out)} bytes / {actual_html_sha}")
+          PY
+
+      - name: Commit exact page
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add proposal/index.html
+          if git diff --cached --quiet; then
+            echo "No change"
+            exit 0
+          fi
+          git commit -m "Publish exact V7.0.1 proposal"
+          git push
