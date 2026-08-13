@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>B2B官网 · 营销型独立站</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+html,body{margin:0;min-height:100%;background:#f7f9fc;font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;color:#172033}.boot{min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box}.card{text-align:center}.dot{width:42px;height:42px;margin:0 auto 16px;border:3px solid #dbe4ff;border-top-color:#4667ff;border-radius:50%;animation:r .8s linear infinite}.t{font-weight:750;font-size:15px}.s{margin-top:7px;color:#8490a4;font-size:12px}@keyframes r{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body><div class="boot"><div class="card"><div class="dot"></div><div class="t">正在载入方案</div><div class="s">B2B 官网 · 营销型独立站</div></div></div>
+<script>
+(async()=>{try{
+ const res=await fetch('./payload.gz',{cache:'no-cache'}); if(!res.ok) throw new Error('payload');
+ if(!('DecompressionStream' in window)) throw new Error('browser');
+ const stream=res.body.pipeThrough(new DecompressionStream('gzip'));
+ let html=await new Response(stream).text();
+ const doc=new DOMParser().parseFromString(html,'text/html');
+ doc.getElementById('visual-demo')?.remove();
+ doc.getElementById('visualLightbox')?.remove();
+ html='<!doctype html>'+doc.documentElement.outerHTML;
+ document.open();document.write(html);document.close();
+}catch(e){document.body.innerHTML='<div class="boot"><div class="card"><div class="t">页面载入失败</div><div class="s">请使用最新版 Chrome、Edge 或 Safari 重新打开。</div></div></div>';}
+})();
+</script></body></html>
