@@ -6,21 +6,25 @@
 <title>B2B官网 · 营销型独立站</title>
 <meta name="robots" content="noindex,nofollow">
 <style>
-html,body{margin:0;min-height:100%;background:#f7f9fc;font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;color:#172033}.boot{min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box}.card{text-align:center}.dot{width:42px;height:42px;margin:0 auto 16px;border:3px solid #dbe4ff;border-top-color:#4667ff;border-radius:50%;animation:r .8s linear infinite}.t{font-weight:750;font-size:15px}.s{margin-top:7px;color:#8490a4;font-size:12px}@keyframes r{to{transform:rotate(360deg)}}
+html,body{margin:0;min-height:100%;background:#f7f9fc;font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;color:#172033}.boot{min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box}.card{text-align:center}.dot{width:42px;height:42px;margin:0 auto 16px;border:3px solid #dbe4ff;border-top-color:#4667ff;border-radius:50%;animation:r .8s linear infinite}.t{font-weight:750;font-size:15px}.s{margin-top:7px;color:#8490a4;font-size:12px}.retry{margin-top:18px;padding:10px 16px;border:0;border-radius:999px;background:#5067f5;color:#fff;font-weight:700}@keyframes r{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body><div class="boot"><div class="card"><div class="dot"></div><div class="t">正在载入方案</div><div class="s">B2B 官网 · 营销型独立站</div></div></div>
 <script>
+function loadScript(src){return new Promise((ok,no)=>{const s=document.createElement('script');s.src=src;s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
+async function ungzip(bytes){
+ if('DecompressionStream' in window){const ds=new DecompressionStream('gzip');const stream=new Blob([bytes]).stream().pipeThrough(ds);return await new Response(stream).text()}
+ if(!window.fflate){try{await loadScript('https://cdn.jsdelivr.net/npm/fflate@0.8.2/umd/index.js')}catch(e){await loadScript('https://unpkg.com/fflate@0.8.2/umd/index.js')}}
+ if(!window.fflate) throw new Error('decoder');
+ return new TextDecoder().decode(window.fflate.gunzipSync(new Uint8Array(bytes)))
+}
 (async()=>{try{
- const res=await fetch('./payload.gz',{cache:'no-cache'}); if(!res.ok) throw new Error('payload');
- if(!('DecompressionStream' in window)) throw new Error('browser');
- const stream=res.body.pipeThrough(new DecompressionStream('gzip'));
- let html=await new Response(stream).text();
+ const res=await fetch('./payload.gz?v=2',{cache:'no-store'});if(!res.ok)throw new Error('payload '+res.status);
+ let html=await ungzip(await res.arrayBuffer());
  const doc=new DOMParser().parseFromString(html,'text/html');
- doc.getElementById('visual-demo')?.remove();
- doc.getElementById('visualLightbox')?.remove();
+ doc.getElementById('visual-demo')?.remove();doc.getElementById('visualLightbox')?.remove();
  html='<!doctype html>'+doc.documentElement.outerHTML;
  document.open();document.write(html);document.close();
-}catch(e){document.body.innerHTML='<div class="boot"><div class="card"><div class="t">页面载入失败</div><div class="s">请使用最新版 Chrome、Edge 或 Safari 重新打开。</div></div></div>';}
+}catch(e){console.error(e);document.body.innerHTML='<div class="boot"><div class="card"><div class="t">页面载入失败</div><div class="s">网络或资源加载异常，请重新尝试。</div><button class="retry" onclick="location.reload()">重新加载</button></div></div>'}
 })();
 </script></body></html>
